@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settings, privacy and help — docmap help</title>
+<meta name="description" content="Every setting of All-in-One Markdown Viewer, what stays on your computer, the guided tour, and what to do when something is not working.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">docmap help <small>· All-in-One Markdown Viewer</small></a>
+    <nav aria-label="Sections">
+      <a href="index.html">Start</a>
+      <a href="reading.html">Reading</a>
+      <a href="trust.html">Trust</a>
+      <a href="finding.html">Find</a>
+      <a href="writing.html">Write</a>
+      <a href="agents.html">AI agents</a>
+      <a href="settings.html" aria-current="page">Settings</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Settings, privacy and help</h1>
+  <p class="intro">Every setting in one table, what docmap keeps (and never sends), the guided tour, and what to do if something goes wrong.</p>
+
+  <div class="search" role="search">
+    <label for="q">Search every feature</label>
+    <input id="q" type="search" placeholder="Type a word, e.g. setting, privacy, problem" autocomplete="off">
+    <ul id="results" aria-live="polite"></ul>
+  </div>
+
+  <h2>On this page</h2>
+  <ol class="toc">
+    <li><a href="#settings">All settings</a></li>
+    <li><a href="#privacy">Privacy</a></li>
+    <li><a href="#help">Help inside VS Code</a></li>
+    <li><a href="#big-files">Big files</a></li>
+    <li><a href="#trouble">Something not working?</a></li>
+  </ol>
+
+  <article class="card" id="settings">
+    <h2>All settings <a class="permalink" href="#settings" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Every docmap setting, what it does and its default. You rarely need to change any.</p>
+    <p class="who">Helps: anyone who wants docmap to behave differently.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Settings: <kbd>Ctrl</kbd>+<kbd>,</kbd> (Mac: <kbd>Cmd</kbd>+<kbd>,</kbd>) → type <b>docmap</b>.</li>
+        <li>Or the gear icon at the bottom left → <b>Settings</b>.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Press <kbd>Ctrl</kbd>+<kbd>,</kbd>.</li>
+      <li>Type <b>docmap</b>.</li>
+      <li>Change a setting; it takes effect at once.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/settings.png" width="1140" height="560" alt="VS Code Settings searched for docmap: Agent Target set to clipboard, then the AI settings" loading="lazy"><figcaption>The docmap settings, with a short description under each.</figcaption></figure>
+    <details open><summary>The full list</summary>
+      <table>
+        <tr><th>Setting</th><th>What it does</th><th>Default</th></tr>
+        <tr><td><code>docmap.cleanView</code></td><td><a href="reading.html#clean-view">Clean view</a> for AI-written Markdown</td><td>on</td></tr>
+        <tr><td><code>docmap.readingTools</code></td><td>Quick read, heading levels, reading times, structure hints in the outline</td><td>on</td></tr>
+        <tr><td><code>docmap.inferHeadings</code></td><td>Add bold-only lines and numbered lines like <code>2.1 Title</code> to the outline (auto / always / off)</td><td>auto</td></tr>
+        <tr><td><code>docmap.headingNumbers</code></td><td><a href="reading.html#heading-numbers">Number the headings</a> on the page</td><td>off</td></tr>
+        <tr><td><code>docmap.theme</code></td><td>Reading theme: vscode, paper, github, night, focus</td><td>vscode</td></tr>
+        <tr><td><code>docmap.fontScale</code></td><td>Text size on the page (1 = normal, 1.15 = larger)</td><td>1</td></tr>
+        <tr><td><code>docmap.lineWidth</code></td><td>Line width: narrow, normal, wide, full</td><td>normal</td></tr>
+        <tr><td><code>docmap.diagrams</code></td><td>Draw <code>mermaid</code> blocks as <a href="reading.html#diagrams">diagrams</a></td><td>on</td></tr>
+        <tr><td><code>docmap.rememberPlace</code></td><td>Reopen a page at the section you were reading</td><td>on</td></tr>
+        <tr><td><code>docmap.liveBrowser</code></td><td><a href="reading.html#in-browser">Open Preview in Browser</a> shows a live page (off: a saved copy)</td><td>on</td></tr>
+        <tr><td><code>docmap.updateDebounceMs</code></td><td>How long after you stop typing the page updates (milliseconds)</td><td>300</td></tr>
+        <tr><td><code>docmap.largeFileBytes</code></td><td>Files bigger than this ask before they open (5242880 = 5 MB)</td><td>5 MB</td></tr>
+        <tr><td><code>docmap.writingHelpers</code></td><td><a href="writing.html#writing-keys">Writing keys</a> and lists that continue on Enter</td><td>on</td></tr>
+        <tr><td><code>docmap.codeLens</code></td><td><a href="trust.html#mentioned-in-code">📄 Mentioned in N docs</a> in code files</td><td>on</td></tr>
+        <tr><td><code>docmap.staleDays</code></td><td>Docs Inbox: unchanged this many days = “Probably out of date” (0 = never)</td><td>90</td></tr>
+        <tr><td><code>docmap.myNames</code></td><td>Your names and @handles for <a href="finding.html#my-items">My Items</a> and <a href="trust.html#sign-off">Sign off</a></td><td>empty (your git user name)</td></tr>
+        <tr><td><code>docmap.agentTarget</code></td><td><a href="agents.html#agent-target">Where prompts go</a>: clipboard or auto (Copilot Chat)</td><td>clipboard</td></tr>
+        <tr><td><code>docmap.ai.answerWithMyModel</code></td><td><a href="agents.html#my-model">Your own model answers</a> on a page</td><td>off</td></tr>
+        <tr><td><code>docmap.ai.model</code></td><td>Which model family answers (empty: a Copilot model, else any)</td><td>empty</td></tr>
+        <tr><td><code>docmap.ai.tools</code></td><td><a href="agents.html#agent-tools">Tools for your AI agents</a></td><td>off</td></tr>
+      </table>
+    </details>
+  </article>
+
+  <article class="card" id="privacy">
+    <h2>Privacy <a class="permalink" href="#privacy" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">No accounts, no tracking, no servers. docmap collects nothing.</p>
+    <p class="who">Helps: anyone working with private or company docs.</p>
+    <div class="where">
+      <h3>What stays where</h3>
+      <ul>
+        <li>What docmap remembers (your place in a doc, highlights, review marks, what you have read) stays in VS Code's storage on your computer.</li>
+        <li>Prompts are copied for you to paste; docmap sends them nowhere.</li>
+        <li>The live browser page is served only to your own computer (<code>127.0.0.1</code>, behind a private link).</li>
+        <li>Your doc text leaves your computer only if you turn on <a href="agents.html#my-model">Answer with my model</a>, goes only to your own model, and only after you agree.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="card" id="help">
+    <h2>Help inside VS Code <a class="permalink" href="#help" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">A guided tour of the main features, and a help page with every feature and an example to try.</p>
+    <p class="who">Helps: new users.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Guided tour: Command Palette → <span class="cmd">Help: Get Started</span> → <b>All-in-One Markdown Viewer</b>.</li>
+        <li>Help page: Command Palette → <span class="cmd">All-in-One Markdown Viewer: Help (All Features)</span>, or the <b>?</b> icon on the Docs Inbox title bar.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>.</li>
+      <li>Type <b>Get Started</b> and pick <span class="cmd">Help: Get Started</span>.</li>
+      <li>Choose <b>All-in-One Markdown Viewer</b>.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/walkthrough.png" width="1000" height="800" alt="VS Code's Welcome page with the All-in-One Markdown Viewer tour: Preview in the same tab with a Show Preview button, Clean view, Trust markers, Plans, Compare, Your own AI" loading="lazy"><figcaption>Six short steps, each with a button to try it, and a last step that opens every feature with examples.</figcaption></figure>
+  </article>
+
+  <article class="card" id="big-files">
+    <h2>Big files <a class="permalink" href="#big-files" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Files over 5 MB ask before they open as a page, so VS Code stays fast.</p>
+    <p class="who">Helps: projects with generated or very long Markdown.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Setting: <code>docmap.largeFileBytes</code> (in bytes; 5242880 = 5 MB).</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="card" id="trouble">
+    <h2>Something not working? <a class="permalink" href="#trouble" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Most problems after an update are fixed by reloading the window.</p>
+    <p class="who">Helps: everyone, sometimes.</p>
+    <div class="where">
+      <h3>What to do</h3>
+      <ul>
+        <li>Docs Inbox missing after an update, or a page not drawing: Command Palette → <span class="cmd">Developer: Reload Window</span>.</li>
+        <li><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> does nothing: docmap leaves that key to “Paste Image” extensions when one is installed. Use the <b>Show Preview</b> button, or set your own key in Keyboard Shortcuts (search <code>docmap</code>).</li>
+        <li>Writing keys do nothing: they are off while “Markdown All in One” is installed, or when <code>docmap.writingHelpers</code> is off.</li>
+        <li>Still stuck: <a href="https://github.com/kish21/docmap-media/issues">report a problem on GitHub</a>. Say what you did, what you expected and what happened.</li>
+      </ul>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    For version 3.0.0. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+  </div>
+</footer>
+<script src="features.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

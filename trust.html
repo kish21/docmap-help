@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trusting your docs — docmap help</title>
+<meta name="description" content="Know which Markdown docs and paragraphs you can trust: trust markers, docs named in code, compare versions, sign off, doc formats.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">docmap help <small>· All-in-One Markdown Viewer</small></a>
+    <nav aria-label="Sections">
+      <a href="index.html">Start</a>
+      <a href="reading.html">Reading</a>
+      <a href="trust.html" aria-current="page">Trust</a>
+      <a href="finding.html">Find</a>
+      <a href="writing.html">Write</a>
+      <a href="agents.html">AI agents</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Trusting your docs</h1>
+  <p class="intro">Docs go out of date quietly. These features show which paragraphs no longer match your code, what changed, and who approved which version.</p>
+
+  <div class="search" role="search">
+    <label for="q">Search every feature</label>
+    <input id="q" type="search" placeholder="Type a word, e.g. compare, verified, sign off" autocomplete="off">
+    <ul id="results" aria-live="polite"></ul>
+  </div>
+
+  <h2>On this page</h2>
+  <ol class="toc">
+    <li><a href="#trust-markers">Trust markers</a></li>
+    <li><a href="#mark-verified">Mark a paragraph as verified or wrong</a></li>
+    <li><a href="#mentioned-in-code">Docs mentioned in code</a></li>
+    <li><a href="#mentions">Docs That Mention This File</a></li>
+    <li><a href="#compare">Compare: what changed, on the page</a></li>
+    <li><a href="#sign-off">Sign off a version</a></li>
+    <li><a href="#doc-formats">What kind of doc is this?</a></li>
+    <li><a href="#compare-standard">Compare with a Standard Format</a></li>
+  </ol>
+
+  <article class="card" id="trust-markers">
+    <h2>Trust markers <a class="permalink" href="#trust-markers" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Marks paragraphs you should not trust: they name files or commands that are not in your code, disagree with another doc, or may be out of date.</p>
+    <p class="who">Helps: anyone about to follow a doc, and anyone who maintains docs.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: a mark in the left margin beside the paragraph, and a count at the top, for example <b>✗ 1 doesn't match the code</b>. Click the count to jump to the next one.</li>
+        <li>In the outline: small ✗ badges next to the sections that have one.</li>
+        <li>In the Docs Inbox: the group <b>Doubtful — check before you trust</b>.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Add this paragraph to a doc and <b>save</b>: <code>The settings live in `src/old-settings-file.ts` and you run `npm run deploy-everything`.</code></li>
+      <li>Open the doc's page (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd>).</li>
+      <li>Hover the red ✗ in the margin to read why.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/trust-markers.png" width="558" height="778" alt="A page with a red cross in the margin next to a paragraph naming src/old-settings-file.ts, and '1 doesn't match the code' at the top" loading="lazy"><figcaption>A red ✗ beside the paragraph and “✗ 1 doesn't match the code” at the top. Hover says, for example, that <code>src/old-settings-file.ts</code> is not in the repository.</figcaption></figure>
+    <details><summary>More detail: what each mark means</summary>
+      <table>
+        <tr><th>Mark</th><th>Means</th></tr>
+        <tr><td>✗</td><td>It names something that is not in your code: a file, function, command, environment variable or version.</td></tr>
+        <tr><td>⇄</td><td>Another doc says something different (e.g. “Port: 8080” here, “Port: 3000” there).</td></tr>
+        <tr><td>⚠</td><td>A file it names changed after this paragraph was written (needs git).</td></tr>
+        <tr><td>↺</td><td>A newer, almost identical doc exists.</td></tr>
+        <tr><td>✓</td><td>You checked it and marked it true.</td></tr>
+      </table>
+      <p>Commands are checked against the scripts in your <code>package.json</code>. Everything is checked on your computer.</p>
+    </details>
+  </article>
+
+  <article class="card" id="mark-verified">
+    <h2>Mark a paragraph as verified or wrong <a class="permalink" href="#mark-verified" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Record that you checked a paragraph. If the code it names changes later, the mark comes back.</p>
+    <p class="who">Helps: doc owners and reviewers who want others to know what has been checked.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: click a trust mark in the margin → <span class="cmd">Mark as verified — it is true</span>, <span class="cmd">Mark as wrong…</span>, <span class="cmd">Clear my verdict</span>, or <span class="cmd">Verify this paragraph against the code</span> (asks your AI agent).</li>
+        <li>For a paragraph without a mark: hover it and click the faint dot in the margin.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open the page from card 1.</li>
+      <li>Click the red ✗.</li>
+      <li>Choose <span class="cmd">Mark as verified — it is true</span>.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>The ✗ turns into a ✓. If a file the paragraph names changes after that, the warning comes back.</p>
+  </article>
+
+  <article class="card" id="mentioned-in-code">
+    <h2>Docs mentioned in code <a class="permalink" href="#mentioned-in-code" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">At the top of a code file, a small line says how many docs talk about it.</p>
+    <p class="who">Helps: developers changing code, so they know which docs to update too.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>In any code file that a doc names: the line <b>📄 Mentioned in N docs</b> above the first line.</li>
+        <li>Setting: <code>docmap.codeLens</code> turns it off.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>In a doc, name a real file of your project in backticks, e.g. <code>`src/queue/client.ts`</code>, and save.</li>
+      <li>Open that code file.</li>
+      <li>Click <b>Mentioned in 1 doc</b> to open the doc at that line.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/mentioned-in-code.png" width="1010" height="300" alt="A TypeScript file with a small 'Mentioned in 2 docs' line above line 1" loading="lazy"><figcaption>“Mentioned in 2 docs” above the code.</figcaption></figure>
+  </article>
+
+  <article class="card" id="mentions">
+    <h2>Docs That Mention This File <a class="permalink" href="#mentions" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Lists every doc that names the file you are in, with the line, so you can jump straight there.</p>
+    <p class="who">Helps: finding the docs to update after a code change.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Click the <b>📄 Mentioned in N docs</b> line at the top of a code file.</li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Docs That Mention This File</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open a code file that one of your docs names.</li>
+      <li>Click <b>Mentioned in N docs</b>.</li>
+      <li>Pick a doc from the list.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/docs-that-mention.png" width="755" height="200" alt="A list titled 'Docs that mention this file' with Setup notes docs/setup-notes.md:6 and Checkout Rollout Plan docs/ROLLOUT_PLAN.md:27" loading="lazy"><figcaption>Each doc with the line that names the file.</figcaption></figure>
+  </article>
+
+  <article class="card" id="compare">
+    <h2>Compare: what changed, on the page <a class="permalink" href="#compare" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Shows what changed in a doc right on the page: new words underlined in green, removed words crossed out in red.</p>
+    <p class="who">Helps: reviewers, and anyone coming back to a doc after a while.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: the <b>⇆ Compare…</b> button at the top.</li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Show Changes on the Page (Compare With…)</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open the page of a doc that is in git, and change a few words in the file.</li>
+      <li>Click <b>⇆ Compare…</b>.</li>
+      <li>Pick <b>The last commit</b>.</li>
+    </ol>
+    <figure><img src="img/compare-menu.png" width="755" height="260" alt="The 'Show changes on the page' menu: The last commit, The main branch, A week ago, A tag, A git version" loading="lazy"><figcaption>The choices. You also see <b>The version I last read</b> and <b>The saved file</b> when they apply.</figcaption></figure>
+    <h3>What you should see</h3>
+    <figure><img src="img/compare-result.png" width="558" height="778" alt="A bar 'Changes since the last commit: 2 changed' with Side by side, Summarise and Stop comparing buttons; old words crossed out in red, new words underlined in green" loading="lazy"><figcaption>A bar “Changes since the last commit: 2 changed”, with old words crossed out and new words underlined.</figcaption></figure>
+    <details><summary>More detail</summary>
+      <ul>
+        <li><b>Side by side</b> opens VS Code's two-column view. <b>✨ Summarise / compare with…</b> asks your AI agent to explain the changes. <b>Stop comparing</b> clears the marks.</li>
+        <li><b>The main branch</b> compares with the file on <code>main</code> or <code>master</code>. <b>A tag…</b> and <b>A git version…</b> let you pick any older version.</li>
+      </ul>
+    </details>
+  </article>
+
+  <article class="card" id="sign-off">
+    <h2>Sign off a version <a class="permalink" href="#sign-off" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Writes “I approve this version” into the file, and warns everyone when the file changes after that.</p>
+    <p class="who">Helps: leads and reviewers approving a plan or spec.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: <b>⋯ Ask my AI agent</b> at the top → <span class="cmd">Sign off this version…</span></li>
+        <li>Your name comes from the setting <code>docmap.myNames</code> (first name), else your git user name.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open a doc's page.</li>
+      <li>Click <b>⋯ Ask my AI agent</b> → <span class="cmd">Sign off this version…</span> and confirm your name.</li>
+      <li>Change a word in the file and save.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>The file gets a line like <code>signed-off-by: Your Name 2026-11-16 #…</code> at the top, and the page shows <b>✓ Signed off by Your Name</b>. After your change it says <b>⚠ Changed since Your Name signed off</b>.</p>
+  </article>
+
+  <article class="card" id="doc-formats">
+    <h2>What kind of doc is this? <a class="permalink" href="#doc-formats" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">When docmap is sure, the page says what kind of doc it is and which well-known format it follows, for example <b>Decision record · MADR</b>.</p>
+    <p class="who">Helps: new team members, and teams that want docs in a common shape.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: a small label at the top left, above the buttons.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open the page of a decision record, design doc, spec, runbook or architecture doc.</li>
+      <li>Look at the top left of the page.</li>
+      <li>Click the label to compare the doc with that format (next card).</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/doc-format-label.png" width="558" height="330" alt="The top of a page with a small label 'Decision record · MADR' and '1 decision'" loading="lazy"><figcaption>The label “Decision record · MADR”.</figcaption></figure>
+    <details><summary>More detail: kinds and formats recognised</summary>
+      <p>Kinds: decision record, design doc, feature spec, runbook, architecture doc, design system (DESIGN.md), test plan, postmortem, release notes. Named formats: MADR, Nygard ADR, Google design doc, Rust-style RFC, GitHub Spec Kit, arc42. A doc in another style is never marked wrong, and there is no score.</p>
+    </details>
+  </article>
+
+  <article class="card" id="compare-standard">
+    <h2>Compare with a Standard Format <a class="permalink" href="#compare-standard" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Lists which parts of a format your doc has. Your team's own format comes first. Your file is never changed.</p>
+    <p class="who">Helps: authors checking they have not forgotten a section.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: click the doc-kind label (previous card).</li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Compare with a Standard Format…</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open a decision record.</li>
+      <li>Run <span class="cmd">Compare with a Standard Format…</span></li>
+      <li>Pick a format, for example <b>MADR</b>.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/compare-with-standard.png" width="755" height="300" alt="A list 'Decision record compared with MADR: 4 of its parts here, 0 not' with ticks for each section and 'optional, not used' for others" loading="lazy"><figcaption>✓ parts the doc has, ○ parts the format expects, – optional parts not used. <b>Read about this format</b> opens its description.</figcaption></figure>
+    <details><summary>More detail: your team's format</summary>
+      <p>Your team's format is its template file (<code>docs/templates/&lt;kind&gt;.md</code>), or else the headings most of its existing docs of that kind share. It is offered before the public formats.</p>
+    </details>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    For version 3.0.0. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+  </div>
+</footer>
+<script src="features.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

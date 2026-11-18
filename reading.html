@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading your docs — docmap help</title>
+<meta name="description" content="How to read Markdown in VS Code with All-in-One Markdown Viewer: the page view, outline, clean view, themes, slides, browser and PDF.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">docmap help <small>· All-in-One Markdown Viewer</small></a>
+    <nav aria-label="Sections">
+      <a href="index.html">Start</a>
+      <a href="reading.html" aria-current="page">Reading</a>
+      <a href="trust.html">Trust</a>
+      <a href="finding.html">Find</a>
+      <a href="writing.html">Write</a>
+      <a href="agents.html">AI agents</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Reading your docs</h1>
+  <p class="intro">Turn any <code>.md</code> file into a clean page you can read, skim and share. Nothing here changes your file, except ticking a task or picking a status (card 6).</p>
+
+  <div class="search" role="search">
+    <label for="q">Search every feature</label>
+    <input id="q" type="search" placeholder="Type a word, e.g. outline, theme, pdf" autocomplete="off">
+    <ul id="results" aria-live="polite"></ul>
+  </div>
+
+  <h2>On this page</h2>
+  <ol class="toc">
+    <li><a href="#show-preview">See the page instead of the code</a></li>
+    <li><a href="#preview-side">Open the page beside the text</a></li>
+    <li><a href="#find-your-way">Find your way in a long doc</a></li>
+    <li><a href="#clean-view">Clean view for AI-written docs</a></li>
+    <li><a href="#show-as-written">Show the doc exactly as written</a></li>
+    <li><a href="#tick-and-status">Tick tasks and change statuses</a></li>
+    <li><a href="#diagrams">Diagrams</a></li>
+    <li><a href="#reading-look">Choose Reading Look</a></li>
+    <li><a href="#heading-numbers">Number the headings</a></li>
+    <li><a href="#slides">Slides</a></li>
+    <li><a href="#highlight">Highlight text</a></li>
+    <li><a href="#in-browser">Open Preview in Browser</a></li>
+    <li><a href="#export">Export as HTML or PDF</a></li>
+  </ol>
+
+  <!-- 1 -->
+  <article class="card" id="show-preview">
+    <h2>See the page instead of the code <a class="permalink" href="#show-preview" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Shows your Markdown file as a readable page, in the same tab, with a clickable outline on the left.</p>
+    <p class="who">Helps: anyone who has to read a Markdown file, written by a person or by an AI.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Keyboard: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> (Mac: <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd>). Press it again to go back to the text.</li>
+        <li>Button: top right of the editor, button <b>2</b> below (<span class="cmd">Show Preview</span>). On the page, button <b>1</b> (<span class="cmd">&lt;/&gt; Show Source</span>) takes you back.</li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Show Preview (in This Tab)</span> / <span class="cmd">Show Source (in This Tab)</span></li>
+      </ul>
+      <figure class="btns"><img src="img/buttons-text-view.png" width="640" height="132" alt="Editor buttons while you see the text: 1 Open Preview to the Side, 2 Show Preview, 3 Open Preview in Browser"><figcaption>Seeing the text: 1 = beside it, 2 = Show Preview, 3 = in your browser.</figcaption></figure>
+      <figure class="btns"><img src="img/buttons-page-view.png" width="640" height="132" alt="Editor buttons while you see the page: 1 Show Source, 2 Open Preview in Browser, 3 the … menu"><figcaption>Seeing the page: 1 = Show Source, 2 = in your browser, 3 = the <b>…</b> menu (Reading Look, Export).</figcaption></figure>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open any <code>.md</code> file in VS Code.</li>
+      <li>Press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd>.</li>
+      <li>Click a heading in the outline on the left to jump to it. Press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> again to edit.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/page-view.png" width="1440" height="900" alt="VS Code showing ROLLOUT_PLAN.md as a page: outline on the left, the title, an owner card and a summary bar at the top" loading="lazy"><figcaption>The same tab now shows a page. The bar at the top sums up the doc (“1 of 3 tasks done”, “2 don't match the code”).</figcaption></figure>
+    <details><summary>More detail</summary>
+      <p>The page updates as you type. To open every Markdown file as a page straight away, use VS Code's <b>Reopen Editor With…</b> → <b>Configure default editor for '*.md'</b> → <b>All-in-One Markdown Viewer (preview)</b>. The key can be changed in VS Code's Keyboard Shortcuts (search <code>docmap.openMapHere</code>).</p>
+    </details>
+  </article>
+
+  <!-- 2 -->
+  <article class="card" id="preview-side">
+    <h2>Open the page beside the text <a class="permalink" href="#preview-side" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Text on the left, the page on the right. The page follows as you type and scroll.</p>
+    <p class="who">Helps: people writing or editing a doc who want to see the result at once.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Button: top right of the editor, button <b>1</b> in the first picture of card 1 (<span class="cmd">Open Preview to the Side</span>).</li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Open Preview to the Side</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open any <code>.md</code> file.</li>
+      <li>Click <span class="cmd">Open Preview to the Side</span>.</li>
+      <li>Type a new heading in the text: it appears on the page and in its outline.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/side-by-side.png" width="1000" height="850" alt="The editor split in two: ROLLOUT_PLAN.md as text on the left, its page on the right" loading="lazy"><figcaption>Your text on the left, the page on the right, with the same buttons as card 1.</figcaption></figure>
+  </article>
+
+  <!-- 3 -->
+  <article class="card" id="find-your-way">
+    <h2>Find your way in a long doc <a class="permalink" href="#find-your-way" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">An outline of every heading, a filter, “quick read” and heading levels, so a 40-page doc takes minutes.</p>
+    <p class="who">Helps: anyone reviewing long specs, plans or AI output.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: the outline panel on the left, with <b>Filter headings</b>, <b>Quick read</b> and <b>Levels 1 2 All</b>.</li>
+        <li>Keys on the page: <kbd>s</kbd> quick read · <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> heading levels, <kbd>0</kbd> all · <kbd>/</kbd> filter the outline · <kbd>j</kbd> / <kbd>k</kbd> next / previous heading · <kbd>Esc</kbd> clear the filter · <kbd>Ctrl</kbd>+<kbd>F</kbd> search the text.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open a long doc's page (card 1).</li>
+      <li>Click <b>Quick read</b> (or press <kbd>s</kbd>): each section shows only its first paragraph.</li>
+      <li>Type <kbd>/</kbd> and a word to keep only the matching headings in the outline.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/outline.png" width="352" height="360" alt="The outline panel: Filter headings box, Quick read and Levels buttons, and headings with reading times and small badges" loading="lazy"><figcaption>Each heading shows its reading time. Small badges show open tasks, questions and doubtful paragraphs in that section.</figcaption></figure>
+    <details><summary>More detail</summary>
+      <ul>
+        <li>The heading you are reading is highlighted in the outline. Fold parts of the outline with the arrows.</li>
+        <li>Resize the outline by dragging its edge; drag it fully left, or click <b>‹</b>, to hide it. Your choice is remembered.</li>
+        <li>When you open a file's page again, even after restarting VS Code, it goes back to the section you were reading (setting <code>docmap.rememberPlace</code>; only the heading is stored).</li>
+        <li>Lines that act as headings (a line of only bold text, or <code>2.1 Title</code>) are added to the outline in italics (setting <code>docmap.inferHeadings</code>).</li>
+        <li>Turn all reading tools off with the setting <code>docmap.readingTools</code>.</li>
+      </ul>
+    </details>
+  </article>
+
+  <!-- 4 -->
+  <article class="card" id="clean-view">
+    <h2>Clean view for AI-written docs <a class="permalink" href="#clean-view" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">AI tools write “<b>Owner:</b> …” bullets, “Note:” lines, steps and status words. Clean view lays them out neatly. Your file is not changed.</p>
+    <p class="who">Helps: anyone reading plans and specs written by Claude Code, Copilot, Cursor or another AI.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On by default. The <b>Clean view</b> switch at the top of the page turns it on and off.</li>
+        <li>Setting: <code>docmap.cleanView</code> (Settings → search “docmap clean view”).</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Paste this into a new file <code>try.md</code>:
+        <pre><code>- **Owner:** Priya
+- **Status:** in progress
+
+Note: the old API stays on until every client has moved.
+
+Step 1: Turn on shadow mode.
+
+Step 2: Compare results for a week.</code></pre></li>
+      <li>Press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd>.</li>
+      <li>Look at the owner card, the note box and the numbered steps.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/clean-view.png" width="558" height="1040" alt="Clean view: an Owner, Deadline, Status card; a blue Note box; numbered steps; a table with coloured done, in progress and blocked labels; a progress bar 1 of 2 done; a checklist" loading="lazy"><figcaption>Bullets become a card, “Note:” a box, steps a numbered list, statuses coloured labels, and the checklist gets a progress bar.</figcaption></figure>
+    <details><summary>More detail</summary>
+      <p>Clean view also shows front matter as a header card, adds colours to code, and lets you zoom images. The layout never changes the file.</p>
+    </details>
+  </article>
+
+  <!-- 5 -->
+  <article class="card" id="show-as-written">
+    <h2>Show the doc exactly as written <a class="permalink" href="#show-as-written" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Turns Clean view off, so you see the plain Markdown layout.</p>
+    <p class="who">Helps: authors checking how the doc looks on GitHub or in other viewers.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: click the <b>Clean view</b> switch at the top so it turns off. Click it again to turn Clean view back on.</li>
+        <li>Setting (for every doc): <code>docmap.cleanView</code> off.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open the page of <code>try.md</code> from card 4.</li>
+      <li>Click the <b>Clean view</b> switch.</li>
+      <li>The bullets, note and steps are shown as plain text again.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/show-as-written.png" width="558" height="778" alt="The same doc with Clean view off: plain bullets, a plain Note line, plain step lines and a plain table" loading="lazy"><figcaption>The same doc as written: plain bullets, lines and table.</figcaption></figure>
+  </article>
+
+  <!-- 6 -->
+  <article class="card" id="tick-and-status">
+    <h2>Tick tasks and change statuses on the page <a class="permalink" href="#tick-and-status" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Click a task box to tick it, or click a status label in a table to pick a new one. Only that one line of the file changes, and it is saved for you.</p>
+    <p class="who">Helps: people keeping a plan up to date without hunting for the line in the text.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page (with Clean view on): the task boxes (<code>- [ ]</code> lines) and the coloured status labels in tables (done, in progress, blocked…).</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Add a task line <code>- [ ] Switch traffic</code> and a table with a <b>Status</b> column to a doc. Open its page.</li>
+      <li>Click the task's box.</li>
+      <li>Click a status label, for example <b>blocked</b>, and pick <b>done</b>.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/tick-and-status.png" width="450" height="345" alt="A table with done, in progress and blocked labels, a progress bar 1 of 2 done, and two task boxes" loading="lazy"><figcaption>After a click the file says <code>- [x] Switch traffic</code>, the progress bar counts it, and the status bar confirms it, e.g. “✓ Updated plan.md, line 12”.</figcaption></figure>
+  </article>
+
+  <!-- 7 -->
+  <article class="card" id="diagrams">
+    <h2>Diagrams <a class="permalink" href="#diagrams" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Code blocks marked <code>mermaid</code> are drawn as diagrams on the page.</p>
+    <p class="who">Helps: architecture docs and plans that explain a flow.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Automatic on the page. Setting <code>docmap.diagrams</code> turns it off.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Paste this into a doc:
+        <pre><code>```mermaid
+flowchart LR
+  A[Checkout page] --> B[Orders service]
+  B --> C[Payments queue]
+```</code></pre></li>
+      <li>Open its page.</li>
+      <li>The diagram appears where the code block was.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/diagram.png" width="558" height="480" alt="A flow diagram: Checkout page, Orders service, Payments queue, Payment provider" loading="lazy"><figcaption>The boxes and arrows from the code block, drawn on the page.</figcaption></figure>
+    <details><summary>More detail</summary>
+      <p>The diagram library loads only for docs that contain a diagram, so other docs stay fast.</p>
+    </details>
+  </article>
+
+  <!-- 8 -->
+  <article class="card" id="reading-look">
+    <h2>Choose Reading Look <a class="permalink" href="#reading-look" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Pick a theme (your VS Code colours, Paper, GitHub, Night, Focus), a text size and a line width for the page.</p>
+    <p class="who">Helps: long reading sessions, small screens, and anyone who wants larger text.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>The <b>…</b> menu at the top right of the editor (button <b>3</b> in the second picture of card 1) → <span class="cmd">Choose Reading Look (Theme, Text Size, Width)…</span></li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Choose Reading Look (Theme, Text Size, Width)…</span></li>
+        <li>Settings: <code>docmap.theme</code>, <code>docmap.fontScale</code>, <code>docmap.lineWidth</code>.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open a doc's page.</li>
+      <li>Click <b>…</b> → <span class="cmd">Choose Reading Look…</span></li>
+      <li>Pick <b>Paper</b>, then a larger text size.</li>
+    </ol>
+    <figure><img src="img/reading-look-menu.png" width="755" height="440" alt="The Reading look menu: themes Follow VS Code, Paper, GitHub, Night, Focus; text sizes Smaller to Largest; line widths Narrow to Full" loading="lazy"><figcaption>Themes, text sizes (90% to 130%) and line widths in one menu.</figcaption></figure>
+    <h3>What you should see</h3>
+    <figure><img src="img/reading-look-paper.png" width="975" height="825" alt="The page in the Paper theme: cream background, serif headings, larger text" loading="lazy"><figcaption>The Paper theme with larger text. High-contrast VS Code themes always win, so the page stays readable.</figcaption></figure>
+  </article>
+
+  <!-- 9 -->
+  <article class="card" id="heading-numbers">
+    <h2>Number the headings <a class="permalink" href="#heading-numbers" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Shows 1, 1.1, 1.2 … before the headings on the page, without typing numbers into the file.</p>
+    <p class="who">Helps: reviewers who want to say “see 2.3” in a meeting.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Setting: <code>docmap.headingNumbers</code> (Settings → search “docmap heading numbers”). Off by default.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open Settings (<kbd>Ctrl</kbd>+<kbd>,</kbd>).</li>
+      <li>Search <b>docmap heading numbers</b> and tick it.</li>
+      <li>Open any doc's page.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/heading-numbers.png" width="558" height="778" alt="The page with numbered headings: 1 Goal, 2 Scope" loading="lazy"><figcaption>Headings numbered on the page. The file itself is unchanged.</figcaption></figure>
+  </article>
+
+  <!-- 10 -->
+  <article class="card" id="slides">
+    <h2>Slides <a class="permalink" href="#slides" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">A doc split by lines of <code>---</code> plays as slides, right in VS Code.</p>
+    <p class="who">Helps: a quick team update without making a slide deck.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: the <b>▶ Slides</b> button at the top. It appears only when the doc has <code>---</code> lines.</li>
+        <li>In slides: <kbd>←</kbd> <kbd>→</kbd> to move, <kbd>Esc</kbd> to stop.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Write a doc with a few sections separated by a line <code>---</code>.</li>
+      <li>Open its page and click <b>▶ Slides</b>.</li>
+      <li>Use the arrow keys; press <kbd>Esc</kbd> to go back.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/slides.png" width="558" height="520" alt="The page of a doc with --- lines, with a Slides button at the top next to Clean view and Compare" loading="lazy"><figcaption>The <b>▶ Slides</b> button next to Clean view and Compare.</figcaption></figure>
+  </article>
+
+  <!-- 11 -->
+  <article class="card" id="highlight">
+    <h2>Highlight text <a class="permalink" href="#highlight" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Mark passages you want to come back to, like a highlighter pen.</p>
+    <p class="who">Helps: reviewers working through a long doc.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: select some text → click <b>Highlight</b>. Click a highlight to remove it.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open a doc's page.</li>
+      <li>Select a sentence with the mouse.</li>
+      <li>Click <b>Highlight</b>.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>The sentence stays marked, also after you close and reopen the doc. Highlights are saved on your computer only, never in the file.</p>
+  </article>
+
+  <!-- 12 -->
+  <article class="card" id="in-browser">
+    <h2>Open Preview in Browser <a class="permalink" href="#in-browser" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Opens the page in your web browser. It follows your edits as you type in VS Code and keeps your place.</p>
+    <p class="who">Helps: reading on a second screen, or showing a doc on a call.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Button: top right of the editor, button <b>3</b> on the text, or button <b>2</b> on the page (pictures in card 1).</li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Open Preview in Browser</span></li>
+        <li>Plans Dashboard: the 🌐 beside each plan.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open any <code>.md</code> file.</li>
+      <li>Click <span class="cmd">Open Preview in Browser</span>.</li>
+      <li>Type in VS Code: the browser page changes with you.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>Your browser opens the same page, with the outline. The address starts with <code>http://127.0.0.1</code>: it is served only to your own computer, behind a private link, and stops updating when VS Code closes.</p>
+    <details><summary>More detail</summary>
+      <p>Prefer a saved copy instead of a live page? Turn off the setting <code>docmap.liveBrowser</code>; press the button again to refresh the copy. Only one browser view exists at a time, so nothing piles up on your disk. In the browser, <kbd>Ctrl</kbd>+<kbd>B</kbd> hides or shows the outline.</p>
+    </details>
+  </article>
+
+  <!-- 13 -->
+  <article class="card" id="export">
+    <h2>Export as HTML or PDF <a class="permalink" href="#export" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Save the page as one HTML file anyone can open, or print it to PDF.</p>
+    <p class="who">Helps: sending a doc to someone who doesn't use VS Code.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>The <b>…</b> menu at the top right of the editor → <span class="cmd">Export as HTML…</span> or <span class="cmd">Export as PDF (Print)…</span></li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Export as HTML…</span> / <span class="cmd">Export as PDF (Print)…</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open a doc.</li>
+      <li>Click <b>…</b> → <span class="cmd">Export as HTML…</span></li>
+      <li>Choose where to save it, then open the file by double-clicking it.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>HTML: one self-contained file that looks like the page. PDF: the page opens in your browser with its print window; choose <b>Save as PDF</b>. It prints dark text on white, whatever theme you read in.</p>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    For version 3.0.0. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+  </div>
+</footer>
+<script src="features.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

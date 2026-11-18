@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Working with AI agents — docmap help</title>
+<meta name="description" content="Use All-in-One Markdown Viewer with Claude Code, Copilot, Codex, Cursor and other AI agents: ready prompts, reviews, your own model, agent tools, AGENTS.md.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">docmap help <small>· All-in-One Markdown Viewer</small></a>
+    <nav aria-label="Sections">
+      <a href="index.html">Start</a>
+      <a href="reading.html">Reading</a>
+      <a href="trust.html">Trust</a>
+      <a href="finding.html">Find</a>
+      <a href="writing.html">Write</a>
+      <a href="agents.html" aria-current="page">AI agents</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Working with AI agents</h1>
+  <p class="intro">docmap has no AI of its own. It writes good prompts for the AI agent you already use (Claude Code, Codex, Copilot, Cursor, Antigravity…) and keeps your agents' rule files in order.</p>
+
+  <div class="search" role="search">
+    <label for="q">Search every feature</label>
+    <input id="q" type="search" placeholder="Type a word, e.g. prompt, review, AGENTS.md" autocomplete="off">
+    <ul id="results" aria-live="polite"></ul>
+  </div>
+
+  <h2>On this page</h2>
+  <ol class="toc">
+    <li><a href="#ask-agent">Ask My AI Agent About This File</a></li>
+    <li><a href="#review">Review a doc and send it to your agent</a></li>
+    <li><a href="#agent-target">Where prompts go</a></li>
+    <li><a href="#add-prompts">Add Markdown Prompts to This Project</a></li>
+    <li><a href="#my-model">Answer with my own model</a></li>
+    <li><a href="#agent-tools">Tools for your AI agents</a></li>
+    <li><a href="#agents-md">Point Other AI Tools to AGENTS.md</a></li>
+    <li><a href="#doc-map">Write Doc Map for Agents</a></li>
+  </ol>
+
+  <article class="card" id="ask-agent">
+    <h2>Ask My AI Agent About This File <a class="permalink" href="#ask-agent" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">A menu of ready prompts about the doc you are reading: summarise, explain, challenge, find risks, turn into tasks, make slides, and more.</p>
+    <p class="who">Helps: getting a useful answer from your agent without writing the prompt yourself.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: <b>⋯ Ask my AI agent</b> at the top → <span class="cmd">Ask my AI agent about this file…</span></li>
+        <li>For one section: hover a heading on the page → <b>⋯</b> → <span class="cmd">Explain, challenge, find risks, make tasks, write tests…</span></li>
+        <li>For several docs: Docs Inbox → hover a file or group → <b>✨</b> (<span class="cmd">Ask My AI Agent About These…</span>).</li>
+        <li>The editor's <b>…</b> menu, or the Command Palette: <span class="cmd">All-in-One Markdown Viewer: Ask My AI Agent About This File…</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open a plan's page.</li>
+      <li>Click <b>⋯ Ask my AI agent</b> → <span class="cmd">Ask my AI agent about this file…</span></li>
+      <li>Pick <b>Summarise this file</b>, then paste into your agent.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/ask-agent-menu.png" width="755" height="440" alt="The 'Ask my AI agent to…' menu: Summarise this file, Restructure into a clear doc, Tidy this file's formatting, Brief me on what changed, Continue this plan, Add a TL;DR at the top" loading="lazy"><figcaption>Each prompt has a one-line description. Then: “Prompt copied — paste it into your AI agent.”</figcaption></figure>
+    <details><summary>More detail: every prompt</summary>
+      <p>For a file: Summarise this file · Restructure into a clear doc · Tidy this file's formatting · Brief me on what changed · Continue this plan · Add a TL;DR at the top · Make a one-page summary · Make a slide deck · Turn this AI plan into a checklist · Fix the heading structure · Write a README from this · Update this doc to match the code.</p>
+      <p>For a section: Explain this section simply · Challenge this plan · Find risks and gaps · Turn this into tasks · Write tests for this.</p>
+      <p>For several docs (Docs Inbox): Merge these duplicate docs into one · Write an INDEX.md for these docs · Tidy these docs (propose, change nothing) · Which plans are finished, what is still open? · Find conflicts in my agent instruction files.</p>
+      <p>Elsewhere: Summarise these changes (Compare) · Verify this paragraph against the code (trust marks).</p>
+    </details>
+  </article>
+
+  <article class="card" id="review">
+    <h2>Review a doc and send it to your agent <a class="permalink" href="#review" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Mark sections as you read (approve, ask a question, request a change), then send all your marks to your agent as one clear prompt.</p>
+    <p class="who">Helps: reviewing an AI-written plan before the agent starts building.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: hover a heading → <b>⋯</b> → <span class="cmd">Approve this section</span>, <span class="cmd">Ask a question…</span>, <span class="cmd">Request a change…</span> or <span class="cmd">Clear my mark</span>.</li>
+        <li>To send: <b>⋯ Ask my AI agent</b> → <span class="cmd">Send my review to my AI agent</span>, the editor's <b>…</b> menu, or the Command Palette: <span class="cmd">Send My Review to My AI Agent</span>.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Hover a heading on a page, click <b>⋯</b> → <span class="cmd">Ask a question…</span> and type your question.</li>
+      <li>Mark one or two more sections.</li>
+      <li>Run <span class="cmd">Send My Review to My AI Agent</span> and paste.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>Each marked heading shows its mark (Approved, Question, Change requested). Your agent receives one prompt with every marked section and your notes.</p>
+  </article>
+
+  <article class="card" id="agent-target">
+    <h2>Where prompts go <a class="permalink" href="#agent-target" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">By default a prompt is copied, with the message “Prompt copied — paste it into your AI agent”, so it works with any agent. Or open it straight in Copilot Chat.</p>
+    <p class="who">Helps: Copilot users who want one less step.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Setting: <code>docmap.agentTarget</code> (Settings → search “docmap agent target”).</li>
+        <li><b>clipboard</b> (default): copy the prompt. <b>auto</b>: open it in Copilot Chat when you use VS Code with Copilot, else copy it.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open Settings (<kbd>Ctrl</kbd>+<kbd>,</kbd>) and search <b>docmap agent target</b>.</li>
+      <li>Choose <b>auto</b>.</li>
+      <li>Ask your agent something from a page: Copilot Chat opens with the prompt.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>docmap never runs AI itself and sends nothing anywhere: the prompt only goes where you paste it, or into Copilot Chat on <b>auto</b>.</p>
+  </article>
+
+  <article class="card" id="add-prompts">
+    <h2>Add Markdown Prompts to This Project <a class="permalink" href="#add-prompts" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Saves docmap's prompts into your project as commands your agent picks up.</p>
+    <p class="who">Helps: teams that want the same review prompts in every agent session.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Add Markdown Prompts to This Project (Copilot, Claude Code)</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Run the command.</li>
+      <li>Keep GitHub Copilot and/or Claude Code ticked and click <b>OK</b>.</li>
+      <li>In Copilot Chat type <code>/</code>, or in Claude Code type <code>/</code>, to see the new prompts.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/add-prompts.png" width="755" height="150" alt="A picker 'Add Markdown prompts to this project' with GitHub Copilot (.github/prompts/*.prompt.md) and Claude Code (.claude/commands/*.md) ticked" loading="lazy"><figcaption>Files are added to <code>.github/prompts/</code> (Copilot) and <code>.claude/commands/</code> (Claude Code).</figcaption></figure>
+  </article>
+
+  <article class="card" id="my-model">
+    <h2>Answer with my own model <a class="permalink" href="#my-model" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Instead of copying a prompt, your own model in VS Code (for example GitHub Copilot) writes the answer on a page next to your doc. Off by default.</p>
+    <p class="who">Helps: quick summaries and explanations without leaving VS Code.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Setting: <code>docmap.ai.answerWithMyModel</code> (Settings → search “docmap ai”). Pick a model with <code>docmap.ai.model</code>, or leave it empty.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Settings → search <b>docmap ai</b> → tick <b>Answer With My Model</b>. (Needs a model in VS Code, such as GitHub Copilot.)</li>
+      <li>On a page: <b>⋯ Ask my AI agent</b> → <span class="cmd">Ask my AI agent about this file…</span> → <b>Summarise this file</b>.</li>
+      <li>Agree once to what will be sent.</li>
+    </ol>
+    <figure><img src="img/settings-ai.png" width="1140" height="560" alt="VS Code Settings filtered to docmap.ai: AI level 1 Answer With My Model (off), Model (empty), AI level 2 Tools (off)" loading="lazy"><figcaption>The AI settings, both off by default.</figcaption></figure>
+    <h3>What you should see</h3>
+    <p>A page <b>AI — Summarise this file</b> fills in, naming the model that answered. Prompts that change files (like “Turn this into a checklist”) still go to your agent. Your text goes only to your own model, and only after you agree.</p>
+  </article>
+
+  <article class="card" id="agent-tools">
+    <h2>Tools for your AI agents <a class="permalink" href="#agent-tools" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Lets your agent ask docmap for your plans, open questions, a doc's outline, and paragraphs that don't match the code. Off by default. Runs on your computer and only reads.</p>
+    <p class="who">Helps: agents that should check the plans before they write code.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Copilot (agent mode): setting <code>docmap.ai.tools</code> on, then use <code>#docmapPlans</code> and the other docmap tools in Copilot Chat.</li>
+        <li>Claude Code, Cursor, Windsurf and other MCP agents: Command Palette → <span class="cmd">All-in-One Markdown Viewer: Set Up docmap Tools for My Agent (MCP)…</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Run <span class="cmd">Set Up docmap Tools for My Agent (MCP)…</span> (it offers to turn the setting on).</li>
+      <li>Pick your agent; the command or JSON is copied. Run or paste it as the message says.</li>
+      <li>Ask your agent: “use docmap to list my plans”.</li>
+    </ol>
+    <figure><img src="img/agent-tools.png" width="755" height="170" alt="A picker 'Give my agent docmap's tools (MCP, runs on this computer)': Claude Code, Cursor Windsurf and other MCP agents, Just the command" loading="lazy"><figcaption>Claude Code gets a command to run once in a terminal; other agents get a JSON entry for their <code>mcp.json</code>.</figcaption></figure>
+    <h3>What you should see</h3>
+    <p>Your agent answers using docmap's table of your plans. It never goes online.</p>
+  </article>
+
+  <article class="card" id="agents-md">
+    <h2>Point Other AI Tools to AGENTS.md <a class="permalink" href="#agents-md" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Keep your agent rules in one <code>AGENTS.md</code>; docmap adds small pointer files so Claude Code, Copilot and Gemini read it too.</p>
+    <p class="who">Helps: teams that use more than one AI tool and keep rules in sync by hand.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Point Other AI Tools to AGENTS.md…</span></li>
+        <li>No <code>AGENTS.md</code> yet? docmap offers <b>New Doc from Template…</b> (Agent guide) first.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Have an <code>AGENTS.md</code> at the top of your project.</li>
+      <li>Run the command.</li>
+      <li>Tick the files to add and click <b>OK</b>; check the changes, then save.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/rule-pointers.png" width="755" height="260" alt="A picker 'Point other AI tools to AGENTS.md (nothing is replaced; added lines stay unsaved)' with CLAUDE.md, .github/copilot-instructions.md and GEMINI.md, each with the line it will add" loading="lazy"><figcaption><code>CLAUDE.md</code> (Claude Code), <code>.github/copilot-instructions.md</code> (Copilot), <code>GEMINI.md</code> (Gemini, Antigravity), each with the line it adds.</figcaption></figure>
+    <details><summary>More detail</summary>
+      <p>Your existing files are never replaced: one marked line is added at the end, only to files you tick, and left unsaved so you can check or undo. A missing file is created with one pointer line. Files that already mention AGENTS.md are left alone.</p>
+    </details>
+  </article>
+
+  <article class="card" id="doc-map">
+    <h2>Write Doc Map for Agents <a class="permalink" href="#doc-map" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Adds a table to <code>AGENTS.md</code> (and <code>CLAUDE.md</code>) saying where each kind of doc lives and which shape to follow, so agents write new docs in the right place.</p>
+    <p class="who">Helps: stopping AI agents from scattering new docs around the project.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Write Doc Map for Agents (AGENTS.md / CLAUDE.md)</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Run the command.</li>
+      <li>Read the <b>Doc map</b> section it wrote.</li>
+      <li>Save the file (<kbd>Ctrl</kbd>+<kbd>S</kbd>) if you are happy.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/doc-map.png" width="1010" height="560" alt="AGENTS.md open in the editor with a Doc map section: a table of Kind, Where, Shape to follow — Decision record in docs/decisions/ (MADR), Design doc, Feature spec, Runbook…" loading="lazy"><figcaption>A <b>Doc map</b> table: kind of doc, where it lives (and how many there are), and the shape to follow.</figcaption></figure>
+    <details><summary>More detail</summary>
+      <p>Only the part between docmap's markers (<code>&lt;!-- docmap:doc-map start --&gt;</code>) changes. <code>AGENTS.md</code> is created if missing; <code>CLAUDE.md</code> gets the map when it exists and does not already import AGENTS.md. Files are left unsaved and open for you to review. Run it again to refresh.</p>
+    </details>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    For version 3.0.0. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+  </div>
+</footer>
+<script src="features.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

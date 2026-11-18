@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing docs — docmap help</title>
+<meta name="description" content="Write Markdown in VS Code with All-in-One Markdown Viewer: writing keys, Format Table, table of contents, New Doc from Template, restructuring old docs.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">docmap help <small>· All-in-One Markdown Viewer</small></a>
+    <nav aria-label="Sections">
+      <a href="index.html">Start</a>
+      <a href="reading.html">Reading</a>
+      <a href="trust.html">Trust</a>
+      <a href="finding.html">Find</a>
+      <a href="writing.html" aria-current="page">Write</a>
+      <a href="agents.html">AI agents</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Writing docs</h1>
+  <p class="intro">Small helpers for typing Markdown, and templates that start a new doc in a clear shape, in the folder your team already uses.</p>
+
+  <div class="search" role="search">
+    <label for="q">Search every feature</label>
+    <input id="q" type="search" placeholder="Type a word, e.g. template, table, bold" autocomplete="off">
+    <ul id="results" aria-live="polite"></ul>
+  </div>
+
+  <h2>On this page</h2>
+  <ol class="toc">
+    <li><a href="#writing-keys">Bold, italic, strikethrough and lists</a></li>
+    <li><a href="#format-table">Format Table</a></li>
+    <li><a href="#toc">Insert / Update Table of Contents</a></li>
+    <li><a href="#new-doc">New Doc from Template</a></li>
+    <li><a href="#team-way">New docs follow your team</a></li>
+    <li><a href="#restructure">Restructure into a clear doc</a></li>
+  </ol>
+
+  <article class="card" id="writing-keys">
+    <h2>Bold, italic, strikethrough and lists <a class="permalink" href="#writing-keys" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Keyboard shortcuts for Markdown formatting, and lists that continue when you press Enter.</p>
+    <p class="who">Helps: anyone typing Markdown by hand.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>In a <code>.md</code> file (the text, not the page): <kbd>Ctrl</kbd>+<kbd>B</kbd> bold · <kbd>Ctrl</kbd>+<kbd>I</kbd> italic · <kbd>Alt</kbd>+<kbd>S</kbd> strikethrough · <kbd>Enter</kbd> continues a list or quote.</li>
+        <li>Command Palette: <span class="cmd">Toggle Bold</span>, <span class="cmd">Toggle Italic</span>, <span class="cmd">Toggle Strikethrough</span>.</li>
+        <li>Setting: <code>docmap.writingHelpers</code> turns them off.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open a <code>.md</code> file and select a word.</li>
+      <li>Press <kbd>Ctrl</kbd>+<kbd>B</kbd>: it becomes <code>**word**</code>. Press it again to undo.</li>
+      <li>Type <code>- first item</code> and press <kbd>Enter</kbd>: the next line starts with <code>- </code>.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>The Markdown marks are added or removed around your selection. On an empty list item, <kbd>Enter</kbd> ends the list.</p>
+    <details><summary>More detail</summary>
+      <p>The keys switch off by themselves when the extension “Markdown All in One” is installed, so the two do not fight. <kbd>Ctrl</kbd>+<kbd>I</kbd> for italic works only in VS Code itself, not in other VS Code-based editors such as Cursor.</p>
+    </details>
+  </article>
+
+  <article class="card" id="format-table">
+    <h2>Format Table <a class="permalink" href="#format-table" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Lines up the columns of a Markdown table so it is easy to read as text.</p>
+    <p class="who">Helps: anyone editing tables by hand.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Right-click inside a table in a <code>.md</code> file → <span class="cmd">Format Table</span>.</li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Format Table</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Put the cursor inside a table in the text.</li>
+      <li>Right-click → <span class="cmd">Format Table</span>.</li>
+      <li>The columns line up.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/format-table.png" width="1000" height="360" alt="A Markdown table in the editor with neatly aligned columns: Step, Owner, Status" loading="lazy"><figcaption>Every column padded to the same width.</figcaption></figure>
+  </article>
+
+  <article class="card" id="toc">
+    <h2>Insert / Update Table of Contents <a class="permalink" href="#toc" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Adds a list of links to every heading, and refreshes it when the headings change.</p>
+    <p class="who">Helps: long README files and docs read on GitHub.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Right-click in a <code>.md</code> file → <span class="cmd">Insert / Update Table of Contents</span>.</li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Insert / Update Table of Contents</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Put the cursor where the contents should go.</li>
+      <li>Right-click → <span class="cmd">Insert / Update Table of Contents</span>.</li>
+      <li>Rename a heading and run it again: the list follows.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/table-of-contents.png" width="1000" height="420" alt="A list of heading links between the markers &lt;!-- toc --&gt; and &lt;!-- tocstop --&gt;" loading="lazy"><figcaption>The list sits between <code>&lt;!-- toc --&gt;</code> and <code>&lt;!-- tocstop --&gt;</code>, so it can be updated later.</figcaption></figure>
+  </article>
+
+  <article class="card" id="new-doc">
+    <h2>New Doc from Template <a class="permalink" href="#new-doc" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Starts a new doc in a clear shape: owner, status and date at the top, the right sections, and a grey hint under each one.</p>
+    <p class="who">Helps: anyone writing a plan, spec, decision record or runbook, and AI agents asked to write one.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Docs Inbox title bar: the new-file icon.</li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: New Doc from Template…</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Run <span class="cmd">New Doc from Template…</span></li>
+      <li>Pick <b>Plan</b>.</li>
+      <li>Type a title, for example <b>Checkout rollout</b>.</li>
+    </ol>
+    <figure><img src="img/new-doc-pick.png" width="755" height="440" alt="The 'New doc from template' menu: Vision, Scope, Plan, Architecture, Feature spec, Design doc, Ticket… each with a one-line description" loading="lazy"><figcaption>Choose the kind of doc. Each has a one-line description.</figcaption></figure>
+    <h3>What you should see</h3>
+    <figure><img src="img/new-doc-plan.png" width="1100" height="640" alt="A new file docs/plans/checkout-rollout.md with owner, status and created at the top and sections In short, Scope, Owners, Milestones, Steps, Rollout with grey hints" loading="lazy"><figcaption><code>docs/plans/checkout-rollout.md</code> opens. The grey hints (<code>&lt;!-- … --&gt;</code>) are hidden on the page. An existing file is opened, never replaced.</figcaption></figure>
+    <details><summary>More detail: all shapes and their rules</summary>
+      <p>Shapes: Vision, Scope, Plan, Architecture, Feature spec, Design doc, Ticket, Decision record, Runbook, Design system (DESIGN.md), Test plan, Postmortem, Release notes, Agent guide (AGENTS.md, with a <b>Never do</b> section for the agent's hard rules), Structure.</p>
+      <p>The templates follow simple rules: one purpose and one <code>#</code> title per doc; an <b>In short</b> first section; specific headings with no skipped levels; owner, status and dates at the top; dates as <code>2026-12-01</code>; tasks as <code>- [ ]</code>; <code>Decision:</code> lines with the reason; an <b>Open questions</b> section.</p>
+    </details>
+  </article>
+
+  <article class="card" id="team-way">
+    <h2>New docs follow your team <a class="permalink" href="#team-way" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">A new decision record, design doc, spec or runbook goes in the folder your team already uses, numbered like its neighbours, in your team's own template.</p>
+    <p class="who">Helps: teams with an existing docs layout, so new docs don't end up in the wrong place.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Automatic when you use <span class="cmd">New Doc from Template…</span></li>
+        <li>Your own template: put it at <code>docs/templates/&lt;kind&gt;.md</code> (e.g. <code>docs/templates/runbook.md</code>); it replaces docmap's.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>In a project that has <code>docs/decisions/0001-….md</code>, run <span class="cmd">New Doc from Template…</span></li>
+      <li>Pick <b>Decision record</b> and type a title.</li>
+      <li>Look at where the file was created.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/new-doc-decision.png" width="1100" height="640" alt="A new file docs/decisions/0002-use-feature-flags.md next to 0001-use-managed-queue.md, with MADR sections: Context and Problem Statement, Decision Drivers, Considered Options, Decision Outcome, Consequences" loading="lazy"><figcaption>It became <code>docs/decisions/0002-use-feature-flags.md</code>, next to 0001, with the MADR sections.</figcaption></figure>
+    <details><summary>More detail</summary>
+      <p>docmap reads adr-tools and log4brains settings to find the decisions folder. With no team template, it uses the shape most of your existing docs of that kind share, else its own template (MADR for decisions, Google design-doc sections for design docs, GitHub Spec Kit sections for specs).</p>
+    </details>
+  </article>
+
+  <article class="card" id="restructure">
+    <h2>Restructure into a clear doc <a class="permalink" href="#restructure" aria-label="Link to this feature">#</a></h2>
+    <p class="lead">Asks your AI agent to move an old doc's text into a clear shape, keeping every fact, deleting nothing, and writing anything missing as an open question.</p>
+    <p class="who">Helps: turning long, messy notes or AI output into a doc others can use.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: <b>⋯ Ask my AI agent</b> → <span class="cmd">Ask my AI agent about this file…</span> → <span class="cmd">Restructure into a clear doc</span>.</li>
+        <li>Command Palette: <span class="cmd">Ask My AI Agent About This File…</span> → <span class="cmd">Restructure into a clear doc</span>.</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open the page of an old, messy doc.</li>
+      <li>Choose <span class="cmd">Restructure into a clear doc</span>, then a shape (or <b>Let my agent pick the best fit</b>).</li>
+      <li>Paste the copied prompt into your AI agent.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <figure><img src="img/ask-agent-menu.png" width="755" height="440" alt="The 'Ask my AI agent to…' menu with Summarise this file, Restructure into a clear doc, Tidy this file's formatting, Brief me on what changed and more" loading="lazy"><figcaption><b>Restructure into a clear doc</b> is second in the list. Afterwards, <a href="trust.html#compare">⇆ Compare… → The last commit</a> shows exactly what moved.</figcaption></figure>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    For version 3.0.0. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+  </div>
+</footer>
+<script src="features.js"></script>
+<script src="search.js"></script>
+</body>
+</html>
