@@ -36,6 +36,7 @@
   <ul class="jump" aria-label="On this page">
     <li><a href="#trust-markers">Trust markers</a></li>
     <li><a href="#mark-verified">Mark as verified</a></li>
+    <li><a href="#file-moved">File moved</a></li>
     <li><a href="#mentioned-in-code">Mentioned in code</a></li>
     <li><a href="#mentions">Docs that mention a file</a></li>
     <li><a href="#commit-hint">Before you commit</a></li>
@@ -51,7 +52,7 @@
       <div class="story-text">
         <h2 class="day">Trust markers</h2>
         <p class="pain">“I followed the setup doc. The file it names doesn't exist.”</p>
-        <p class="fix">A red <b>✗</b> in the margin marks paragraphs that name files or commands not in your code. Other marks: <b>⇄</b> another doc disagrees, <b>⚠</b> may be out of date.</p>
+        <p class="fix">A red <b>✗</b> in the margin marks paragraphs that name files or commands not in your code. Other marks: <b>⇄</b> another doc disagrees, <b>⚠</b> may be out of date. <span class="soon">next update</span> Far fewer false alarms: shortened paths, build output, library names, npm's own commands and years are no longer marked.</p>
         <p class="where-line"><b>Where:</b> the left margin of the page, and a count at the top, e.g. <b>✗ 1 doesn't match the code</b>.</p>
       </div>
       <img src="img/trust-hover.jpg" width="1451" height="699" alt="A design doc page: a red cross in the margin next to the paragraph about payments, with the explanation 'Mentions src/payments.js, which is not in the repository'">
@@ -65,6 +66,16 @@
         <p class="where-line"><b>Where:</b> click a mark in the margin. For a paragraph without one, hover it and click the faint dot.</p>
       </div>
       <img class="small" src="img/mark-verified.jpg" width="604" height="181" alt="The menu for a marked paragraph: why it was marked, Mark as verified, Mark as wrong, Verify this paragraph against the code" loading="lazy">
+    </li>
+
+    <li id="file-moved">
+      <div class="story-text">
+        <h2 class="day">A file moved? One click fixes the doc <span class="soon">next update</span></h2>
+        <p class="pain">“We moved <code>cart.js</code> into a folder. Now every doc points to the old place.”</p>
+        <p class="fix">When the file still exists under a new path, the ✗ menu offers <b>Update old to new</b>. One click changes that name on that one line, nothing else.</p>
+        <p class="where-line"><b>Where:</b> click the red ✗ next to the paragraph → <b>Update … to …</b></p>
+      </div>
+      <img class="small" src="img/file-moved.jpg" width="604" height="202" alt="The marker menu: 'Update src/cart.js to src/shop/cart.js — src/cart.js is gone; a file with that name is at src/shop/cart.js. Changes line 5 only.'" loading="lazy">
     </li>
 
     <li id="mentioned-in-code">
@@ -87,13 +98,14 @@
       <img src="img/docs-that-mention.png" width="755" height="200" alt="A list 'Docs that mention this file' with two docs and their line numbers" loading="lazy">
     </li>
 
-    <li id="commit-hint" class="noimg">
+    <li id="commit-hint">
       <div class="story-text">
         <h2 class="day">Docs to update before you commit <span class="soon">next update</span></h2>
         <p class="pain">“I changed the code. Now the docs are quietly wrong.”</p>
         <p class="fix">A note at the bottom of VS Code: <b>📖 2 docs mention files you changed</b>. Click it to open those docs, or point at one and click the sparkle icon on its right to have your AI agent update it. Never a pop-up.</p>
         <p class="where-line"><b>Where:</b> the status bar (the thin bar at the very bottom), after you save a change. It goes away once you commit.</p>
       </div>
+      <img class="small" src="img/commit-hint-list.jpg" width="604" height="158" alt="The list 'Docs that mention files you changed': Checkout design and Sample Shop, each mentioning src/cart.js" loading="lazy">
     </li>
 
     <li id="design-check">
@@ -152,7 +164,7 @@
 
 <footer>
   <div class="wrap">
-    Updated November 2026. Features marked <span class="soon">next update</span> come in the version after 3.0.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026. Features marked <span class="soon">next update</span> come in docmap 3.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>

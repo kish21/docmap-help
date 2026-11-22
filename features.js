@@ -14,6 +14,8 @@ window.DOCMAP_FEATURES = [
   ["Go back to the text", "reading.html#show-preview", "Show Source switches the tab back to the Markdown text.", "show source edit raw ctrl+alt+v"],
   ["Open the page beside the text", "reading.html#preview-side", "Text on the left, page on the right, updating as you type.", "open preview to the side split live"],
   ["Find your way in a long doc", "reading.html#find-your-way", "Outline, filter headings, quick read, heading levels, j / k keys.", "outline table of contents quick read levels filter headings j k reading time remember place ctrl+f key points"],
+  ["Click a file or function name", "reading.html#code-names", "File names, functions and classes in a doc open the code beside the page.", "click code link file function class open beside go to definition file:line"],
+  ["▶ Terminal on command blocks", "reading.html#terminal", "Types a command from the doc into the terminal; you press Enter.", "terminal run command shell powershell npm copy"],
   ["Clean view for AI-written docs", "reading.html#clean-view", "Owner/status bullets as cards, notes as boxes, steps as a stepper.", "clean view show as written ai cards note box status chips"],
   ["Show the doc exactly as written", "reading.html#show-as-written", "Turn Clean view off to see the plain Markdown layout.", "show as written plain clean view off"],
   ["Tick tasks and change statuses on the page", "reading.html#tick-and-status", "Click a task box or a status label; only that line of the file changes.", "checkbox task done blocked in progress status table progress bar"],
@@ -28,6 +30,7 @@ window.DOCMAP_FEATURES = [
   // Trusting your docs
   ["Trust markers", "trust.html#trust-markers", "Marks paragraphs that don't match the code, conflict with another doc, or may be stale.", "doesn't match the code stale conflict verified wrong doubtful"],
   ["Mark a paragraph as verified", "trust.html#mark-verified", "Click a marker → Mark as verified; it comes back if the code changes.", "verify check true"],
+  ["A file moved? One click fixes the doc", "trust.html#file-moved", "The ✗ menu offers Update old to new; it changes that one line.", "moved renamed file path fix update broken link"],
   ["Docs mentioned in code", "trust.html#mentioned-in-code", "Code files show “📄 Mentioned in N docs” at the top.", "code lens mentioned in docs"],
   ["Docs That Mention This File", "trust.html#mentions", "List every doc that names the file you are in.", "mentions references backlinks"],
   ["Docs to update before you commit", "trust.html#commit-hint", "The status bar says “N docs mention files you changed”; click to open or update them.", "status bar commit changed files docs mention update doc stale before you commit"],
@@ -38,6 +41,7 @@ window.DOCMAP_FEATURES = [
   ["Compare with a Standard Format…", "trust.html#compare-standard", "Lists which parts of a format your doc has. Your team's own format first.", "standard format template sections missing"],
 
   // Finding and tidying
+  ["What can docmap do?", "finding.html#what-can-docmap-do", "Every docmap command in one list, by what you want to do.", "all commands list features what can help discover"],
   ["Docs Inbox", "finding.html#docs-inbox", "Every Markdown file sorted like an email inbox: changed, new this week, out of date, duplicates.", "inbox changed since you read new last 7 days duplicates out of date stale doubtful mark as read archive skip folders include folders explorer"],
   ["Where Do I Start?", "finding.html#where-to-start", "A reading order for a project: README, design, specs, decisions, plans, runbooks.", "where do i start reading order new project onboarding first read"],
   ["Markdown Files list", "finding.html#markdown-files", "Every Markdown file in the project, in the Explorer.", "markdown files list refresh explorer"],
@@ -61,6 +65,8 @@ window.DOCMAP_FEATURES = [
   // Working with AI agents
   ["Ask My AI Agent About This File…", "agents.html#ask-agent", "Ready prompts: explain, challenge, find risks, turn into tasks, summarise, slides…", "ask agent prompt explain challenge risks summarise copilot claude code codex cursor"],
   ["Build from this doc · Fill in this doc", "agents.html#build-from-doc", "Your agent builds exactly what a design says, or fills a doc's empty sections from the code.", "build from this doc fill in this doc design implement decision record agent prompt"],
+  ["Comment on any words", "agents.html#comments", "Select words → Comment; your notes go to your AI with the words they are about.", "comment note annotate review selection feedback"],
+  ["Copy for my AI", "agents.html#copy-for-ai", "This doc plus the linked docs you pick, as one text, with its size.", "copy context paste chat tokens words linked docs bundle"],
   ["Review a doc and send it to your agent", "agents.html#review", "Mark sections, ask questions, then Send My Review to My AI Agent.", "review send review approve section question request change"],
   ["Prompts are copied for you", "agents.html#agent-target", "“Prompt copied — paste it into your AI agent”, or open Copilot Chat (Agent Target).", "clipboard agent target auto copilot chat"],
   ["Add Markdown Prompts to This Project", "agents.html#add-prompts", "Saves docmap's prompts as commands Copilot and Claude Code pick up.", "prompts .github/prompts .claude/commands"],

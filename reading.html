@@ -37,12 +37,14 @@
     <li><a href="#show-preview">See the page</a></li>
     <li><a href="#preview-side">Side by side</a></li>
     <li><a href="#find-your-way">Long docs</a></li>
+    <li><a href="#code-names">Click code names</a></li>
     <li><a href="#clean-view">Clean view</a></li>
     <li><a href="#show-as-written">As written</a></li>
     <li><a href="#tick-and-status">Tick tasks</a></li>
     <li><a href="#diagrams">Diagrams</a></li>
     <li><a href="#reading-look">Reading look</a></li>
     <li><a href="#heading-numbers">Heading numbers</a></li>
+    <li><a href="#terminal">▶ Terminal</a></li>
     <li><a href="#slides">Slides</a></li>
     <li><a href="#highlight">Highlight</a></li>
     <li><a href="#in-browser">In your browser</a></li>
@@ -78,6 +80,16 @@
         <p class="where-line"><b>Where:</b> the left side of the page. Keys: <kbd>s</kbd> quick read, <kbd>/</kbd> filter headings, <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> heading levels.</p>
       </div>
       <img src="img/outline.png" width="352" height="360" alt="The outline: a filter box, Quick read and Levels buttons, and headings with reading times" loading="lazy">
+    </li>
+
+    <li id="code-names">
+      <div class="story-text">
+        <h2 class="day">Click a file or function name <span class="soon">next update</span></h2>
+        <p class="pain">“The doc says <code>src/cart.js</code>. Now I have to go and find it.”</p>
+        <p class="fix">File names, functions and classes in the doc are links: click one and the code opens beside the page, at that line. A dotted underline shows which ones; only names your project really has.</p>
+        <p class="where-line"><b>Where:</b> on the page, in any doc. Also works for <code>file:line</code>, like <code>src/cart.js:2</code>.</p>
+      </div>
+      <img src="img/code-names.jpg" width="1427" height="405" alt="A README page next to cart.js: clicking addItem() on the page opened cart.js beside it at the addItem function" loading="lazy">
     </li>
 
     <li id="clean-view">
@@ -140,6 +152,16 @@
       <img class="show-bottom" src="img/heading-numbers.png" width="558" height="778" alt="The page with numbered headings: 1 Goal, 2 Scope" loading="lazy">
     </li>
 
+    <li id="terminal">
+      <div class="story-text">
+        <h2 class="day">▶ Terminal on command blocks <span class="soon">next update</span></h2>
+        <p class="pain">“The setup guide says to run a command. I copy, switch, paste…”</p>
+        <p class="fix">Click <b>▶ Terminal</b> on a command block: the command is typed into VS Code's terminal for you. It never runs by itself; you press Enter when you're ready.</p>
+        <p class="where-line"><b>Where:</b> point at a command block on the page (shell, PowerShell, console); the button sits next to <b>Copy</b>.</p>
+      </div>
+      <img class="small" src="img/terminal-button.jpg" width="1411" height="105" alt="A command block '$ npm test' with a ▶ Terminal button next to Copy" loading="lazy">
+    </li>
+
     <li id="slides">
       <div class="story-text">
         <h2 class="day">Slides</h2>
@@ -186,7 +208,7 @@
 
 <footer>
   <div class="wrap">
-    Updated November 2026. Features marked <span class="soon">next update</span> come in the version after 3.0.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026. Features marked <span class="soon">next update</span> come in docmap 3.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>
