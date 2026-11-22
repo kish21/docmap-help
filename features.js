@@ -54,7 +54,7 @@ window.DOCMAP_FEATURES = [
   ["Bold, italic, strikethrough keys", "writing.html#writing-keys", "Ctrl+B, Ctrl+I, Alt+S; lists continue on Enter.", "bold italic strikethrough enter list writing helpers"],
   ["Format Table", "writing.html#format-table", "Lines up a Markdown table's columns.", "table format align"],
   ["Insert / Update Table of Contents", "writing.html#toc", "Adds or refreshes a contents list in the file.", "toc table of contents"],
-  ["New Doc from Template…", "writing.html#new-doc", "Your team's templates and five known formats first; More doc types… for plans, specs, runbooks, AGENTS.md…", "template new doc plan adr decision record spec runbook design.md test plan postmortem release notes agent guide madr nygard rfc spec kit keep a changelog read more"],
+  ["New Doc from Template…", "writing.html#new-doc", "Your team's templates and five known formats first; More doc types… for plans, specs, runbooks, AGENTS.md…", "template new doc plan adr decision record spec runbook design.md test plan postmortem release notes agent guide vision scope architecture feature spec design doc ticket structure madr nygard rfc spec kit keep a changelog read more"],
   ["New docs follow your team", "writing.html#team-way", "New docs go in your team's folder, numbered like their neighbours, in your template.", "folder numbering adr-tools log4brains team template docs/templates"],
   ["Restructure into a clear doc", "writing.html#restructure", "Ask your agent to reshape an old doc into a clear shape, keeping every fact.", "restructure reshape rewrite tidy doc"],
 
