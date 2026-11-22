@@ -37,6 +37,7 @@
   <ol class="toc">
     <li><a href="#settings">All settings</a></li>
     <li><a href="#privacy">Privacy</a></li>
+    <li><a href="#clear-data">Clear docmap's saved data</a></li>
     <li><a href="#help">Help inside VS Code</a></li>
     <li><a href="#big-files">Big files</a></li>
     <li><a href="#trouble">Something not working?</a></li>
@@ -61,29 +62,35 @@
     </ol>
     <h3>What you should see</h3>
     <figure><img src="img/settings.png" width="1140" height="560" alt="VS Code Settings searched for docmap: Agent Target set to clipboard, then the AI settings" loading="lazy"><figcaption>The docmap settings, with a short description under each.</figcaption></figure>
-    <details open><summary>The full list</summary>
+    <details open><summary>The full list, in the groups you see in Settings</summary>
       <table>
         <tr><th>Setting</th><th>What it does</th><th>Default</th></tr>
-        <tr><td><code>docmap.cleanView</code></td><td><a href="reading.html#clean-view">Clean view</a> for AI-written Markdown</td><td>on</td></tr>
+        <tr><th colspan="3">Main</th></tr>
         <tr><td><code>docmap.readingTools</code></td><td>Quick read, heading levels, reading times, structure hints in the outline</td><td>on</td></tr>
-        <tr><td><code>docmap.inferHeadings</code></td><td>Add bold-only lines and numbered lines like <code>2.1 Title</code> to the outline (auto / always / off)</td><td>auto</td></tr>
-        <tr><td><code>docmap.headingNumbers</code></td><td><a href="reading.html#heading-numbers">Number the headings</a> on the page</td><td>off</td></tr>
+        <tr><td><code>docmap.writingHelpers</code></td><td><a href="writing.html#writing-keys">Writing keys</a> and lists that continue on Enter</td><td>on</td></tr>
+        <tr><td><code>docmap.codeLens</code></td><td><a href="trust.html#mentioned-in-code">📄 Mentioned in N docs</a> in code files</td><td>on</td></tr>
+        <tr><td><code>docmap.myNames</code></td><td>Your names and @handles for <a href="finding.html#my-items">My Items</a> and <a href="trust.html#sign-off">Sign off</a></td><td>empty (your git user name)</td></tr>
+        <tr><th colspan="3">Reading look</th></tr>
         <tr><td><code>docmap.theme</code></td><td>Reading theme: vscode, paper, github, night, focus</td><td>vscode</td></tr>
         <tr><td><code>docmap.fontScale</code></td><td>Text size on the page (1 = normal, 1.15 = larger)</td><td>1</td></tr>
         <tr><td><code>docmap.lineWidth</code></td><td>Line width: narrow, normal, wide, full</td><td>normal</td></tr>
-        <tr><td><code>docmap.diagrams</code></td><td>Draw <code>mermaid</code> blocks as <a href="reading.html#diagrams">diagrams</a></td><td>on</td></tr>
-        <tr><td><code>docmap.rememberPlace</code></td><td>Reopen a page at the section you were reading</td><td>on</td></tr>
-        <tr><td><code>docmap.liveBrowser</code></td><td><a href="reading.html#in-browser">Open Preview in Browser</a> shows a live page (off: a saved copy)</td><td>on</td></tr>
-        <tr><td><code>docmap.updateDebounceMs</code></td><td>How long after you stop typing the page updates (milliseconds)</td><td>300</td></tr>
-        <tr><td><code>docmap.largeFileBytes</code></td><td>Files bigger than this ask before they open (5242880 = 5 MB)</td><td>5 MB</td></tr>
-        <tr><td><code>docmap.writingHelpers</code></td><td><a href="writing.html#writing-keys">Writing keys</a> and lists that continue on Enter</td><td>on</td></tr>
-        <tr><td><code>docmap.codeLens</code></td><td><a href="trust.html#mentioned-in-code">📄 Mentioned in N docs</a> in code files</td><td>on</td></tr>
-        <tr><td><code>docmap.staleDays</code></td><td>Docs Inbox: unchanged this many days = “Probably out of date” (0 = never)</td><td>90</td></tr>
-        <tr><td><code>docmap.myNames</code></td><td>Your names and @handles for <a href="finding.html#my-items">My Items</a> and <a href="trust.html#sign-off">Sign off</a></td><td>empty (your git user name)</td></tr>
+        <tr><th colspan="3">Docs Inbox <span class="soon">next update</span></th></tr>
+        <tr><td><code>docmap.skipFolders</code></td><td>Extra folders to leave out of the Docs Inbox, search, the Plans Dashboard and trust marks</td><td>empty</td></tr>
+        <tr><td><code>docmap.includeFolders</code></td><td>Folders starting with a dot to show after all</td><td><code>.github</code></td></tr>
+        <tr><th colspan="3">AI</th></tr>
         <tr><td><code>docmap.agentTarget</code></td><td><a href="agents.html#agent-target">Where prompts go</a>: clipboard or auto (Copilot Chat)</td><td>clipboard</td></tr>
         <tr><td><code>docmap.ai.answerWithMyModel</code></td><td><a href="agents.html#my-model">Your own model answers</a> on a page</td><td>off</td></tr>
-        <tr><td><code>docmap.ai.model</code></td><td>Which model family answers (empty: a Copilot model, else any)</td><td>empty</td></tr>
         <tr><td><code>docmap.ai.tools</code></td><td><a href="agents.html#agent-tools">Tools for your AI agents</a></td><td>off</td></tr>
+        <tr><th colspan="3">Advanced (rarely needed)</th></tr>
+        <tr><td><code>docmap.cleanView</code></td><td><a href="reading.html#clean-view">Clean view</a> for AI-written Markdown</td><td>on</td></tr>
+        <tr><td><code>docmap.headingNumbers</code></td><td><a href="reading.html#heading-numbers">Number the headings</a> on the page</td><td>off</td></tr>
+        <tr><td><code>docmap.diagrams</code></td><td>Draw <code>mermaid</code> blocks as <a href="reading.html#diagrams">diagrams</a></td><td>on</td></tr>
+        <tr><td><code>docmap.inferHeadings</code></td><td>Add bold-only lines and numbered lines like <code>2.1 Title</code> to the outline (auto / always / off)</td><td>auto</td></tr>
+        <tr><td><code>docmap.rememberPlace</code></td><td>Reopen a page at the section you were reading</td><td>on</td></tr>
+        <tr><td><code>docmap.liveBrowser</code></td><td><a href="reading.html#in-browser">Open Preview in Browser</a> shows a live page (off: a saved copy)</td><td>on</td></tr>
+        <tr><td><code>docmap.largeFileBytes</code></td><td>Files bigger than this ask before they open (5242880 = 5 MB)</td><td>5 MB</td></tr>
+        <tr><td><code>docmap.staleDays</code></td><td>Docs Inbox: unchanged this many days = “Probably out of date” (0 = never)</td><td>90</td></tr>
+        <tr><td><code>docmap.ai.model</code></td><td>Which model family answers (empty: a Copilot model, else any)</td><td>empty</td></tr>
       </table>
     </details>
   </article>
@@ -99,8 +106,33 @@
         <li>Prompts are copied for you to paste; docmap sends them nowhere.</li>
         <li>The live browser page is served only to your own computer (<code>127.0.0.1</code>, behind a private link).</li>
         <li>Your doc text leaves your computer only if you turn on <a href="agents.html#my-model">Answer with my model</a>, goes only to your own model, and only after you agree.</li>
+        <li>To remove what docmap remembers, see <a href="#clear-data">Clear docmap's saved data</a>.</li>
       </ul>
     </div>
+  </article>
+
+  <article class="card" id="clear-data">
+    <h2>Clear docmap's saved data <span class="soon">next update</span> <a class="permalink" href="#clear-data" aria-label="Link to this feature">#</a></h2>
+    <p class="problem">The problem: you want docmap to forget what it remembered about your docs.</p>
+    <p class="lead">Pick what docmap should forget, tick it, confirm. Your docs themselves are never touched.</p>
+    <p class="who">Helps: anyone handing over a computer, or starting fresh.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Clear docmap's Saved Data…</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, type <b>Clear docmap</b> and press <kbd>Enter</kbd>.</li>
+      <li>Tick what to remove: highlights and notes, your place in each file, copies kept for “since you last read it”, browser page copies, or permission to send text to your AI.</li>
+      <li>Click <b>OK</b>, then <b>Remove</b>.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>A question first: “Remove …? This cannot be undone.” Then “docmap's saved data you picked is removed.” Press <kbd>Esc</kbd> at any point and nothing is removed.</p>
+    <details><summary>More detail</summary>
+      <p>Browser page copies and the reading place of deleted files are removed by themselves when VS Code starts. Highlights, notes and read marks stay until you clear them here.</p>
+    </details>
   </article>
 
   <article class="card" id="help">
@@ -111,7 +143,7 @@
       <h3>Where to find it</h3>
       <ul>
         <li>Guided tour: Command Palette → <span class="cmd">Help: Get Started</span> → <b>All-in-One Markdown Viewer</b>.</li>
-        <li>Help page: Command Palette → <span class="cmd">All-in-One Markdown Viewer: Help (All Features)</span>, or the <b>?</b> icon on the Docs Inbox title bar.</li>
+        <li>Help page: Command Palette → <span class="cmd">All-in-One Markdown Viewer: Help (All Features)</span>, or the <b>?</b> button on the Docs Inbox title (move the mouse over it).</li>
       </ul>
     </div>
     <h3>Try it</h3>
@@ -154,7 +186,7 @@
 
 <footer>
   <div class="wrap">
-    For version 3.0.0. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026. Features marked <span class="soon">next update</span> come in the version after 3.0.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>

@@ -24,12 +24,94 @@
 </header>
 
 <main class="wrap">
-  <h1>Make sense of every Markdown doc in your project</h1>
-  <p class="intro">
-    All-in-One Markdown Viewer (docmap) is a free VS Code extension. It shows your <code>.md</code> files as clean pages,
-    tells you which docs you can trust, and hands good prompts to the AI agent you already use.
-    Every feature is on this site: what it does, <b>where to find it</b>, and how to try it.
-  </p>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Your project's docs, easy to read and safe to trust</h1>
+      <p class="intro">A free add-on for VS Code. It turns plans, specs and AI-written notes into clean pages, and shows you which ones are out of date.</p>
+      <p class="cta">
+        <a class="btn" href="https://marketplace.visualstudio.com/items?itemName=kish21.markdown-as-web-page">Install free</a>
+        <a class="btn ghost" href="#start">Start in 3 steps</a>
+      </p>
+      <ul class="pills">
+        <li>Free</li><li>No account, no tracking</li><li>Works with the AI you already use</li>
+      </ul>
+    </div>
+    <img class="hero-img" src="img/page-view.png" width="1440" height="900" alt="A plan shown as a clean page in VS Code, with a contents list on the left and a summary bar at the top">
+  </section>
+
+  <h2 class="story-title">A week with docmap</h2>
+  <p class="story-sub">Five everyday problems, and the one click that fixes each.</p>
+  <ol class="story">
+    <li>
+      <div class="story-text">
+        <span class="day">Monday</span>
+        <p class="pain">“I just joined. There are 60 docs. Where do I even start?”</p>
+        <p class="fix"><b>Where Do I Start?</b> gives you a short reading order, with one line on why each doc matters.</p>
+        <a href="finding.html#where-to-start">See how →</a>
+      </div>
+      <div class="story-art" aria-hidden="true"><span>1</span><span>2</span><span>3</span></div>
+    </li>
+    <li>
+      <div class="story-text">
+        <span class="day">Tuesday</span>
+        <p class="pain">“The AI wrote me a long plan. It reads like a wall of symbols.”</p>
+        <p class="fix"><b>Clean view</b> turns it into a page: owner cards, note boxes, coloured statuses, a progress bar.</p>
+        <a href="reading.html#clean-view">See how →</a>
+      </div>
+      <img src="img/clean-view.png" width="558" height="1040" alt="An AI-written plan in Clean view: an owner card, a note box, numbered steps, coloured status labels and a progress bar" loading="lazy">
+    </li>
+    <li>
+      <div class="story-text">
+        <span class="day">Wednesday</span>
+        <p class="pain">“I followed the setup doc. The file it names doesn't exist.”</p>
+        <p class="fix"><b>Trust markers</b> put a red ✗ next to every paragraph that doesn't match the code, before you trust it.</p>
+        <a href="trust.html#trust-markers">See how →</a>
+      </div>
+      <img src="img/trust-markers.png" width="558" height="778" alt="A red cross in the margin next to a paragraph that names a missing file, and '1 doesn't match the code' at the top" loading="lazy">
+    </li>
+    <li>
+      <div class="story-text">
+        <span class="day">Thursday</span>
+        <p class="pain">“Someone changed the plan. What exactly is different?”</p>
+        <p class="fix"><b>Compare</b> marks it on the page: new words underlined, removed words crossed out.</p>
+        <a href="trust.html#compare">See how →</a>
+      </div>
+      <img src="img/compare-result.png" width="558" height="778" alt="A page with old words crossed out in red and new words underlined in green" loading="lazy">
+    </li>
+    <li>
+      <div class="story-text">
+        <span class="day">Friday</span>
+        <p class="pain">“Status meeting in 10 minutes. Where are we on every plan?”</p>
+        <p class="fix"><b>Plans Dashboard</b>: every plan on one page, with what is overdue, blocked or has no owner.</p>
+        <a href="finding.html#plans-dashboard">See how →</a>
+      </div>
+      <img src="img/plans-dashboard.png" width="558" height="870" alt="The Plans Dashboard: totals at the top, then a Needs attention list of overdue plans and plans with no owner" loading="lazy">
+    </li>
+  </ol>
+  <p class="story-more">And when your AI agent builds from a design: <a href="trust.html#design-check">check the code still matches it</a>, <a href="trust.html#commit-hint">see which docs your change affects</a>, and <a href="agents.html#build-from-doc">have the agent explain every choice it made</a>.</p>
+
+  <h2 id="start">New here? Start with these three steps</h2>
+  <p><b>Markdown</b> is plain text with a few marks for headings, lists and tables. Files ending in <code>.md</code> (like <code>README.md</code>) are Markdown. AI tools such as Claude Code, Copilot and Cursor write their plans and notes this way. <b>VS Code</b> is Microsoft's free editor; docmap is an extension (an add-on) for it.</p>
+  <ol>
+    <li><b>Install docmap.</b> In VS Code press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd> (Mac: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>) to open the list of extensions, search for <b>All-in-One Markdown Viewer</b> and click <b>Install</b>. Or open it on the <a href="https://marketplace.visualstudio.com/items?itemName=kish21.markdown-as-web-page">Visual Studio Marketplace</a>.</li>
+    <li><b>Open your project.</b> Menu <b>File → Open Folder…</b> and pick a folder that has some <code>.md</code> files. If VS Code asks “Do you trust the authors?”, choose <b>Yes</b> for your own projects: docmap needs this to compare docs with the code.</li>
+    <li><b>See a doc as a page.</b> Click a <code>.md</code> file in the file list on the left, then press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> (Mac: <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd>). Press it again to go back to the text.</li>
+  </ol>
+  <p>Not sure which doc to read first? Try <a href="finding.html#where-to-start">Where Do I Start?</a></p>
+
+  <h2 id="words">Words used on this site</h2>
+  <table class="words">
+    <tr><th>Word</th><th>What it means and where to find it</th></tr>
+    <tr><td><b>Command Palette</b></td><td>A search box for every command. Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>), type part of a name shown in <span class="cmd">bold</span> on this site, and press <kbd>Enter</kbd>. docmap's commands start with “All-in-One Markdown Viewer:”.</td></tr>
+    <tr><td><b>Explorer</b></td><td>The file list on the left of VS Code. Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> if you can't see it.</td></tr>
+    <tr><td><b>Docs Inbox</b></td><td>A section inside the Explorer, below your files, titled <b>DOCS INBOX</b>. Click the title to open it. Its small buttons only show when the mouse is over the title. <a href="finding.html#docs-inbox">More</a></td></tr>
+    <tr><td><b>Preview</b> (the page)</td><td>docmap's page that shows a doc neatly laid out, with a <b>Contents</b> list of its headings on the left.</td></tr>
+    <tr><td><b>Status bar</b></td><td>The thin bar along the very bottom of the VS Code window.</td></tr>
+    <tr><td><b>⋯</b></td><td>Three dots. Click it for a menu with more choices. There is one at the top of the page (<b>⋯ Ask my AI agent</b>), one at the top right of the editor tab, and one on the Docs Inbox title.</td></tr>
+    <tr><td><b>Settings</b></td><td>Press <kbd>Ctrl</kbd>+<kbd>,</kbd> (comma) and type <b>docmap</b>. <a href="settings.html#settings">All settings</a></td></tr>
+    <tr><td><b>AI agent</b></td><td>The AI chat you already use for coding, such as Claude Code, GitHub Copilot, Codex or Cursor. docmap has no AI of its own.</td></tr>
+    <tr><td><b>git</b>, <b>commit</b></td><td>git is the tool most projects use to keep every saved version of their files. A commit is one saved version. Features that compare versions need it; everything else works without.</td></tr>
+  </table>
 
   <div class="search" role="search">
     <label for="q">Search every feature</label>
@@ -45,36 +127,32 @@
     <li><a href="reading.html#in-browser"><span>Share</span>show a doc in my browser, or save it as PDF</a></li>
     <li><a href="trust.html#trust-markers"><span>Trust</span>know which paragraphs are out of date</a></li>
     <li><a href="trust.html#compare"><span>Trust</span>see what changed in a doc</a></li>
+    <li><a href="trust.html#design-check"><span>Trust</span>check the code still matches a design doc</a></li>
+    <li><a href="trust.html#commit-hint"><span>Trust</span>know which docs to update after I change code</a></li>
+    <li><a href="finding.html#where-to-start"><span>Find</span>know which docs to read first in a new project</a></li>
     <li><a href="finding.html#docs-inbox"><span>Find</span>get on top of a messy docs folder</a></li>
     <li><a href="finding.html#search-all-docs"><span>Find</span>search every doc at once</a></li>
     <li><a href="finding.html#plans-dashboard"><span>Find</span>see every plan and what is overdue</a></li>
     <li><a href="writing.html#new-doc"><span>Write</span>start a new plan, spec or decision record</a></li>
     <li><a href="agents.html#ask-agent"><span>AI</span>ask my AI agent about a doc</a></li>
+    <li><a href="agents.html#build-from-doc"><span>AI</span>have my AI agent build what a doc describes</a></li>
     <li><a href="agents.html#agents-md"><span>AI</span>give every AI tool the same rules (AGENTS.md)</a></li>
   </ul>
 
   <h2>All sections</h2>
   <ul class="sections">
     <li><h3><a href="reading.html">Reading your docs</a></h3><p>The page view, outline, clean view, themes, slides, browser and PDF.</p></li>
-    <li><h3><a href="trust.html">Trusting your docs</a></h3><p>Trust markers, compare versions, sign off, docs named in code, doc formats.</p></li>
-    <li><h3><a href="finding.html">Finding and tidying</a></h3><p>Docs Inbox, Search All Docs, Doc Atlas, Plans Dashboard, open questions, my items.</p></li>
+    <li><h3><a href="trust.html">Trusting your docs</a></h3><p>Trust markers, does the code still match the design, docs to update after a change, compare versions, sign off, doc formats.</p></li>
+    <li><h3><a href="finding.html">Finding and tidying</a></h3><p>Docs Inbox, Where Do I Start?, Search All Docs, Doc Atlas, Plans Dashboard, open questions, my items.</p></li>
     <li><h3><a href="writing.html">Writing docs</a></h3><p>Writing keys, tables, contents, new docs from templates, restructuring.</p></li>
-    <li><h3><a href="agents.html">Working with AI agents</a></h3><p>Ready prompts, reviews, your own model, agent tools, AGENTS.md.</p></li>
-    <li><h3><a href="settings.html">Settings, privacy and help</a></h3><p>Every setting, what stays on your computer, and what to do if something breaks.</p></li>
+    <li><h3><a href="agents.html">Working with AI agents</a></h3><p>Ready prompts, build from a doc, reviews, your own model, agent tools, AGENTS.md.</p></li>
+    <li><h3><a href="settings.html">Settings, privacy and help</a></h3><p>Every setting, what stays on your computer, clearing saved data, and what to do if something breaks.</p></li>
   </ul>
-
-  <h2>Before you start</h2>
-  <ol>
-    <li>Install <b>All-in-One Markdown Viewer</b> from the VS Code Extensions view (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>, search “All-in-One Markdown Viewer”).</li>
-    <li>Open a project folder that has some <code>.md</code> files.</li>
-    <li>Open any <code>.md</code> file and press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> (Mac: <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd>).</li>
-  </ol>
-  <p>Every command is also in the Command Palette: press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) and type the name shown in <span class="cmd">bold</span> on this site.</p>
 </main>
 
 <footer>
   <div class="wrap">
-    For version 3.0.0. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites.
+    Updated November 2026. Features marked <span class="soon">next update</span> come in the version after 3.0.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites.
   </div>
 </footer>
 <script src="features.js"></script>

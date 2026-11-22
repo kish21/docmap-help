@@ -39,6 +39,8 @@
     <li><a href="#mark-verified">Mark a paragraph as verified or wrong</a></li>
     <li><a href="#mentioned-in-code">Docs mentioned in code</a></li>
     <li><a href="#mentions">Docs That Mention This File</a></li>
+    <li><a href="#commit-hint">Docs to update before you commit</a></li>
+    <li><a href="#design-check">Does the code still match this doc?</a></li>
     <li><a href="#compare">Compare: what changed, on the page</a></li>
     <li><a href="#sign-off">Sign off a version</a></li>
     <li><a href="#doc-formats">What kind of doc is this?</a></li>
@@ -47,6 +49,7 @@
 
   <article class="card" id="trust-markers">
     <h2>Trust markers <a class="permalink" href="#trust-markers" aria-label="Link to this feature">#</a></h2>
+    <p class="problem">The problem: docs go out of date quietly, and you only find out when a step fails.</p>
     <p class="lead">Marks paragraphs you should not trust: they name files or commands that are not in your code, disagree with another doc, or may be out of date.</p>
     <p class="who">Helps: anyone about to follow a doc, and anyone who maintains docs.</p>
     <div class="where">
@@ -141,8 +144,56 @@
     <figure><img src="img/docs-that-mention.png" width="755" height="200" alt="A list titled 'Docs that mention this file' with Setup notes docs/setup-notes.md:6 and Checkout Rollout Plan docs/ROLLOUT_PLAN.md:27" loading="lazy"><figcaption>Each doc with the line that names the file.</figcaption></figure>
   </article>
 
+  <article class="card" id="commit-hint">
+    <h2>Docs to update before you commit <span class="soon">next update</span> <a class="permalink" href="#commit-hint" aria-label="Link to this feature">#</a></h2>
+    <p class="problem">The problem: you change the code, and the docs that describe it quietly go out of date.</p>
+    <p class="lead">When you change a file that your docs talk about, a small note at the bottom of VS Code says so: <b>📖 2 docs mention files you changed</b>. Never a pop-up.</p>
+    <p class="who">Helps: developers, and anyone asking an AI agent to change code.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>The status bar (the thin bar along the very bottom of VS Code), after you save a change to a file that a doc names. It goes away once you commit (save the version in git).</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open a code file that one of your docs names, change a line and save (<kbd>Ctrl</kbd>+<kbd>S</kbd>).</li>
+      <li>Within a few seconds, click <b>📖 … docs mention files you changed</b> at the bottom.</li>
+      <li>Pick a doc to open it at the line that names your file, or click its <b>✨</b> to have your AI agent update the doc to match your change.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>A list titled <b>Docs that mention files you changed</b>. The ✨ button copies a prompt: “Prompt copied — paste it into your AI agent”.</p>
+  </article>
+
+  <article class="card" id="design-check">
+    <h2>Does the code still match this doc? <span class="soon">next update</span> <a class="permalink" href="#design-check" aria-label="Link to this feature">#</a></h2>
+    <p class="problem">The problem: the design doc says one thing, the code does another, and nobody notices until something breaks.</p>
+    <p class="lead">One list of everything a doc names that the code no longer has: files, functions, commands, settings and versions.</p>
+    <p class="who">Helps: anyone about to build from a design doc, or checking an AI agent's work against it.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Right-click in the text of a doc → <span class="cmd">Does the Code Still Match This Doc?</span></li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Does the Code Still Match This Doc?</span></li>
+        <li>On the page: <b>⋯ Ask my AI agent</b> → <span class="cmd">Ask my AI agent about this file…</span> → <b>Does the code still match this design?</b> (for design docs, specs and architecture docs).</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open a design doc (any doc works).</li>
+      <li>Right-click in its text → <span class="cmd">Does the Code Still Match This Doc?</span></li>
+      <li>Click a line in the list to jump to it in the doc.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>A list at the top of the window, for example “Checkout design: 2 … no longer match the code”, with a line for each missing file or function. If all is well: “…nothing contradicts the code”.</p>
+    <details><summary>More detail</summary>
+      <p>The <b>✨</b> button at the top right of the list hands the doc and the list to your AI agent. It says whether the doc or the code is wrong and proposes a fix, changing nothing until you agree. docmap checks only what the doc names, not how the code behaves.</p>
+    </details>
+  </article>
+
   <article class="card" id="compare">
     <h2>Compare: what changed, on the page <a class="permalink" href="#compare" aria-label="Link to this feature">#</a></h2>
+    <p class="problem">The problem: someone changed the doc, and you can't tell what is different.</p>
     <p class="lead">Shows what changed in a doc right on the page: new words underlined in green, removed words crossed out in red.</p>
     <p class="who">Helps: reviewers, and anyone coming back to a doc after a while.</p>
     <div class="where">
@@ -240,7 +291,7 @@
 
 <footer>
   <div class="wrap">
-    For version 3.0.0. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026. Features marked <span class="soon">next update</span> come in the version after 3.0.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>

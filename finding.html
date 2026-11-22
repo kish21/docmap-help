@@ -36,6 +36,7 @@
   <h2>On this page</h2>
   <ol class="toc">
     <li><a href="#docs-inbox">Docs Inbox</a></li>
+    <li><a href="#where-to-start">Where Do I Start?</a></li>
     <li><a href="#search-all-docs">Search All Docs</a></li>
     <li><a href="#doc-atlas">Doc Atlas</a></li>
     <li><a href="#plans-dashboard">Plans Dashboard</a></li>
@@ -49,28 +50,57 @@
 
   <article class="card" id="docs-inbox">
     <h2>Docs Inbox <a class="permalink" href="#docs-inbox" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">Sorts every Markdown file in your project like an email inbox: what changed since you read it, what is new, what is probably out of date.</p>
-    <p class="who">Helps: anyone joining or returning to a project with many docs.</p>
+    <p class="problem">The problem: dozens of docs, and no idea which changed, which are new and which are stale.</p>
+    <p class="lead">A list of every doc in your project, sorted like an email inbox: what changed since you last read it, what is new this week, and what is probably out of date.</p>
+    <p class="who">Helps: anyone joining or coming back to a project with many docs.</p>
     <div class="where">
       <h3>Where to find it</h3>
       <ul>
-        <li>The Explorer (left sidebar, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>) → the <b>Docs Inbox</b> section near the bottom. Click its title to open it.</li>
-        <li>In a folder with more than 10 Markdown docs, docmap offers <b>Open Docs Inbox</b> once.</li>
-        <li>Command Palette: <span class="cmd">Refresh Docs Inbox</span> updates it.</li>
+        <li>The file list on the left of VS Code (the <b>Explorer</b>; press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> if you can't see it). Below your files there is a section titled <b>DOCS INBOX</b>. Click the title to open it.</li>
+        <li>Its buttons appear only when the mouse is over the title: <b>Search</b>, <b>New Doc</b> and <b>Help</b>. The <b>⋯</b> (three dots) next to them has the rest: Where Do I Start?, Doc Atlas, Plans Dashboard, Decision Log and Refresh.</li>
       </ul>
     </div>
     <h3>Try it</h3>
     <ol>
-      <li>Open a project folder with several <code>.md</code> files.</li>
-      <li>In the Explorer, open <b>Docs Inbox</b>.</li>
-      <li>Click a file to open its page. Hover a file for <b>✓ Mark as read</b>, <b>✨ Ask my AI agent</b> and more.</li>
+      <li>Open a project folder that has a few <code>.md</code> files (menu <b>File → Open Folder…</b>).</li>
+      <li>In the Explorer, click <b>DOCS INBOX</b>.</li>
+      <li>Click a file in any group. Move the mouse over a file to see <b>✓ Mark as read</b> and <b>✨ Ask my AI agent</b>.</li>
     </ol>
     <h3>What you should see</h3>
-    <figure><img src="img/docs-inbox.png" width="440" height="300" alt="The Docs Inbox in the Explorer: groups 'Changed since you read (2)' and 'New — not opened yet (8)', with icons in its title bar" loading="lazy"><figcaption>Groups of files, each with its folder, progress and age. The icons on the title bar open the Plans Dashboard, the Decision Log, refresh, help and New Doc from Template; <b>…</b> has Search All Docs and Doc Atlas.</figcaption></figure>
-    <details><summary>More detail: the groups and actions</summary>
-      <p>Groups (only the ones that have files): <b>Changed since you read</b>, <b>New — not opened yet</b>, <b>Worth reading first</b>, <b>Plans in progress</b>, <b>Possible duplicates</b>, <b>Probably out of date</b> (not changed for 90 days; setting <code>docmap.staleDays</code>), <b>Doubtful — check before you trust</b>, <b>Decisions</b>.</p>
-      <p>Hover or right-click a file: <b>Mark as Read</b>, <b>Ask My AI Agent About These…</b>, <b>Move to Archive Folder</b> (nothing is deleted), and for duplicates <b>Compare with the First Duplicate</b>.</p>
+    <p>Groups of files, each file with its folder and age. Only groups that have files are shown. Each group lists 10 files, then <b>Show all</b>.</p>
+    <details><summary>More detail: the groups and what a click does</summary>
+      <ul>
+        <li><b>Changed since you read</b>: opens the doc with what changed marked.</li>
+        <li><b>New — last 7 days, not opened</b>: docs added this week that you haven't opened yet.</li>
+        <li><b>Possible duplicates</b>: opens the doc side by side with its twin. Then <b>Are these really duplicates?</b> or <b>Merge them into one</b> hands the question to your AI agent.</li>
+        <li><b>Probably out of date</b> (not changed for 90 days): says why, and offers <b>Update this doc to match the code</b>.</li>
+        <li>Also: <b>Worth reading first</b>, <b>Plans in progress</b>, <b>Doubtful — check before you trust</b>, <b>Decisions</b>.</li>
+        <li>Folders whose names start with a dot (tool folders such as <code>.agents</code>) are left out, except <code>.github</code>. To change that, use the settings <b>Skip Folders</b> and <b>Include Folders</b> (Settings → search “docmap folders”).</li>
+        <li>Right-click a file: <b>Mark as Read</b>, <b>Ask My AI Agent About These…</b>, <b>Move to Archive Folder</b> (nothing is deleted).</li>
+      </ul>
     </details>
+  </article>
+
+  <article class="card" id="where-to-start">
+    <h2>Where Do I Start? <span class="soon">next update</span> <a class="permalink" href="#where-to-start" aria-label="Link to this feature">#</a></h2>
+    <p class="problem">The problem: you join a project with 60 docs and don't know which to read first.</p>
+    <p class="lead">A page with a reading order for this project: the README, how the parts fit, the design, the specs, recent decisions, plans still in progress and runbooks. Each with one line on why to read it.</p>
+    <p class="who">Helps: new team members, and anyone coming back after a long break.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>Docs Inbox: move the mouse over the <b>DOCS INBOX</b> title → <b>⋯</b> → <span class="cmd">Where Do I Start? (Reading Order for This Project)</span></li>
+        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Where Do I Start?</span></li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open a project folder.</li>
+      <li>Run <span class="cmd">Where Do I Start?</span></li>
+      <li>Click a title on the page to open that doc.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>A short, numbered reading list. Only docs that exist are listed. Nothing is written to your project.</p>
   </article>
 
   <article class="card" id="search-all-docs">
@@ -81,7 +111,7 @@
       <h3>Where to find it</h3>
       <ul>
         <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Search All Docs…</span></li>
-        <li>Docs Inbox title bar → <b>…</b> → <span class="cmd">Search All Docs…</span></li>
+        <li>Docs Inbox: move the mouse over the title → the search (magnifier) button.</li>
       </ul>
     </div>
     <h3>Try it</h3>
@@ -102,7 +132,7 @@
       <h3>Where to find it</h3>
       <ul>
         <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Doc Atlas (Which Docs Link to Which)</span></li>
-        <li>Docs Inbox title bar → <b>…</b> → <span class="cmd">Doc Atlas</span></li>
+        <li>Docs Inbox: move the mouse over the title → <b>⋯</b> → <span class="cmd">Doc Atlas</span></li>
       </ul>
     </div>
     <h3>Try it</h3>
@@ -117,12 +147,13 @@
 
   <article class="card" id="plans-dashboard">
     <h2>Plans Dashboard <a class="permalink" href="#plans-dashboard" aria-label="Link to this feature">#</a></h2>
+    <p class="problem">The problem: many plans, many owners, and no single view of where things stand.</p>
     <p class="lead">One page with every plan in your project, grouped by folder: progress, status, owner, next date, overdue, open questions and risks.</p>
     <p class="who">Helps: leads and product owners who need “where are we?” across many plans.</p>
     <div class="where">
       <h3>Where to find it</h3>
       <ul>
-        <li>Docs Inbox title bar: the dashboard icon (first icon).</li>
+        <li>Docs Inbox: move the mouse over the title → <b>⋯</b> → <span class="cmd">Plans Dashboard</span>.</li>
         <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Plans Dashboard</span></li>
       </ul>
     </div>
@@ -208,7 +239,7 @@
     <div class="where">
       <h3>Where to find it</h3>
       <ul>
-        <li>Docs Inbox title bar: the scales icon (second icon), or the <b>Decisions</b> group.</li>
+        <li>Docs Inbox: move the mouse over the title → <b>⋯</b> → <span class="cmd">Open Decision Log</span>, or click the <b>Decisions</b> group.</li>
         <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Open Decision Log</span></li>
       </ul>
     </div>
@@ -265,7 +296,7 @@
 
 <footer>
   <div class="wrap">
-    For version 3.0.0. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026. Features marked <span class="soon">next update</span> come in the version after 3.0.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>

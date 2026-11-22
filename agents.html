@@ -36,6 +36,7 @@
   <h2>On this page</h2>
   <ol class="toc">
     <li><a href="#ask-agent">Ask My AI Agent About This File</a></li>
+    <li><a href="#build-from-doc">Build from this doc · Fill in this doc</a></li>
     <li><a href="#review">Review a doc and send it to your agent</a></li>
     <li><a href="#agent-target">Where prompts go</a></li>
     <li><a href="#add-prompts">Add Markdown Prompts to This Project</a></li>
@@ -67,11 +68,33 @@
     <h3>What you should see</h3>
     <figure><img src="img/ask-agent-menu.png" width="755" height="440" alt="The 'Ask my AI agent to…' menu: Summarise this file, Restructure into a clear doc, Tidy this file's formatting, Brief me on what changed, Continue this plan, Add a TL;DR at the top" loading="lazy"><figcaption>Each prompt has a one-line description. Then: “Prompt copied — paste it into your AI agent.”</figcaption></figure>
     <details><summary>More detail: every prompt</summary>
-      <p>For a file: Summarise this file · Restructure into a clear doc · Tidy this file's formatting · Brief me on what changed · Continue this plan · Add a TL;DR at the top · Make a one-page summary · Make a slide deck · Turn this AI plan into a checklist · Fix the heading structure · Write a README from this · Update this doc to match the code.</p>
+      <p>For a file: Summarise this file · Restructure into a clear doc · Tidy this file's formatting · Brief me on what changed · Continue this plan · Add a TL;DR at the top · Make a one-page summary · Make a slide deck · Turn this AI plan into a checklist · Fix the heading structure · Write a README from this · Update this doc to match the code. Shown only when they fit: <a href="#build-from-doc">Build from this doc · Fill in this doc</a> · <a href="trust.html#design-check">Does the code still match this design?</a></p>
+      <p>The same menu also has <b>Send my review to my AI agent</b>, <b>Sign off this version…</b> and <a href="reading.html#slides">Show as slides</a>; those don't use any AI.</p>
       <p>For a section: Explain this section simply · Challenge this plan · Find risks and gaps · Turn this into tasks · Write tests for this.</p>
       <p>For several docs (Docs Inbox): Merge these duplicate docs into one · Write an INDEX.md for these docs · Tidy these docs (propose, change nothing) · Which plans are finished, what is still open? · Find conflicts in my agent instruction files.</p>
       <p>Elsewhere: Summarise these changes (Compare) · Verify this paragraph against the code (trust marks).</p>
     </details>
+  </article>
+
+  <article class="card" id="build-from-doc">
+    <h2>Build from this doc · Fill in this doc <span class="soon">next update</span> <a class="permalink" href="#build-from-doc" aria-label="Link to this feature">#</a></h2>
+    <p class="problem">The problem: you hand your AI a design, it builds something a bit different, and nobody remembers why.</p>
+    <p class="lead">Two ready prompts. <b>Build from this doc</b>: your agent builds exactly what the doc says, then lists what it had to change, assume or leave out. <b>Fill in this doc</b>: your agent fills the empty sections from the code.</p>
+    <p class="who">Helps: anyone who writes the design first and lets an AI agent build it.</p>
+    <div class="where">
+      <h3>Where to find it</h3>
+      <ul>
+        <li>On the page: <b>⋯ Ask my AI agent</b> → <span class="cmd">Ask my AI agent about this file…</span> → <b>Build from this doc</b> (design docs, specs, architecture docs) or <b>Fill in this doc</b> (a doc with empty sections, such as a new one from a template).</li>
+      </ul>
+    </div>
+    <h3>Try it</h3>
+    <ol>
+      <li>Open the page of a design doc.</li>
+      <li>Click <b>⋯ Ask my AI agent</b> → <span class="cmd">Ask my AI agent about this file…</span> → <b>Build from this doc</b>.</li>
+      <li>Paste the copied prompt into your AI agent.</li>
+    </ol>
+    <h3>What you should see</h3>
+    <p>“Prompt copied — paste it into your AI agent.” The doc itself is not edited. Each time the agent picks between options the doc doesn't settle, it writes a short <b>decision record</b> (a one-page note: the choice, the options, and why) in your decisions folder, so the reasons are kept. With <b>Fill in this doc</b>, every heading stays, and anything the agent is unsure of goes under <b>Open questions</b>.</p>
   </article>
 
   <article class="card" id="review">
@@ -222,6 +245,7 @@
     <h3>What you should see</h3>
     <figure><img src="img/doc-map.png" width="1010" height="560" alt="AGENTS.md open in the editor with a Doc map section: a table of Kind, Where, Shape to follow — Decision record in docs/decisions/ (MADR), Design doc, Feature spec, Runbook…" loading="lazy"><figcaption>A <b>Doc map</b> table: kind of doc, where it lives (and how many there are), and the shape to follow.</figcaption></figure>
     <details><summary>More detail</summary>
+      <p><span class="soon">next update</span> When the project has design docs, the map starts with a <b>Before building</b> line telling your agent to read them first and build to them.</p>
       <p>Only the part between docmap's markers (<code>&lt;!-- docmap:doc-map start --&gt;</code>) changes. <code>AGENTS.md</code> is created if missing; <code>CLAUDE.md</code> gets the map when it exists and does not already import AGENTS.md. Files are left unsaved and open for you to review. Run it again to refresh.</p>
     </details>
   </article>
@@ -229,7 +253,7 @@
 
 <footer>
   <div class="wrap">
-    For version 3.0.0. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026. Features marked <span class="soon">next update</span> come in the version after 3.0.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>
