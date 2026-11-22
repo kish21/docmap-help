@@ -54,16 +54,17 @@
         <p class="fix">A red <b>✗</b> in the margin marks paragraphs that name files or commands not in your code. Other marks: <b>⇄</b> another doc disagrees, <b>⚠</b> may be out of date.</p>
         <p class="where-line"><b>Where:</b> the left margin of the page, and a count at the top, e.g. <b>✗ 1 doesn't match the code</b>.</p>
       </div>
-      <img class="show-middle" src="img/trust-markers.png" width="558" height="778" alt="A red cross in the margin next to a paragraph that names a missing file, and '1 doesn't match the code' at the top">
+      <img src="img/trust-hover.jpg" width="1451" height="699" alt="A design doc page: a red cross in the margin next to the paragraph about payments, with the explanation 'Mentions src/payments.js, which is not in the repository'">
     </li>
 
-    <li id="mark-verified" class="noimg">
+    <li id="mark-verified">
       <div class="story-text">
         <h2 class="day">Mark a paragraph as verified</h2>
         <p class="pain">“I checked this paragraph. I want others to know it's right.”</p>
         <p class="fix">Click a mark → <b>Mark as verified</b>. It turns into <b>✓</b>, and the warning comes back if the code changes later.</p>
         <p class="where-line"><b>Where:</b> click a mark in the margin. For a paragraph without one, hover it and click the faint dot.</p>
       </div>
+      <img class="small" src="img/mark-verified.jpg" width="604" height="181" alt="The menu for a marked paragraph: why it was marked, Mark as verified, Mark as wrong, Verify this paragraph against the code" loading="lazy">
     </li>
 
     <li id="mentioned-in-code">
@@ -95,13 +96,14 @@
       </div>
     </li>
 
-    <li id="design-check" class="noimg">
+    <li id="design-check">
       <div class="story-text">
         <h2 class="day">Does the code still match this doc? <span class="soon">next update</span></h2>
         <p class="pain">“The design says one thing, the code does another, and nobody noticed.”</p>
         <p class="fix">One list of everything the doc names that the code no longer has: files, functions, commands, settings, versions. Its first line, <b>Ask my AI to fix these</b>, asks your AI agent which side is wrong.</p>
         <p class="where-line"><b>Where:</b> right-click in the doc's text → <b>Does the Code Still Match This Doc?</b></p>
       </div>
+      <img class="small" src="img/design-check.jpg" width="604" height="202" alt="A list 'Checkout design: 2 things no longer match the code', starting with Ask my AI to fix these" loading="lazy">
     </li>
 
     <li id="compare">
@@ -114,13 +116,14 @@
       <img class="show-bottom" src="img/compare-result.png" width="558" height="778" alt="A page with old words crossed out in red and new words underlined in green" loading="lazy">
     </li>
 
-    <li id="sign-off" class="noimg">
+    <li id="sign-off">
       <div class="story-text">
         <h2 class="day">Sign off a version</h2>
         <p class="pain">“Which version did the lead actually approve?”</p>
         <p class="fix">Writes <b>✓ Signed off by</b> your name and the date into the file, and shows <b>⚠ Changed since…</b> when someone edits it later.</p>
         <p class="where-line"><b>Where:</b> <b>⋯ Ask my AI agent</b> at the top of the page → <b>Sign off this version…</b></p>
       </div>
+      <img class="small" src="img/page-menu.jpg" width="604" height="154" alt="The page's Ask my AI agent menu: Sign off this version, Ask my AI agent about this file, Show as slides" loading="lazy">
     </li>
 
     <li id="doc-formats">
@@ -154,5 +157,6 @@
 </footer>
 <script src="features.js"></script>
 <script src="search.js"></script>
+<script src="zoom.js"></script>
 </body>
 </html>
