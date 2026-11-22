@@ -155,6 +155,17 @@ details th, details td { text-align: left; border-bottom: 1px solid var(--line);
 }
 .story-art span::after { content: ""; flex: 1; height: 8px; border-radius: 4px; background: var(--line); }
 .story-more { margin: 4px 0 36px; }
+.story > li { scroll-margin-top: 16px; }
+.story > li.noimg { grid-template-columns: 1fr; }
+.story img.show-bottom { object-position: bottom; }
+.story img.show-middle { object-position: center; }
+.story img.show-all { object-fit: contain; max-height: none; }
+.story-text details table { font-size: 14px; }
+h2.day { margin: 0; line-height: 1.4; }
+.where-line { font-size: 15px; margin: 0; padding: 8px 12px; background: var(--where); border-left: 3px solid var(--where-line); border-radius: 6px; }
+.jump { list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+.jump a { display: inline-block; font-size: 14px; padding: 4px 12px; border: 1px solid var(--line); border-radius: 99px; background: var(--panel); text-decoration: none; }
+.jump a:hover { border-color: var(--accent); }
 table.words { border-collapse: collapse; width: 100%; font-size: 15px; margin: 0 0 24px; }
 table.words th, table.words td { text-align: left; border-bottom: 1px solid var(--line); padding: 8px 10px 8px 0; vertical-align: top; overflow-wrap: anywhere; }
 .problem { font-weight: 700; color: var(--accent); margin: 0 0 6px; }

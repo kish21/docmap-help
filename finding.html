@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Finding and tidying — docmap help</title>
-<meta name="description" content="Get on top of a project's Markdown docs: Docs Inbox, Search All Docs, Doc Atlas, Plans Dashboard, Open Questions, My Items, Decision Log.">
+<meta name="description" content="Get on top of a project's Markdown docs: Docs Inbox, Where Do I Start?, Search All Docs, Doc Atlas, Plans Dashboard, Open Questions, My Items, Decision Log.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
 
 <main class="wrap">
   <h1>Finding and tidying</h1>
-  <p class="intro">A project with dozens of docs is hard to keep track of. These features show what changed, what is new, every plan, every open question, and how your docs link together.</p>
+  <p class="intro">A project with dozens of docs is hard to keep track of. See what changed, what is new, every plan, every open question.</p>
 
   <div class="search" role="search">
     <label for="q">Search every feature</label>
@@ -33,265 +33,130 @@
     <ul id="results" aria-live="polite"></ul>
   </div>
 
-  <h2>On this page</h2>
-  <ol class="toc">
+  <ul class="jump" aria-label="On this page">
     <li><a href="#docs-inbox">Docs Inbox</a></li>
-    <li><a href="#where-to-start">Where Do I Start?</a></li>
-    <li><a href="#search-all-docs">Search All Docs</a></li>
+    <li><a href="#where-to-start">Where do I start?</a></li>
+    <li><a href="#search-all-docs">Search all docs</a></li>
     <li><a href="#doc-atlas">Doc Atlas</a></li>
     <li><a href="#plans-dashboard">Plans Dashboard</a></li>
-    <li><a href="#plans-menu">Sort, export or report on plans</a></li>
-    <li><a href="#open-questions">Open Questions</a></li>
-    <li><a href="#my-items">My Items</a></li>
-    <li><a href="#decision-log">Decision Log</a></li>
-    <li><a href="#tidy">Tidy these docs</a></li>
-    <li><a href="#markdown-files">Markdown Files list</a></li>
+    <li><a href="#plans-menu">Export plans</a></li>
+    <li><a href="#open-questions">Open questions</a></li>
+    <li><a href="#my-items">My items</a></li>
+    <li><a href="#decision-log">Decision log</a></li>
+    <li><a href="#tidy">Tidy docs</a></li>
+    <li><a href="#markdown-files">Markdown files</a></li>
+  </ul>
+
+  <ol class="story">
+    <li id="docs-inbox" class="noimg">
+      <div class="story-text">
+        <h2 class="day">Docs Inbox</h2>
+        <p class="pain">“Dozens of docs. Which changed, which are new, which are stale?”</p>
+        <p class="fix">Every doc sorted like an email inbox: <b>Changed since you read</b>, <b>New — last 7 days</b>, <b>Possible duplicates</b>, <b>Probably out of date</b> and more. One click opens a doc with what changed marked.</p>
+        <p class="where-line"><b>Where:</b> the file list on the left (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>) → the <b>DOCS INBOX</b> section below your files. Move the mouse over its title for Search, New Doc, Help and <b>⋯</b>.</p>
+      </div>
+    </li>
+
+    <li id="where-to-start" class="noimg">
+      <div class="story-text">
+        <h2 class="day">Where Do I Start? <span class="soon">next update</span></h2>
+        <p class="pain">“I just joined. There are 60 docs. Where do I even start?”</p>
+        <p class="fix">A short reading order for the project: README, design, specs, recent decisions, plans, runbooks. Each with one line on why it matters.</p>
+        <p class="where-line"><b>Where:</b> Docs Inbox title → <b>⋯</b> → <b>Where Do I Start?</b></p>
+      </div>
+    </li>
+
+    <li id="search-all-docs">
+      <div class="story-text">
+        <h2 class="day">Search All Docs</h2>
+        <p class="pain">“Where did we write that down?”</p>
+        <p class="fix">One search box over every doc. Each result shows the headings it sits under, so you know which one you want.</p>
+        <p class="where-line"><b>Where:</b> the search button on the Docs Inbox title, or Command Palette → <b>Search All Docs…</b></p>
+      </div>
+      <img src="img/search-all-docs.png" width="755" height="440" alt="Search results for 'queue': 18 matches in 8 of 14 files, each with its headings" loading="lazy">
+    </li>
+
+    <li id="doc-atlas">
+      <div class="story-text">
+        <h2 class="day">Doc Atlas</h2>
+        <p class="pain">“Which docs does nobody ever link to?”</p>
+        <p class="fix">A diagram of which docs link to which, grouped by folder, plus the docs that link to none.</p>
+        <p class="where-line"><b>Where:</b> Docs Inbox title → <b>⋯</b> → <b>Doc Atlas</b>.</p>
+      </div>
+      <img src="img/doc-atlas.png" width="558" height="870" alt="A Doc Atlas page: a diagram of linked docs in folder boxes" loading="lazy">
+    </li>
+
+    <li id="plans-dashboard">
+      <div class="story-text">
+        <h2 class="day">Plans Dashboard</h2>
+        <p class="pain">“Status meeting in 10 minutes. Where are we on every plan?”</p>
+        <p class="fix">Every plan on one page: progress, owner, next date, and a <b>Needs attention</b> list of what is overdue, blocked or has no owner.</p>
+        <p class="where-line"><b>Where:</b> Docs Inbox title → <b>⋯</b> → <b>Plans Dashboard</b>.</p>
+      </div>
+      <img src="img/plans-dashboard.png" width="558" height="870" alt="The Plans Dashboard: totals at the top, then a Needs attention list" loading="lazy">
+    </li>
+
+    <li id="plans-menu">
+      <div class="story-text">
+        <h2 class="day">Sort, export or report on plans</h2>
+        <p class="pain">“I need this in a spreadsheet for the weekly update.”</p>
+        <p class="fix">Sort the dashboard, save it as a spreadsheet (CSV) or Markdown, or ask your AI agent for a status report of every plan.</p>
+        <p class="where-line"><b>Where:</b> Command Palette → <b>Plans Dashboard: Sort, Export or Ask My Agent…</b></p>
+      </div>
+      <img src="img/plans-menu.png" width="755" height="260" alt="A menu with sort choices, Save as Markdown, Save as CSV and Status report of every plan" loading="lazy">
+    </li>
+
+    <li id="open-questions">
+      <div class="story-text">
+        <h2 class="day">Open Questions</h2>
+        <p class="pain">“What is still undecided, across all our docs?”</p>
+        <p class="fix">Every open question from every doc on one page, grouped by doc.</p>
+        <p class="where-line"><b>Where:</b> Command Palette → <b>Open Questions (Every Doc)</b>.</p>
+      </div>
+      <img src="img/open-questions.png" width="558" height="870" alt="The Open questions page: 7 questions in 5 files, grouped by doc" loading="lazy">
+    </li>
+
+    <li id="my-items">
+      <div class="story-text">
+        <h2 class="day">My Items</h2>
+        <p class="pain">“What did people ask me to do, in all these docs?”</p>
+        <p class="fix">Every open task and question that names you, e.g. “Ask @priya…”.</p>
+        <p class="where-line"><b>Where:</b> first add your name in Settings → <b>docmap my names</b>; then Command Palette → <b>My Items</b>.</p>
+      </div>
+      <img src="img/my-items.png" width="558" height="500" alt="The My items page: one open item naming @priya" loading="lazy">
+    </li>
+
+    <li id="decision-log">
+      <div class="story-text">
+        <h2 class="day">Decision Log</h2>
+        <p class="pain">“Why did we do it this way?”</p>
+        <p class="fix">Every decision written in your docs, on one page, newest first.</p>
+        <p class="where-line"><b>Where:</b> Docs Inbox title → <b>⋯</b> → <b>Open Decision Log</b>, or the <b>Decisions</b> group.</p>
+      </div>
+      <img src="img/decision-log.png" width="558" height="870" alt="The Decision log page: 4 decisions in 3 files" loading="lazy">
+    </li>
+
+    <li id="tidy" class="noimg">
+      <div class="story-text">
+        <h2 class="day">Tidy these docs</h2>
+        <p class="pain">“Our docs folder is a mess.”</p>
+        <p class="fix">Your AI agent proposes which docs are current, out of date, duplicated or in the wrong place. It changes nothing until you agree.</p>
+        <p class="where-line"><b>Where:</b> Docs Inbox → move the mouse over a group → its sparkle icon → <b>Tidy these docs</b>.</p>
+      </div>
+    </li>
+
+    <li id="markdown-files">
+      <div class="story-text">
+        <h2 class="day">Markdown Files list</h2>
+        <p class="pain">“Just show me all the docs and their headings.”</p>
+        <p class="fix">Every Markdown file in the project, each with its headings.</p>
+        <p class="where-line"><b>Where:</b> the file list on the left → the <b>Markdown Files</b> section.</p>
+      </div>
+      <img src="img/markdown-files.png" width="440" height="120" alt="The Markdown Files section listing the docs folder, AGENTS.md and PLAN.md" loading="lazy">
+    </li>
   </ol>
 
-  <article class="card" id="docs-inbox">
-    <h2>Docs Inbox <a class="permalink" href="#docs-inbox" aria-label="Link to this feature">#</a></h2>
-    <p class="problem">The problem: dozens of docs, and no idea which changed, which are new and which are stale.</p>
-    <p class="lead">A list of every doc in your project, sorted like an email inbox: what changed since you last read it, what is new this week, and what is probably out of date.</p>
-    <p class="who">Helps: anyone joining or coming back to a project with many docs.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>The file list on the left of VS Code (the <b>Explorer</b>; press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> if you can't see it). Below your files there is a section titled <b>DOCS INBOX</b>. Click the title to open it.</li>
-        <li>Its buttons appear only when the mouse is over the title: <b>Search</b>, <b>New Doc</b> and <b>Help</b>. The <b>⋯</b> (three dots) next to them has the rest: Where Do I Start?, Doc Atlas, Plans Dashboard, Decision Log and Refresh.</li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Open a project folder that has a few <code>.md</code> files (menu <b>File → Open Folder…</b>).</li>
-      <li>In the Explorer, click <b>DOCS INBOX</b>.</li>
-      <li>Click a file in any group. Move the mouse over a file to see <b>✓ Mark as read</b> and <b>✨ Ask my AI agent</b>.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <p>Groups of files, each file with its folder and age. Only groups that have files are shown. Each group lists 10 files, then <b>Show all</b>.</p>
-    <details><summary>More detail: the groups and what a click does</summary>
-      <ul>
-        <li><b>Changed since you read</b>: opens the doc with what changed marked.</li>
-        <li><b>New — last 7 days, not opened</b>: docs added this week that you haven't opened yet.</li>
-        <li><b>Possible duplicates</b>: opens the doc side by side with its twin. Then <b>Are these really duplicates?</b> or <b>Merge them into one</b> hands the question to your AI agent.</li>
-        <li><b>Probably out of date</b> (not changed for 90 days): says why, and offers <b>Update this doc to match the code</b>.</li>
-        <li>Also: <b>Worth reading first</b>, <b>Plans in progress</b>, <b>Doubtful — check before you trust</b>, <b>Decisions</b>.</li>
-        <li>Folders whose names start with a dot (tool folders such as <code>.agents</code>) are left out, except <code>.github</code>. To change that, use the settings <b>Skip Folders</b> and <b>Include Folders</b> (Settings → search “docmap folders”).</li>
-        <li>Right-click a file: <b>Mark as Read</b>, <b>Ask My AI Agent About These…</b>, <b>Move to Archive Folder</b> (nothing is deleted).</li>
-      </ul>
-    </details>
-  </article>
-
-  <article class="card" id="where-to-start">
-    <h2>Where Do I Start? <span class="soon">next update</span> <a class="permalink" href="#where-to-start" aria-label="Link to this feature">#</a></h2>
-    <p class="problem">The problem: you join a project with 60 docs and don't know which to read first.</p>
-    <p class="lead">A page with a reading order for this project: the README, how the parts fit, the design, the specs, recent decisions, plans still in progress and runbooks. Each with one line on why to read it.</p>
-    <p class="who">Helps: new team members, and anyone coming back after a long break.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Docs Inbox: move the mouse over the <b>DOCS INBOX</b> title → <b>⋯</b> → <span class="cmd">Where Do I Start? (Reading Order for This Project)</span></li>
-        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Where Do I Start?</span></li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Open a project folder.</li>
-      <li>Run <span class="cmd">Where Do I Start?</span></li>
-      <li>Click a title on the page to open that doc.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <p>A short, numbered reading list. Only docs that exist are listed. Nothing is written to your project.</p>
-  </article>
-
-  <article class="card" id="search-all-docs">
-    <h2>Search All Docs <a class="permalink" href="#search-all-docs" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">One search box over every Markdown file. Each result shows the doc and the headings it sits under.</p>
-    <p class="who">Helps: finding “where did we write that down?” in seconds.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Search All Docs…</span></li>
-        <li>Docs Inbox: move the mouse over the title → the search (magnifier) button.</li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Run <span class="cmd">Search All Docs…</span></li>
-      <li>Type at least 2 letters, for example <b>queue</b>.</li>
-      <li>Pick a result to open the file at that line.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <figure><img src="img/search-all-docs.png" width="755" height="440" alt="Search results for 'queue': '18 matches in 8 of 14 files', each line showing the doc title, the headings path and the line number" loading="lazy"><figcaption>“18 matches in 8 of 14 files”, each with its headings, e.g. <i>Use a managed queue for payments › Considered Options, line 14</i>.</figcaption></figure>
-  </article>
-
-  <article class="card" id="doc-atlas">
-    <h2>Doc Atlas <a class="permalink" href="#doc-atlas" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">A diagram of which docs link to which, grouped by folder, plus a list of docs that link to no other doc.</p>
-    <p class="who">Helps: spotting forgotten docs and seeing how a docs folder hangs together.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Doc Atlas (Which Docs Link to Which)</span></li>
-        <li>Docs Inbox: move the mouse over the title → <b>⋯</b> → <span class="cmd">Doc Atlas</span></li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Open a project whose docs link to each other.</li>
-      <li>Run <span class="cmd">Doc Atlas</span>.</li>
-      <li>Look at “Docs that link to no other doc” for docs nobody finds.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <figure><img src="img/doc-atlas.png" width="558" height="870" alt="A Doc Atlas page: '14 docs: 6 link to or from another doc, 8 link to none', a diagram of linked docs in folder boxes, and a list of docs that link to no other doc" loading="lazy"><figcaption>A summary line, the diagram, and the docs with no links. It only reads; nothing is written.</figcaption></figure>
-  </article>
-
-  <article class="card" id="plans-dashboard">
-    <h2>Plans Dashboard <a class="permalink" href="#plans-dashboard" aria-label="Link to this feature">#</a></h2>
-    <p class="problem">The problem: many plans, many owners, and no single view of where things stand.</p>
-    <p class="lead">One page with every plan in your project, grouped by folder: progress, status, owner, next date, overdue, open questions and risks.</p>
-    <p class="who">Helps: leads and product owners who need “where are we?” across many plans.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Docs Inbox: move the mouse over the title → <b>⋯</b> → <span class="cmd">Plans Dashboard</span>.</li>
-        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Plans Dashboard</span></li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Have a few docs with “plan” in their name or title.</li>
-      <li>Run <span class="cmd">Plans Dashboard</span>.</li>
-      <li>Click a plan's name to open it.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <figure><img src="img/plans-dashboard.png" width="558" height="870" alt="The Plans dashboard page: '5 plans · 5 in progress · 5 open questions · 5 risks · 2 decisions', then Needs attention with overdue plans and plans with no owner" loading="lazy"><figcaption>Totals at the top, then <b>Needs attention</b> (overdue, blocked, no owner, names files that no longer exist), <b>Coming up</b>, <b>Plans by folder</b> and more.</figcaption></figure>
-    <details><summary>More detail</summary>
-      <p>A file counts as a plan by its name, its title or its front matter. Only the columns your project fills are shown. No owner written → the last git author. No task boxes → active / quiet / stale by last change. 🌐 beside each plan opens it in your browser. Run the command again to refresh.</p>
-    </details>
-  </article>
-
-  <article class="card" id="plans-menu">
-    <h2>Sort, export or report on plans <a class="permalink" href="#plans-menu" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">Sort the dashboard, save it as Markdown or as a CSV for a spreadsheet, or ask your AI agent for a status report of every plan.</p>
-    <p class="who">Helps: sharing plan status in a meeting or a weekly update.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Plans Dashboard: Sort, Export or Ask My Agent…</span></li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Open the Plans Dashboard.</li>
-      <li>Run <span class="cmd">Plans Dashboard: Sort, Export or Ask My Agent…</span></li>
-      <li>Pick <b>Save as CSV (spreadsheet)…</b> and open the file in your spreadsheet app.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <figure><img src="img/plans-menu.png" width="755" height="260" alt="A menu 'Plans dashboard — 5 plans' with Sort: needs attention first, last changed first, least done first, next date first; Save as Markdown; Save as CSV; Status report of every plan" loading="lazy"><figcaption>Sort choices, Save as Markdown / CSV, and <b>Status report of every plan</b>.</figcaption></figure>
-  </article>
-
-  <article class="card" id="open-questions">
-    <h2>Open Questions <a class="permalink" href="#open-questions" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">Collects every open question from all your docs onto one page, by file, with line numbers.</p>
-    <p class="who">Helps: preparing a meeting, or making sure nothing is left unanswered.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Open Questions (Every Doc)</span></li>
-        <li>In a page's outline, an “Open questions” heading shows small counts such as <b>☐1 ?1</b>.</li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Add a heading <code>## Open questions</code> with a line <code>- Do we keep the v1 endpoint?</code> to a doc and save.</li>
-      <li>Run <span class="cmd">Open Questions (Every Doc)</span>.</li>
-      <li>Click a file name to open it.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <figure><img src="img/open-questions.png" width="558" height="870" alt="The Open questions page: '7 questions in 5 files', grouped by doc with line numbers" loading="lazy"><figcaption>Questions grouped by doc. Lines ending in “?”, “Question:” lines and items under an “Open questions” heading are collected.</figcaption></figure>
-  </article>
-
-  <article class="card" id="my-items">
-    <h2>My Items <a class="permalink" href="#my-items" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">Lists the open tasks and questions that name you, from every doc.</p>
-    <p class="who">Helps: anyone who gets tagged in plans (“Ask @priya …”).</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: My Items (Tasks and Questions Naming Me)</span></li>
-        <li>Your names come from the setting <code>docmap.myNames</code>, e.g. <code>["Priya", "@priya"]</code>.</li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Settings (<kbd>Ctrl</kbd>+<kbd>,</kbd>) → search <b>docmap my names</b> → add your name or @handle.</li>
-      <li>Write <code>- [ ] Ask @yourname about the rollout date</code> in a doc and save.</li>
-      <li>Run <span class="cmd">My Items</span>.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <figure><img src="img/my-items.png" width="558" height="500" alt="The My items page: '1 open item naming @priya', with the task 'Ask @priya about the rollout date (line 15)' under Setup notes" loading="lazy"><figcaption>Each item with its doc and line.</figcaption></figure>
-  </article>
-
-  <article class="card" id="decision-log">
-    <h2>Decision Log <a class="permalink" href="#decision-log" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">Every decision written in your docs, on one page, newest file first.</p>
-    <p class="who">Helps: answering “why did we do it this way?” without digging.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Docs Inbox: move the mouse over the title → <b>⋯</b> → <span class="cmd">Open Decision Log</span>, or click the <b>Decisions</b> group.</li>
-        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Open Decision Log</span></li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Write a line starting with <code>Decision:</code> in a doc, with the reason.</li>
-      <li>Run <span class="cmd">Open Decision Log</span>.</li>
-      <li>Click a doc's name to open it.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <figure><img src="img/decision-log.png" width="558" height="870" alt="The Decision log page: '4 decisions in 3 files', each decision under its doc with the line number" loading="lazy"><figcaption>Built from lines that start with “Decision:”, “We chose”, “Decided”… and from decision records.</figcaption></figure>
-  </article>
-
-  <article class="card" id="tidy">
-    <h2>Tidy these docs <a class="permalink" href="#tidy" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">Hands your AI agent a prompt to sort a group of docs into current, out of date, duplicated or misplaced. It proposes; it changes nothing until you agree.</p>
-    <p class="who">Helps: cleaning up a messy docs folder.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Docs Inbox → hover a group (for example <b>Worth reading first</b>) → click its <b>✨</b> → <span class="cmd">Tidy these docs (propose, change nothing)</span>.</li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Open the Docs Inbox.</li>
-      <li>Hover a group and click <b>✨</b>.</li>
-      <li>Pick <b>Tidy these docs</b>, then paste the copied prompt into your AI agent.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <p>“Prompt copied — paste it into your AI agent.” Your agent replies with a proposal per doc. See <a href="agents.html#agent-target">where prompts go</a>.</p>
-  </article>
-
-  <article class="card" id="markdown-files">
-    <h2>Markdown Files list <a class="permalink" href="#markdown-files" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">A list of every Markdown file in your project, each with its headings, in the Explorer.</p>
-    <p class="who">Helps: browsing docs by their headings without opening each one.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>The Explorer → the <b>Markdown Files</b> section at the bottom. Its refresh icon runs <span class="cmd">Refresh Markdown Files</span>.</li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Open a project folder with <code>.md</code> files.</li>
-      <li>In the Explorer, open <b>Markdown Files</b>.</li>
-      <li>Expand a file to see its headings.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <figure><img src="img/markdown-files.png" width="440" height="120" alt="The Markdown Files section in the Explorer listing the docs folder, AGENTS.md and PLAN.md, with refresh and collapse icons" loading="lazy"><figcaption>Your folders and Markdown files, with a refresh icon on the title bar.</figcaption></figure>
-  </article>
+  <p class="story-more">Want step-by-step examples to try? In VS Code press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and run <b>Help (All Features)</b>.</p>
 </main>
 
 <footer>

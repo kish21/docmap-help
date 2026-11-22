@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Writing docs — docmap help</title>
-<meta name="description" content="Write Markdown in VS Code with All-in-One Markdown Viewer: writing keys, Format Table, table of contents, New Doc from Template, restructuring old docs.">
+<meta name="description" content="Write Markdown docs faster: writing keys, tables, contents, new docs from templates in your team's folder, and restructuring old docs.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
 
 <main class="wrap">
   <h1>Writing docs</h1>
-  <p class="intro">Small helpers for typing Markdown, and templates that start a new doc in a clear shape, in the folder your team already uses.</p>
+  <p class="intro">Small helpers for typing Markdown, and templates that start a new doc in a clear shape.</p>
 
   <div class="search" role="search">
     <label for="q">Search every feature</label>
@@ -33,154 +33,77 @@
     <ul id="results" aria-live="polite"></ul>
   </div>
 
-  <h2>On this page</h2>
-  <ol class="toc">
-    <li><a href="#writing-keys">Bold, italic, strikethrough and lists</a></li>
-    <li><a href="#format-table">Format Table</a></li>
-    <li><a href="#toc">Insert / Update Table of Contents</a></li>
-    <li><a href="#new-doc">New Doc from Template</a></li>
-    <li><a href="#team-way">New docs follow your team</a></li>
-    <li><a href="#restructure">Restructure into a clear doc</a></li>
+  <ul class="jump" aria-label="On this page">
+    <li><a href="#writing-keys">Writing keys</a></li>
+    <li><a href="#format-table">Format table</a></li>
+    <li><a href="#toc">Table of contents</a></li>
+    <li><a href="#new-doc">New doc</a></li>
+    <li><a href="#team-way">Your team's way</a></li>
+    <li><a href="#restructure">Restructure</a></li>
+  </ul>
+
+  <ol class="story">
+    <li id="writing-keys" class="noimg">
+      <div class="story-text">
+        <h2 class="day">Bold, italic, strikethrough and lists</h2>
+        <p class="pain">“I keep forgetting the ** and ~~ marks.”</p>
+        <p class="fix"><kbd>Ctrl</kbd>+<kbd>B</kbd> bold, <kbd>Ctrl</kbd>+<kbd>I</kbd> italic, <kbd>Alt</kbd>+<kbd>S</kbd> strikethrough. Lists continue when you press <kbd>Enter</kbd>.</p>
+        <p class="where-line"><b>Where:</b> in the text of any <code>.md</code> file.</p>
+      </div>
+    </li>
+
+    <li id="format-table">
+      <div class="story-text">
+        <h2 class="day">Format Table</h2>
+        <p class="pain">“My table's columns are all over the place.”</p>
+        <p class="fix">Lines up every column so the table is easy to read as text.</p>
+        <p class="where-line"><b>Where:</b> right-click inside a table → <b>Format Table</b>.</p>
+      </div>
+      <img src="img/format-table.png" width="1000" height="360" alt="A Markdown table with neatly aligned columns" loading="lazy">
+    </li>
+
+    <li id="toc">
+      <div class="story-text">
+        <h2 class="day">Insert / Update Table of Contents</h2>
+        <p class="pain">“My README is long, and readers get lost.”</p>
+        <p class="fix">Adds a list of links to every heading, and refreshes it when the headings change.</p>
+        <p class="where-line"><b>Where:</b> right-click in a <code>.md</code> file → <b>Insert / Update Table of Contents</b>.</p>
+      </div>
+      <img src="img/table-of-contents.png" width="1000" height="420" alt="A list of heading links added to the file" loading="lazy">
+    </li>
+
+    <li id="new-doc">
+      <div class="story-text">
+        <h2 class="day">New Doc from Template</h2>
+        <p class="pain">“I stare at a blank page. What sections should a plan even have?”</p>
+        <p class="fix">Starts the doc for you: owner, status and date at the top, the right sections, and a grey hint under each. Well-known formats first, each with a <b>↗ read more</b> link; <b>More doc types…</b> for plans, specs, runbooks and more.</p>
+        <p class="where-line"><b>Where:</b> the new-file button on the Docs Inbox title, or Command Palette → <b>New Doc from Template…</b></p>
+      </div>
+      <img src="img/new-doc-plan.png" width="1100" height="640" alt="A new plan file with owner, status and created at the top, and empty sections with grey hints" loading="lazy">
+    </li>
+
+    <li id="team-way">
+      <div class="story-text">
+        <h2 class="day">New docs follow your team</h2>
+        <p class="pain">“New docs end up in random places.”</p>
+        <p class="fix">A new decision record, design or spec goes in the folder your team already uses, numbered like its neighbours, in your team's own template.</p>
+        <p class="where-line"><b>Where:</b> automatic with <b>New Doc from Template…</b>. Your own template goes in <code>docs/templates/</code>.</p>
+      </div>
+      <img src="img/new-doc-decision.png" width="1100" height="640" alt="A new decision record numbered 0002, next to 0001, with the MADR sections" loading="lazy">
+    </li>
+
+    <li id="restructure">
+      <div class="story-text">
+        <h2 class="day">Restructure into a clear doc</h2>
+        <p class="pain">“This old doc is a mess, but everything in it matters.”</p>
+        <p class="fix">Your AI agent moves the text into a clear shape, keeping every fact and deleting nothing. Missing parts become open questions.</p>
+        <p class="where-line"><b>Where:</b> <b>⋯ Ask my AI agent</b> → <b>Ask my AI agent about this file…</b> → <b>Restructure into a clear doc</b>.</p>
+      </div>
+      <img src="img/ask-agent-menu.png" width="755" height="440" alt="The Ask my AI agent menu with Restructure into a clear doc second in the list" loading="lazy">
+    </li>
   </ol>
 
-  <article class="card" id="writing-keys">
-    <h2>Bold, italic, strikethrough and lists <a class="permalink" href="#writing-keys" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">Keyboard shortcuts for Markdown formatting, and lists that continue when you press Enter.</p>
-    <p class="who">Helps: anyone typing Markdown by hand.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>In a <code>.md</code> file (the text, not the page): <kbd>Ctrl</kbd>+<kbd>B</kbd> bold · <kbd>Ctrl</kbd>+<kbd>I</kbd> italic · <kbd>Alt</kbd>+<kbd>S</kbd> strikethrough · <kbd>Enter</kbd> continues a list or quote.</li>
-        <li>Command Palette: <span class="cmd">Toggle Bold</span>, <span class="cmd">Toggle Italic</span>, <span class="cmd">Toggle Strikethrough</span>.</li>
-        <li>Setting: <code>docmap.writingHelpers</code> turns them off.</li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Open a <code>.md</code> file and select a word.</li>
-      <li>Press <kbd>Ctrl</kbd>+<kbd>B</kbd>: it becomes <code>**word**</code>. Press it again to undo.</li>
-      <li>Type <code>- first item</code> and press <kbd>Enter</kbd>: the next line starts with <code>- </code>.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <p>The Markdown marks are added or removed around your selection. On an empty list item, <kbd>Enter</kbd> ends the list.</p>
-    <details><summary>More detail</summary>
-      <p>The keys switch off by themselves when the extension “Markdown All in One” is installed, so the two do not fight. <kbd>Ctrl</kbd>+<kbd>I</kbd> for italic works only in VS Code itself, not in other VS Code-based editors such as Cursor.</p>
-    </details>
-  </article>
-
-  <article class="card" id="format-table">
-    <h2>Format Table <a class="permalink" href="#format-table" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">Lines up the columns of a Markdown table so it is easy to read as text.</p>
-    <p class="who">Helps: anyone editing tables by hand.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Right-click inside a table in a <code>.md</code> file → <span class="cmd">Format Table</span>.</li>
-        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Format Table</span></li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Put the cursor inside a table in the text.</li>
-      <li>Right-click → <span class="cmd">Format Table</span>.</li>
-      <li>The columns line up.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <figure><img src="img/format-table.png" width="1000" height="360" alt="A Markdown table in the editor with neatly aligned columns: Step, Owner, Status" loading="lazy"><figcaption>Every column padded to the same width.</figcaption></figure>
-  </article>
-
-  <article class="card" id="toc">
-    <h2>Insert / Update Table of Contents <a class="permalink" href="#toc" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">Adds a list of links to every heading, and refreshes it when the headings change.</p>
-    <p class="who">Helps: long README files and docs read on GitHub.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Right-click in a <code>.md</code> file → <span class="cmd">Insert / Update Table of Contents</span>.</li>
-        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: Insert / Update Table of Contents</span></li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Put the cursor where the contents should go.</li>
-      <li>Right-click → <span class="cmd">Insert / Update Table of Contents</span>.</li>
-      <li>Rename a heading and run it again: the list follows.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <figure><img src="img/table-of-contents.png" width="1000" height="420" alt="A list of heading links between the markers &lt;!-- toc --&gt; and &lt;!-- tocstop --&gt;" loading="lazy"><figcaption>The list sits between <code>&lt;!-- toc --&gt;</code> and <code>&lt;!-- tocstop --&gt;</code>, so it can be updated later.</figcaption></figure>
-  </article>
-
-  <article class="card" id="new-doc">
-    <h2>New Doc from Template <a class="permalink" href="#new-doc" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">Starts a new doc in a clear shape: owner, status and date at the top, the right sections, and a grey hint under each one.</p>
-    <p class="who">Helps: anyone writing a plan, spec, decision record or runbook, and AI agents asked to write one.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Docs Inbox: move the mouse over the title → the new-file button.</li>
-        <li>Command Palette: <span class="cmd">All-in-One Markdown Viewer: New Doc from Template…</span></li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Run <span class="cmd">New Doc from Template…</span></li>
-      <li>Click <b>More doc types…</b> at the bottom of the list, then pick <b>Plan</b>.</li>
-      <li>Type a title, for example <b>Checkout rollout</b>.</li>
-    </ol>
-    <p><span class="soon">next update</span> The first list is short: your team's own templates first, then five well-known formats (MADR, Nygard ADR, RFC, GitHub Spec Kit, Keep a Changelog). Each has one line on what it is for and a <b>↗ read more</b> link to the format's own website. Picking one writes its section headings only; you write the rest.</p>
-    <figure><img src="img/new-doc-pick.png" width="755" height="440" alt="The doc types list: Vision, Scope, Plan, Architecture, Feature spec, Design doc, Ticket… each with a one-line description" loading="lazy"><figcaption><b>More doc types…</b> shows docmap's own shapes, each with a one-line description.</figcaption></figure>
-    <h3>What you should see</h3>
-    <figure><img src="img/new-doc-plan.png" width="1100" height="640" alt="A new file docs/plans/checkout-rollout.md with owner, status and created at the top and sections In short, Scope, Owners, Milestones, Steps, Rollout with grey hints" loading="lazy"><figcaption><code>docs/plans/checkout-rollout.md</code> opens. The grey hints (<code>&lt;!-- … --&gt;</code>) are hidden on the page. An existing file is opened, never replaced.</figcaption></figure>
-    <details><summary>More detail: all shapes and their rules</summary>
-      <p>Shapes: Vision, Scope, Plan, Architecture, Feature spec, Design doc, Ticket, Decision record, Runbook, Design system (DESIGN.md), Test plan, Postmortem, Release notes, Agent guide (AGENTS.md, with a <b>Never do</b> section for the agent's hard rules), Structure.</p>
-      <p>The templates follow simple rules: one purpose and one <code>#</code> title per doc; an <b>In short</b> first section; specific headings with no skipped levels; owner, status and dates at the top; dates as <code>2026-12-01</code>; tasks as <code>- [ ]</code>; <code>Decision:</code> lines with the reason; an <b>Open questions</b> section.</p>
-    </details>
-  </article>
-
-  <article class="card" id="team-way">
-    <h2>New docs follow your team <a class="permalink" href="#team-way" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">A new decision record, design doc, spec or runbook goes in the folder your team already uses, numbered like its neighbours, in your team's own template.</p>
-    <p class="who">Helps: teams with an existing docs layout, so new docs don't end up in the wrong place.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>Automatic when you use <span class="cmd">New Doc from Template…</span></li>
-        <li>Your own template: put it at <code>docs/templates/&lt;kind&gt;.md</code> (e.g. <code>docs/templates/runbook.md</code>); it replaces docmap's.</li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>In a project that has <code>docs/decisions/0001-….md</code>, run <span class="cmd">New Doc from Template…</span></li>
-      <li>Pick <b>More doc types…</b> → <b>Decision record</b> and type a title.</li>
-      <li>Look at where the file was created.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <figure><img src="img/new-doc-decision.png" width="1100" height="640" alt="A new file docs/decisions/0002-use-feature-flags.md next to 0001-use-managed-queue.md, with MADR sections: Context and Problem Statement, Decision Drivers, Considered Options, Decision Outcome, Consequences" loading="lazy"><figcaption>It became <code>docs/decisions/0002-use-feature-flags.md</code>, next to 0001, with the MADR sections.</figcaption></figure>
-    <details><summary>More detail</summary>
-      <p>docmap reads adr-tools and log4brains settings to find the decisions folder. With no team template, it uses the shape most of your existing docs of that kind share, else its own template (MADR for decisions, Google design-doc sections for design docs, GitHub Spec Kit sections for specs).</p>
-    </details>
-  </article>
-
-  <article class="card" id="restructure">
-    <h2>Restructure into a clear doc <a class="permalink" href="#restructure" aria-label="Link to this feature">#</a></h2>
-    <p class="lead">Asks your AI agent to move an old doc's text into a clear shape, keeping every fact, deleting nothing, and writing anything missing as an open question.</p>
-    <p class="who">Helps: turning long, messy notes or AI output into a doc others can use.</p>
-    <div class="where">
-      <h3>Where to find it</h3>
-      <ul>
-        <li>On the page: <b>⋯ Ask my AI agent</b> → <span class="cmd">Ask my AI agent about this file…</span> → <span class="cmd">Restructure into a clear doc</span>.</li>
-        <li>Command Palette: <span class="cmd">Ask My AI Agent About This File…</span> → <span class="cmd">Restructure into a clear doc</span>.</li>
-      </ul>
-    </div>
-    <h3>Try it</h3>
-    <ol>
-      <li>Open the page of an old, messy doc.</li>
-      <li>Choose <span class="cmd">Restructure into a clear doc</span>, then a shape (or <b>Let my agent pick the best fit</b>).</li>
-      <li>Paste the copied prompt into your AI agent.</li>
-    </ol>
-    <h3>What you should see</h3>
-    <figure><img src="img/ask-agent-menu.png" width="755" height="440" alt="The 'Ask my AI agent to…' menu with Summarise this file, Restructure into a clear doc, Tidy this file's formatting, Brief me on what changed and more" loading="lazy"><figcaption><b>Restructure into a clear doc</b> is second in the list. Afterwards, <a href="trust.html#compare">⇆ Compare… → The last commit</a> shows exactly what moved.</figcaption></figure>
-  </article>
+  <p class="story-more">Want step-by-step examples to try? In VS Code press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and run <b>Help (All Features)</b>.</p>
 </main>
 
 <footer>
