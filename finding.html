@@ -34,6 +34,7 @@
   </div>
 
   <ul class="jump" aria-label="On this page">
+    <li><a href="#home">Home</a></li>
     <li><a href="#what-can-docmap-do">What can docmap do?</a></li>
     <li><a href="#docs-inbox">Docs Inbox</a></li>
     <li><a href="#where-to-start">Where do I start?</a></li>
@@ -49,9 +50,19 @@
   </ul>
 
   <ol class="story">
+    <li id="home">
+      <div class="story-text">
+        <h2 class="day">Home: what's going on</h2>
+        <p class="pain">“I'm back on this project. What is being worked on, and what is next?”</p>
+        <p class="fix">One page: what is being worked on and what is next (from your handover note), <b>What's open</b> (questions waiting for an answer, tasks that name you), docs that are hard to read, docs out of date with the code, and every feature.</p>
+        <p class="where-line"><b>Where:</b> Command Palette → <b>Home (What's Going On in This Project)</b>. It opens by itself in a project with many docs (setting <b>Home on Start</b>).</p>
+      </div>
+      <img src="img/home.png" width="1000" height="1200" alt="The Home page of a sample bookshop project: what's next from the handover, open questions, and the feature list" loading="lazy">
+    </li>
+
     <li id="what-can-docmap-do">
       <div class="story-text">
-        <h2 class="day">What can docmap do? <span class="soon">next update</span></h2>
+        <h2 class="day">What can docmap do?</h2>
         <p class="pain">“I know it can do more. I just don't know what, or what it's called.”</p>
         <p class="fix">Every docmap command in one list, grouped by what you want to do, each with one plain line. Type a word like <i>plan</i> or <i>compare</i> to narrow it; pick one to run it.</p>
         <p class="where-line"><b>Where:</b> Docs Inbox title → <b>⋯</b> → <b>What Can docmap Do?</b>, or the last line of the page's <b>⋯ Ask my AI agent</b> menu, or the Command Palette.</p>
@@ -71,7 +82,7 @@
 
     <li id="where-to-start">
       <div class="story-text">
-        <h2 class="day">Where Do I Start? <span class="soon">next update</span></h2>
+        <h2 class="day">Where Do I Start?</h2>
         <p class="pain">“I just joined. There are 60 docs. Where do I even start?”</p>
         <p class="fix">A short reading order for the project: README, design, specs, recent decisions, plans, runbooks. Each with one line on why it matters.</p>
         <p class="where-line"><b>Where:</b> Docs Inbox title → <b>⋯</b> → <b>Where Do I Start?</b></p>
@@ -92,11 +103,11 @@
     <li id="doc-atlas">
       <div class="story-text">
         <h2 class="day">Doc Atlas</h2>
-        <p class="pain">“Which docs does nobody ever link to?”</p>
-        <p class="fix">A diagram of which docs link to which, grouped by folder, plus the docs that link to none.</p>
-        <p class="where-line"><b>Where:</b> Docs Inbox title → <b>⋯</b> → <b>Doc Atlas</b>.</p>
+        <p class="pain">“What else touches this feature: which docs, which code?”</p>
+        <p class="fix">Beside the doc: the docs that link to it, the docs it links to and the code files it names. Click any box to move there. <b>☰ All features</b> lists every feature; <b>Code details</b> lists its files and functions, and the names the code no longer has.</p>
+        <p class="where-line"><b>Where:</b> <b>◈ Doc Atlas</b> at the top of any doc's page, or Command Palette → <b>Doc Atlas (Your Features)</b>.</p>
       </div>
-      <img src="img/doc-atlas.png" width="558" height="870" alt="A Doc Atlas page: a diagram of linked docs in folder boxes" loading="lazy">
+      <img src="img/doc-atlas-beside.png" width="760" height="560" alt="Doc Atlas for the Checkout doc: the docs that link to it on the left, the docs it links to on the right" loading="lazy">
     </li>
 
     <li id="plans-dashboard">
@@ -114,7 +125,7 @@
         <h2 class="day">Sort, export or report on plans</h2>
         <p class="pain">“I need this in a spreadsheet for the weekly update.”</p>
         <p class="fix">Sort the dashboard, save it as a spreadsheet (CSV) or Markdown, or ask your AI agent for a status report of every plan.</p>
-        <p class="where-line"><b>Where:</b> Command Palette → <b>Plans Dashboard: Sort, Export or Ask My Agent…</b></p>
+        <p class="where-line"><b>Where:</b> <b>What Can docmap Do?</b> → <b>Plans Dashboard: Sort, Export or Ask My Agent…</b></p>
       </div>
       <img src="img/plans-menu.png" width="755" height="260" alt="A menu with sort choices, Save as Markdown, Save as CSV and Status report of every plan" loading="lazy">
     </li>
@@ -123,10 +134,10 @@
       <div class="story-text">
         <h2 class="day">Open Questions</h2>
         <p class="pain">“What is still undecided, across all our docs?”</p>
-        <p class="fix">Every open question from every doc on one page, grouped by doc.</p>
-        <p class="where-line"><b>Where:</b> Command Palette → <b>Open Questions (Every Doc)</b>.</p>
+        <p class="fix">Every real question from every doc on one page, grouped by doc: text ending in “?” and lines marked “Question:”. Click <b>line N</b> to open the doc at that line.</p>
+        <p class="where-line"><b>Where:</b> <b>Home</b> → <b>What's open</b>, or <b>What Can docmap Do?</b> → <b>Open Questions (Every Doc)</b>.</p>
       </div>
-      <img src="img/open-questions.png" width="558" height="870" alt="The Open questions page: 7 questions in 5 files, grouped by doc" loading="lazy">
+      <img src="img/open-questions.png" width="720" height="750" alt="The Open questions page of a sample project: each question with a link to its line" loading="lazy">
     </li>
 
     <li id="my-items">
@@ -134,7 +145,7 @@
         <h2 class="day">My Items</h2>
         <p class="pain">“What did people ask me to do, in all these docs?”</p>
         <p class="fix">Every open task and question that names you, e.g. “Ask @priya…”.</p>
-        <p class="where-line"><b>Where:</b> first add your name in Settings → <b>docmap my names</b>; then Command Palette → <b>My Items</b>.</p>
+        <p class="where-line"><b>Where:</b> first add your name in Settings → <b>docmap my names</b>; then <b>What Can docmap Do?</b> → <b>My Items</b>.</p>
       </div>
       <img src="img/my-items.png" width="558" height="500" alt="The My items page: one open item naming @priya" loading="lazy">
     </li>
@@ -175,7 +186,7 @@
 
 <footer>
   <div class="wrap">
-    Updated November 2026. Features marked <span class="soon">next update</span> come in docmap 3.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026. Features marked come in docmap 3.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>
