@@ -130,10 +130,10 @@
 
     <li id="agent-tools">
       <div class="story-text">
-        <h2 class="day">Tools for your AI agents</h2>
-        <p class="pain">“My agent should check the plans before it writes code.”</p>
-        <p class="fix">Your agent can ask docmap for your plans, open questions and docs that don't match the code. Off by default. Runs on your computer, only reads.</p>
-        <p class="where-line"><b>Where:</b> <b>What Can docmap Do?</b> → <b>Set Up docmap Tools for My Agent…</b> and pick your agent.</p>
+        <h2 class="day">Tools for your AI agents (standalone docmap-mcp &amp; SKILL.md)</h2>
+        <p class="pain">“My agent should check the plans before it writes code — even outside VS Code.”</p>
+        <p class="fix">Your agent can call four read-only local stdio MCP tools: <code>docmap_plans</code>, <code>docmap_open_questions</code>, <code>docmap_outline</code>, and <code>docmap_check_doc</code>. Also ships as the standalone <code>docmap-mcp</code> npm package (zero runtime dependencies, zero network, folder-confined) with a ready-to-use <code>SKILL.md</code> for Claude Desktop, Claude Code, Codex, Cursor and Antigravity.</p>
+        <p class="where-line"><b>Where:</b> <b>What Can docmap Do?</b> → <b>Set Up docmap Tools for My Agent…</b>, or run <code>npx -y docmap-mcp /path/to/project</code>.</p>
       </div>
       <img src="img/agent-tools.png" width="755" height="170" alt="A picker: Claude Code, Cursor, Windsurf and other agents, Just the command" loading="lazy">
     </li>
@@ -164,7 +164,7 @@
 
 <footer>
   <div class="wrap">
-    Updated November 2026. Features marked come in docmap 3.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026 (docmap 3.3.0). Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>

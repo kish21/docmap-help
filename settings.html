@@ -58,7 +58,7 @@
             <tr><td><code>docmap.codeLens</code></td><td><a href="trust.html#mentioned-in-code">📄 Mentioned in N docs</a> in code files</td><td>on</td></tr>
             <tr><td><code>docmap.myNames</code></td><td>Your names and @handles for <a href="finding.html#my-items">My Items</a> and <a href="trust.html#sign-off">Sign off</a></td><td>empty (your git user name)</td></tr>
             <tr><th colspan="3">Reading look</th></tr>
-            <tr><td><code>docmap.theme</code></td><td>Reading theme: vscode, paper, github, night, focus</td><td>vscode</td></tr>
+            <tr><td><code>docmap.theme</code></td><td>Reading theme: vscode, paper, github, github-dark, warm-dark, solarized-light, night, focus</td><td>vscode</td></tr>
             <tr><td><code>docmap.fontScale</code></td><td>Text size on the page (1 = normal, 1.15 = larger)</td><td>1</td></tr>
             <tr><td><code>docmap.lineWidth</code></td><td>Line width: narrow, normal, wide, full</td><td>normal</td></tr>
             <tr><th colspan="3">Docs Inbox</th></tr>
@@ -75,7 +75,7 @@
             <tr><td><code>docmap.inferHeadings</code></td><td>Add bold-only lines and numbered lines like <code>2.1 Title</code> to the outline (auto / always / off)</td><td>auto</td></tr>
             <tr><td><code>docmap.rememberPlace</code></td><td>Reopen a page at the section you were reading</td><td>on</td></tr>
             <tr><td><code>docmap.liveBrowser</code></td><td><a href="reading.html#in-browser">Open Preview in Browser</a> shows a live page (off: a saved copy)</td><td>on</td></tr>
-            <tr><td><code>docmap.largeFileBytes</code></td><td>Files bigger than this ask before they open (5242880 = 5 MB)</td><td>5 MB</td></tr>
+            <tr><td><code>docmap.largeFileBytes</code></td><td>Files bigger than this ask before they open (1048576 = 1 MB)</td><td>1 MB</td></tr>
             <tr><td><code>docmap.staleDays</code></td><td>Docs Inbox: unchanged this many days = “Probably out of date” (0 = never)</td><td>90</td></tr>
             <tr><td><code>docmap.ai.model</code></td><td>Which model family answers (empty: a Copilot model, else any)</td><td>empty</td></tr>
           </table>
@@ -118,7 +118,7 @@
       <div class="story-text">
         <h2 class="day">Big files</h2>
         <p class="pain">“Will a huge file slow VS Code down?”</p>
-        <p class="fix">Files over 5 MB ask before they open as a page, so VS Code stays fast.</p>
+        <p class="fix">Files over 1 MB ask before they open as a page, so VS Code stays fast.</p>
         <p class="where-line"><b>Where:</b> automatic. The limit is the setting <b>Large File Bytes</b>.</p>
       </div>
       <img class="small" src="img/big-files.jpg" width="554" height="165" alt="'This file is very large. big-file.md is 5.9 MB. Rendering it may be slow.' with a Render anyway button" loading="lazy">
@@ -129,7 +129,7 @@
         <h2 class="day">Something not working?</h2>
         <p class="pain">“The Docs Inbox is gone,” or “the page doesn't draw.”</p>
         <p class="fix">Most problems after an update go away when you reload the window. If <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> does nothing, another extension may use that key: click <b>Show Preview</b> instead.</p>
-        <p class="where-line"><b>Where:</b> Command Palette → <b>Developer: Reload Window</b>. Still stuck? <a href="https://github.com/kish21/docmap-media/issues">Report a problem on GitHub</a>.</p>
+        <p class="where-line"><b>Where:</b> Command Palette → <b>Developer: Reload Window</b>. Still stuck? <a href="https://github.com/kish21/markdown-docmap/issues">Report a problem on GitHub</a>.</p>
       </div>
       <img class="small" src="img/trouble.jpg" width="604" height="237" alt="The Command Palette listing Developer: Reload Window" loading="lazy">
     </li>
@@ -138,7 +138,7 @@
 
 <footer>
   <div class="wrap">
-    Updated November 2026. Features marked come in docmap 3.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026 (docmap 3.3.0). Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>

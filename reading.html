@@ -52,6 +52,7 @@
     <li><a href="#highlight">Highlight</a></li>
     <li><a href="#in-browser">In your browser</a></li>
     <li><a href="#export">HTML or PDF</a></li>
+    <li><a href="#chrome-extension">Chrome extension</a></li>
   </ul>
 
   <ol class="story">
@@ -167,10 +168,10 @@
 
     <li id="reading-look">
       <div class="story-text">
-        <h2 class="day">Choose Reading Look</h2>
+        <h2 class="day">1-click Look popover &amp; 8 reading themes</h2>
         <p class="pain">“Long reading sessions tire my eyes.”</p>
-        <p class="fix">Pick a theme (Paper, GitHub, Night, Focus), a text size and a line width.</p>
-        <p class="where-line"><b>Where:</b> the <b>⋯</b> at the top right of the editor tab → <b>Choose Reading Look</b>.</p>
+        <p class="fix">Pick from 8 themes (VS Code, Paper, GitHub, GitHub Dark, Warm Dark, Solarized Light, Night, Focus) with visual swatches, adjust Text Size (90%–130%) and Line Width (Narrow–Full) right on the page. Works in VS Code and browser views; VS Code High Contrast themes always win.</p>
+        <p class="where-line"><b>Where:</b> click <b>Look: &lt;Theme&gt;</b> at the top of the preview page.</p>
       </div>
       <img src="img/reading-look-paper.png" width="975" height="825" alt="The page in the Paper theme: cream background, serif headings, larger text" loading="lazy">
     </li>
@@ -200,7 +201,7 @@
         <h2 class="day">Slides</h2>
         <p class="pain">“A quick team update shouldn't need a slide deck.”</p>
         <p class="fix">Split sections with a <code>---</code> line and play the doc as slides. <kbd>←</kbd> <kbd>→</kbd> to move, <kbd>Esc</kbd> to stop.</p>
-        <p class="where-line"><b>Where:</b> <b>⋯ Ask my AI agent</b> at the top of the page → <b>Show as slides</b>. No AI is used.</p>
+        <p class="where-line"><b>Where:</b> <b>⋯ More</b> at the top of the page → <b>This doc</b> → <b>Slides</b>. No AI is used.</p>
       </div>
       <img class="small" src="img/slides.jpg" width="783" height="327" alt="A slide showing 'Second slide' with buttons for back, 2 of 3, next and Exit slides" loading="lazy">
     </li>
@@ -220,7 +221,7 @@
         <h2 class="day">Open Preview in Browser</h2>
         <p class="pain">“I want to read on a second screen, or show the doc on a call.”</p>
         <p class="fix">Opens the page in your web browser. It follows your edits as you type, and only your computer can see it.</p>
-        <p class="where-line"><b>Where:</b> the <b>⋯</b> at the top right of the editor tab → <b>Open Preview in Browser</b>.</p>
+        <p class="where-line"><b>Where:</b> click <b>🌐</b> in the preview top bar (or the editor tab's <b>⋯</b> → <b>Open Preview in Browser</b>).</p>
       </div>
       <img class="small" src="img/tab-menu.jpg" width="396" height="161" alt="The editor tab's menu: Ask My AI Agent About This File, Send My Review, Choose Reading Look, Open Preview in Browser, Export as HTML, Export as PDF" loading="lazy">
     </li>
@@ -230,9 +231,18 @@
         <h2 class="day">Export as HTML or PDF</h2>
         <p class="pain">“My colleague doesn't use VS Code.”</p>
         <p class="fix">Save the page as one HTML file anyone can open, or print it to PDF.</p>
-        <p class="where-line"><b>Where:</b> the <b>⋯</b> at the top right of the editor tab → <b>Export as HTML…</b> or <b>Export as PDF (Print)…</b></p>
+        <p class="where-line"><b>Where:</b> <b>⋯ More</b> at the top of the page → <b>Export</b> → <b>HTML</b> or <b>PDF</b>.</p>
       </div>
       <img class="small" src="img/tab-menu.jpg" width="396" height="161" alt="The editor tab's menu with Export as HTML and Export as PDF (Print)" loading="lazy">
+    </li>
+
+    <li id="chrome-extension" class="noimg">
+      <div class="story-text">
+        <h2 class="day">Chrome extension (local .md &amp; GitHub)</h2>
+        <p class="pain">“I want docmap's outline and themes on GitHub READMEs and local .md files in Chrome.”</p>
+        <p class="fix">A read-only Chrome MV3 extension sharing docmap's core parser — zero permissions, zero network, zero telemetry. Renders local <code>.md</code> files with the navigable outline, Quick read, all 8 Look themes, lazy Mermaid diagrams and copy-only AI prompts, and adds a collapsible outline sidebar beside GitHub Markdown pages.</p>
+        <p class="where-line"><b>Where:</b> build with <code>npm run build:chrome</code> from <a href="https://github.com/kish21/markdown-docmap">kish21/markdown-docmap</a> and load <code>dist-chrome/</code> unpacked in <code>chrome://extensions</code> (enable “Allow access to file URLs” for local files).</p>
+      </div>
     </li>
   </ol>
 
@@ -241,7 +251,7 @@
 
 <footer>
   <div class="wrap">
-    Updated November 2026. Features marked come in docmap 3.1. Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026 (docmap 3.3.0). Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>
