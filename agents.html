@@ -150,6 +150,17 @@
 }</code></pre>
           <p>Use <code>"${workspaceFolder}"</code> in Cursor's <code>.cursor/mcp.json</code>, or <code>"."</code> in a project's <code>.mcp.json</code>. Run <code>npx -y docmap-mcp --help</code> to see all flags.</p>
         </details>
+        <details><summary>Sample prompts to try once connected (all 6 tools)</summary>
+          <table>
+            <tr><th>Tool</th><th>Prompt to paste into your AI agent</th></tr>
+            <tr><td><code>docmap_plans</code></td><td>“Use <code>docmap_plans</code> to list our top plans and anything overdue or needing attention.”</td></tr>
+            <tr><td><code>docmap_open_questions</code></td><td>“Use <code>docmap_open_questions</code> to find every unresolved question across our docs, with file and line numbers.”</td></tr>
+            <tr><td><code>docmap_decisions</code></td><td>“Use <code>docmap_decisions</code> to summarize the key decisions we've already recorded so we don't contradict them.”</td></tr>
+            <tr><td><code>docmap_search</code></td><td>“Use <code>docmap_search</code> to find every mention of <i>auth</i> across our Markdown docs and show the heading trail.”</td></tr>
+            <tr><td><code>docmap_outline</code></td><td>“Use <code>docmap_outline</code> on <code>DESIGN.md</code> first, then read only the section about security.”</td></tr>
+            <tr><td><code>docmap_check_doc</code></td><td>“Use <code>docmap_check_doc</code> on <code>README.md</code> to see if any code paths it mentions no longer exist.”</td></tr>
+          </table>
+        </details>
       </div>
       <img src="img/agent-tools.png" width="755" height="170" alt="A picker: Claude Code, Cursor, Windsurf and other agents, Just the command" loading="lazy">
     </li>
