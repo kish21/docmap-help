@@ -18,6 +18,7 @@
       <a href="finding.html" aria-current="page">Find</a>
       <a href="writing.html">Write</a>
       <a href="agents.html">AI agents</a>
+      <a href="chrome.html">Chrome</a>
       <a href="settings.html">Settings</a>
     </nav>
   </div>
@@ -55,7 +56,7 @@
         <h2 class="day">Home: what's going on</h2>
         <p class="pain">“I'm back on this project. What is being worked on, and what is next?”</p>
         <p class="fix">One page: what is being worked on and what is next (from your handover note), <b>What's open</b> (questions waiting for an answer, tasks that name you), docs that are hard to read, docs out of date with the code, and every feature.</p>
-        <p class="where-line"><b>Where:</b> <b>Quick Launch</b> in the <b>docmap</b> Activity Bar sidebar → <b>Home</b>, or Command Palette → <b>Home (What's Going On in This Project)</b>. (<b>Home on Start</b> is off by default for zero-cost startup; enable it in Settings if you want it on launch.)</p>
+        <p class="where-line"><b>Where:</b> <b>docmap sidebar</b> → <b>Quick Launch</b> → <b>Home</b>, or <b>⋯ More</b> → <b>Workspace views</b> → <b>Home</b>. (Setting <b>Home on Start</b> is off by default so VS Code starts instantly.)</p>
       </div>
       <img src="img/home.png" width="1000" height="1200" alt="The Home page of a sample bookshop project: what's next from the handover, open questions, and the feature list" loading="lazy">
     </li>
@@ -75,7 +76,7 @@
         <h2 class="day">Docs Inbox</h2>
         <p class="pain">“Dozens of docs. Which changed, which are new, which are stale?”</p>
         <p class="fix">Every doc sorted like an email inbox: <b>Changed since you read</b>, <b>New — last 7 days</b>, <b>Possible duplicates</b>, <b>Probably out of date</b> and more. One click opens a doc with what changed marked.</p>
-        <p class="where-line"><b>Where:</b> click the <b>docmap</b> icon in the left Activity Bar — it holds <b>Quick Launch</b> (one-click buttons for Home, Plans Dashboard, Doc Atlas, Open Questions, Search All Docs, New Doc), <b>Docs Inbox</b>, and <b>Markdown Files</b>.</p>
+        <p class="where-line"><b>Where:</b> click the <b>docmap</b> icon in the Activity Bar on the far left. <b>Quick Launch</b> sits at the top (one-click Home, Plans Dashboard, Doc Atlas, Open Questions, Search All Docs, New Doc), with <b>Docs Inbox</b> and <b>Markdown Files</b> right below it.</p>
       </div>
       <img class="small" src="img/docs-inbox.jpg" width="298" height="298" alt="The Docs Inbox: Search, Help and New Doc buttons on its title, and groups Worth reading first, Plans in progress, Probably out of date, Doubtful, Decisions" loading="lazy">
     </li>
@@ -104,8 +105,8 @@
       <div class="story-text">
         <h2 class="day">Doc Atlas</h2>
         <p class="pain">“What else touches this feature: which docs, which code?”</p>
-        <p class="fix">Beside the doc: the docs that link to it, the docs it links to and the code files it names. Includes a <b>Features / All docs</b> sidebar toggle, <b>← Back</b> button, clickable <b>+N more</b> nodes, a bottom <b>Legend</b> (Current, Feature, Doc, Code), and <b>Code details</b> for files and functions.</p>
-        <p class="where-line"><b>Where:</b> <b>Atlas</b> in the preview top bar, <b>Quick Launch → Doc Atlas</b>, or Command Palette → <b>Doc Atlas (Your Features)</b>.</p>
+        <p class="fix">Beside the doc: the docs that link to it, the docs it links to, and the code files it names. Switch between <b>Features</b> and <b>All docs</b> in the sidebar, click any box or <b>+N more</b> node to walk the graph, use <b>← Back</b> in the header, and check the bottom <b>Legend</b> (Current, Feature, Doc, Code). <b>Code details</b> lists its files, functions, and any names the code no longer has.</p>
+        <p class="where-line"><b>Where:</b> <b>Atlas</b> in the preview top bar, or <b>docmap sidebar</b> → <b>Quick Launch</b> → <b>Doc Atlas</b>.</p>
       </div>
       <img src="img/doc-atlas-beside.png" width="760" height="560" alt="Doc Atlas for the Checkout doc: the docs that link to it on the left, the docs it links to on the right" loading="lazy">
     </li>
@@ -114,8 +115,8 @@
       <div class="story-text">
         <h2 class="day">Interactive Plans Dashboard</h2>
         <p class="pain">“Status meeting in 10 minutes. Where are we on every plan?”</p>
-        <p class="fix">Opens as an interactive view showing all workspace Markdown docs and their statuses with progress bars, relative paths, sorting, a <b>Plans only</b> filter pill, and a <b>Needs attention</b> list of what is overdue, blocked or has no owner.</p>
-        <p class="where-line"><b>Where:</b> <b>Plans</b> in the preview top bar, or <b>Quick Launch → Plans Dashboard</b> in the docmap sidebar.</p>
+        <p class="fix">An interactive view of all workspace Markdown docs and their statuses with visual progress bars, relative paths, owner, next date, a <b>Plans only</b> filter pill, and a <b>Needs attention</b> list of what is overdue, blocked or has no owner.</p>
+        <p class="where-line"><b>Where:</b> <b>Plans</b> in the preview top bar, or <b>docmap sidebar</b> → <b>Quick Launch</b> → <b>Plans Dashboard</b>.</p>
       </div>
       <img src="img/plans-dashboard.png" width="558" height="870" alt="The Plans Dashboard: totals at the top, then a Needs attention list" loading="lazy">
     </li>
@@ -135,7 +136,7 @@
         <h2 class="day">Open Questions</h2>
         <p class="pain">“What is still undecided, across all our docs?”</p>
         <p class="fix">Every real question from every doc on one page, grouped by doc: text ending in “?” and lines marked “Question:”. Click <b>line N</b> to open the doc at that line.</p>
-        <p class="where-line"><b>Where:</b> <b>Home</b> → <b>What's open</b>, or <b>What Can docmap Do?</b> → <b>Open Questions (Every Doc)</b>.</p>
+        <p class="where-line"><b>Where:</b> <b>?</b> in the preview top bar, <b>docmap sidebar</b> → <b>Quick Launch</b> → <b>Open Questions</b>, or <b>Home</b> → <b>What's open</b>.</p>
       </div>
       <img src="img/open-questions.png" width="720" height="750" alt="The Open questions page of a sample project: each question with a link to its line" loading="lazy">
     </li>
@@ -175,7 +176,7 @@
         <h2 class="day">Markdown Files list</h2>
         <p class="pain">“Just show me all the docs and their headings.”</p>
         <p class="fix">Every Markdown file in the project, each with its headings.</p>
-        <p class="where-line"><b>Where:</b> the <b>docmap</b> Activity Bar sidebar → <b>Markdown Files</b>.</p>
+        <p class="where-line"><b>Where:</b> the <b>docmap sidebar</b> → <b>Markdown Files</b>.</p>
       </div>
       <img src="img/markdown-files.png" width="440" height="120" alt="The Markdown Files section listing the docs folder, AGENTS.md and PLAN.md" loading="lazy">
     </li>
@@ -186,7 +187,7 @@
 
 <footer>
   <div class="wrap">
-    Updated November 2026 (docmap 3.3.0). Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026 for docmap 3.3.2. Screenshots are from the real extensions in VS Code and Chrome. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>

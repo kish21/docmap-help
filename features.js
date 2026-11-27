@@ -6,6 +6,7 @@ window.DOCMAP_SECTIONS = {
   "finding.html": "Finding and tidying",
   "writing.html": "Writing docs",
   "agents.html": "Working with AI agents",
+  "chrome.html": "Chrome extension",
   "settings.html": "Settings, privacy and help"
 };
 window.DOCMAP_FEATURES = [
@@ -24,8 +25,7 @@ window.DOCMAP_FEATURES = [
   ["Show the doc exactly as written", "reading.html#show-as-written", "Turn Clean view off to see the plain Markdown layout.", "show as written plain clean view off"],
   ["Tick tasks and change statuses on the page", "reading.html#tick-and-status", "Click a task box or a status label; only that line of the file changes.", "checkbox task done blocked in progress status table progress bar"],
   ["Diagrams", "reading.html#diagrams", "```mermaid blocks are drawn as diagrams.", "mermaid flowchart diagram chart"],
-  ["1-click Look popover & 8 reading themes", "reading.html#reading-look", "8 themes (VS Code, Paper, GitHub, GitHub Dark, Warm Dark, Solarized Light, Night, Focus), text size and line width right on the page.", "theme look popover font size text size line width paper github dark warm dark solarized light night focus"],
-  ["Chrome extension (local .md & GitHub)", "reading.html#chrome-extension", "Read local .md files and GitHub READMEs in Chrome with outline, themes and Mermaid diagrams.", "chrome extension mv3 browser github readme outline local markdown"],
+  ["1-click Look popover & 8 themes", "reading.html#reading-look", "Switch between 8 themes (VS Code, Paper, GitHub, GitHub Dark, Night, Warm Dark, Solarized Light, Focus), text size and line width right from the top bar.", "theme look popover font size text size line width paper github dark night warm solarized focus"],
   ["Number the headings", "reading.html#heading-numbers", "Show 1, 1.1, 1.2 … before headings on the page.", "heading numbers numbering"],
   ["Slides", "reading.html#slides", "A file with --- lines plays as slides: ⋯ Ask my AI agent → Show as slides.", "presentation slides deck present show as slides"],
   ["Highlight text", "reading.html#highlight", "Select text on the page → Highlight. Saved on your computer, never in the file.", "highlighter mark"],
@@ -47,12 +47,12 @@ window.DOCMAP_FEATURES = [
 
   // Finding and tidying
   ["What can docmap do?", "finding.html#what-can-docmap-do", "Every docmap command in one list, by what you want to do.", "all commands list features what can help discover"],
-  ["Docs Inbox & docmap Activity Bar sidebar", "finding.html#docs-inbox", "Dedicated docmap sidebar with Quick Launch, Docs Inbox and Markdown Files.", "inbox quick launch activity bar sidebar changed since you read new last 7 days duplicates out of date stale doubtful mark as read archive skip folders include folders"],
+  ["Docs Inbox & Quick Launch sidebar", "finding.html#docs-inbox", "Dedicated docmap Activity Bar sidebar with Quick Launch, Docs Inbox and Markdown Files.", "sidebar activity bar quick launch inbox changed since you read new last 7 days duplicates out of date stale doubtful mark as read archive"],
   ["Where Do I Start?", "finding.html#where-to-start", "A reading order for a project: README, design, specs, decisions, plans, runbooks.", "where do i start reading order new project onboarding first read"],
   ["Markdown Files list", "finding.html#markdown-files", "Every Markdown file in the project, in the Explorer.", "markdown files list refresh explorer"],
   ["Search All Docs…", "finding.html#search-all-docs", "One search box over every Markdown file, with the headings each result sits under.", "search find all docs"],
-  ["Doc Atlas", "finding.html#doc-atlas", "Interactive graph of docs and code with Features/All docs toggle, Back button and Legend.", "atlas links map graph feature code beside legend back"],
-  ["Interactive Plans Dashboard", "finding.html#plans-dashboard", "Interactive view of every doc and plan with progress bars, Plans only filter, owners and overdue items.", "plans dashboard interactive filter overdue owner progress"],
+  ["Doc Atlas", "finding.html#doc-atlas", "Beside a doc: the docs around it and the code it names.", "atlas links map graph feature code beside"],
+  ["Plans Dashboard", "finding.html#plans-dashboard", "Every plan by folder: progress, status, owner, next date, overdue.", "plans dashboard overdue owner progress"],
   ["Sort, export or report on plans", "finding.html#plans-menu", "Sort the dashboard, save it as Markdown or CSV, or ask for a status report.", "csv export sort spreadsheet status report"],
   ["Open Questions (every doc)", "finding.html#open-questions", "Every real question from all your docs, each linked to its line.", "questions open undecided line"],
   ["My Items", "finding.html#my-items", "Tasks and questions that name you.", "my items assigned me @name my names"],
@@ -76,16 +76,26 @@ window.DOCMAP_FEATURES = [
   ["Prompts are copied for you", "agents.html#agent-target", "“Prompt copied — paste it into your AI agent”, or open Copilot Chat (Agent Target).", "clipboard agent target auto copilot chat"],
   ["Add Markdown Prompts to This Project", "agents.html#add-prompts", "Saves docmap's prompts as commands Copilot and Claude Code pick up.", "prompts .github/prompts .claude/commands"],
   ["Answer with my model", "agents.html#my-model", "Your own model in VS Code answers on a page. Off by default.", "ai level 1 copilot model answer summarise"],
-  ["Tools for your AI agents (docmap-mcp & SKILL.md)", "agents.html#agent-tools", "Standalone local stdio MCP server (npx docmap-mcp) and SKILL.md for Claude, Codex, Cursor and Antigravity.", "mcp tools docmap-mcp skill.md npx ai level 2 copilot claude code codex cursor antigravity set up"],
+  ["Tools for your AI agents (docmap-mcp)", "agents.html#agent-tools", "Standalone npx -y docmap-mcp with 6 read-only local tools: plans, open_questions, decisions, search, outline, check_doc.", "mcp tools npx docmap-mcp docmap_plans docmap_open_questions docmap_decisions docmap_search docmap_outline docmap_check_doc claude desktop claude code cursor antigravity copilot"],
+  ["Install the Agent Skill (SKILL.md)", "agents.html#agent-skill", "npx -y docmap-mcp --install-skill teaches your AI agent to inspect outlines and search before loading long docs.", "skill.md install-skill print-skill claude agents"],
   ["Point Other AI Tools to AGENTS.md…", "agents.html#agents-md", "Adds small pointer files so every agent reads the one AGENTS.md.", "agents.md claude.md copilot-instructions gemini.md rules pointer"],
   ["Write Doc Map for Agents", "agents.html#doc-map", "Adds a table to AGENTS.md saying where each kind of doc lives, and to read the design before building.", "doc map agents.md claude.md where docs live before building"],
 
+  // Chrome extension
+  ["docmap for Chrome: local .md & Clean view", "chrome.html#chrome-clean-view", "Read local .md files in Chrome with clickable outline, Where this stands, Clean view and Mermaid diagrams.", "chrome extension browser local file:// markdown outline clean view"],
+  ["Chrome 1-time local file setup", "chrome.html#chrome-setup", "Turn on Allow access to file URLs in chrome://extensions once to render local .md files.", "chrome extensions file:// allow access popup"],
+  ["Chrome: Questions & Tasks drawer and 8 themes", "chrome.html#chrome-questions", "Jump to open tasks and questions from the drawer, and switch between 8 themes.", "chrome questions tasks drawer dark theme look"],
+  ["Chrome: Review, highlights & Copy for AI", "chrome.html#chrome-review", "Highlight text, leave notes and copy a clean review or prompt for Claude or ChatGPT.", "chrome highlight review copy for ai prompt"],
+  ["Chrome: 1-click Slides mode", "chrome.html#chrome-slides", "Present any Markdown doc split by --- as full-screen slides in Chrome.", "chrome slides presentation deck"],
+  ["Chrome: GitHub READMEs & raw Markdown", "chrome.html#chrome-github", "Collapsible outline on github.com READMEs and full reader on raw.githubusercontent.com and gists.", "chrome github readme raw gist"],
+
   // Settings, privacy and help
   ["All settings", "settings.html#settings", "Settings → search “docmap”: what each one does and its default.", "settings options configure"],
-  ["Privacy", "settings.html#privacy", "No accounts, no tracking, no servers.", "privacy telemetry data tracking"],
+  ["Privacy", "settings.html#privacy", "No accounts, no tracking, no servers, never reads .env secrets.", "privacy telemetry data tracking env security"],
   ["Clear docmap's Saved Data…", "settings.html#clear-data", "Tick what docmap should forget: highlights, notes, reading places, copies.", "clear saved data forget remove highlights notes reset privacy"],
-  ["Start here: install and words used", "index.html#start", "What docmap is, how to install it, and what Command Palette, Explorer and Docs Inbox mean.", "install get started beginner new command palette explorer status bar glossary what is markdown"],
+  ["Start here: install and words used", "index.html#start", "What docmap is, how to install it, and what Command Palette, docmap sidebar and Docs Inbox mean.", "install get started beginner new command palette sidebar explorer status bar glossary what is markdown"],
+  ["Use docmap everywhere", "index.html#everywhere", "VS Code extension, Chrome extension, standalone docmap-mcp, and SKILL.md.", "everywhere chrome mcp skill vs code"],
   ["Help inside VS Code", "settings.html#help", "Help (All Features) and the Get Started walkthrough.", "help get started walkthrough"],
-  ["Big files", "settings.html#big-files", "Files over 1 MB ask before they open.", "large file size slow 1mb"],
+  ["Big files", "settings.html#big-files", "Files over 1 MB ask before they open.", "large file size slow"],
   ["Something not working?", "settings.html#trouble", "Reload Window, and where to report a problem.", "bug problem not working reload issue report"]
 ];

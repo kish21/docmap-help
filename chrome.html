@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chrome extension — docmap help</title>
+<meta name="description" content="Read local Markdown files, raw GitHub files and GitHub READMEs in Chrome with Clean view, outline, 8 themes, Slides, and Copy for AI. Zero permissions, zero tracking.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">docmap help <small>· All-in-One Markdown Viewer</small></a>
+    <nav aria-label="Sections">
+      <a href="index.html">Start</a>
+      <a href="reading.html">Reading</a>
+      <a href="trust.html">Trust</a>
+      <a href="finding.html">Find</a>
+      <a href="writing.html">Write</a>
+      <a href="agents.html">AI agents</a>
+      <a href="chrome.html" aria-current="page">Chrome</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>docmap for Chrome</h1>
+  <p class="intro">Read local <code>.md</code> files, raw GitHub files and GitHub READMEs right in Chrome — no VS Code needed. Zero permissions, zero tracking, read-only.</p>
+
+  <div class="search" role="search">
+    <label for="q">Search every feature</label>
+    <input id="q" type="search" placeholder="Type a word, e.g. chrome, file://, github, slides" autocomplete="off">
+    <ul id="results" aria-live="polite"></ul>
+  </div>
+
+  <ul class="jump" aria-label="On this page">
+    <li><a href="#chrome-clean-view">Local .md &amp; Clean view</a></li>
+    <li><a href="#chrome-setup">1-time local file toggle</a></li>
+    <li><a href="#chrome-questions">Plans, questions &amp; 8 themes</a></li>
+    <li><a href="#chrome-review">Review, highlights &amp; Copy for AI</a></li>
+    <li><a href="#chrome-slides">1-click Slides</a></li>
+    <li><a href="#chrome-github">GitHub &amp; raw files</a></li>
+    <li><a href="#chrome-privacy">Zero permissions &amp; privacy</a></li>
+  </ul>
+
+  <ol class="story">
+    <li id="chrome-clean-view">
+      <div class="story-text">
+        <h2 class="day">Local .md files &amp; Clean view</h2>
+        <p class="pain">“I opened a <code>.md</code> file in Chrome and got a wall of plain text.”</p>
+        <p class="fix">docmap turns any local <code>.md</code> or <code>.markdown</code> file into a clean page with a clickable outline, <b>Where this stands</b> summary, Quick read, fold/levels, safe relative images, and lazy-loaded Mermaid diagrams. Toggle <b>Clean view</b> off anytime to see it as written.</p>
+        <p class="where-line"><b>Where:</b> drag any <code>.md</code> file into Chrome or open a <code>file://</code> link. Keys: <kbd>Ctrl</kbd>+<kbd>B</kbd> toggle outline, <kbd>/</kbd> filter headings, <kbd>s</kbd> quick read, <kbd>j</kbd>/<kbd>k</kbd> jump sections.</p>
+      </div>
+      <img src="img/chrome-clean-view.jpg" width="1280" height="800" alt="A local Markdown plan rendered in Chrome by docmap: clickable outline on the left, Where this stands card, Clean view layout and top toolbar">
+    </li>
+
+    <li id="chrome-setup" class="noimg">
+      <div class="story-text">
+        <h2 class="day">One-time setup for local files</h2>
+        <p class="pain">“Why did my local <code>file://</code> Markdown file still open as plain text?”</p>
+        <p class="fix">Chrome keeps extensions off local files until you allow it once. Click the <b>docmap</b> toolbar icon for step-by-step instructions and a 1-click copy button for <code>chrome://extensions</code>.</p>
+        <p class="where-line"><b>How:</b> open <code>chrome://extensions</code> → click <b>Details</b> on <b>docmap</b> → turn on <b>Allow access to file URLs</b> → reload the <code>.md</code> tab.</p>
+      </div>
+    </li>
+
+    <li id="chrome-questions">
+      <div class="story-text">
+        <h2 class="day">Plan progress, Questions &amp; Tasks, and 8 themes</h2>
+        <p class="pain">“Where are the open tasks and questions in this long doc — and can I read it in dark mode?”</p>
+        <p class="fix">The <b>Questions &amp; Tasks</b> drawer lists every open checkbox and question with jump links and pill badges in the outline. Pick any of <b>8 reading themes</b> (Paper, GitHub, GitHub Dark, Night, Warm Dark, Solarized Light, Focus, or System), plus text size and line width, from the <b>Look</b> button.</p>
+        <p class="where-line"><b>Where:</b> click <b>?</b> (Questions &amp; Tasks) or <b>Look</b> in the top bar.</p>
+      </div>
+      <img src="img/chrome-dark-questions.jpg" width="1280" height="800" alt="docmap in Chrome using a dark reading theme with the Questions and Tasks drawer open and outline badges visible" loading="lazy">
+    </li>
+
+    <li id="chrome-review">
+      <div class="story-text">
+        <h2 class="day">Local review, highlights &amp; Copy for AI</h2>
+        <p class="pain">“I want to mark up a plan in my browser and paste my feedback into Claude or ChatGPT.”</p>
+        <p class="fix">Highlight passages, leave section notes, or pick a ready prompt (summarise, challenge, find risks, turn into tasks). Click <b>Copy Review for AI</b> or <b>Ask AI</b> to copy a clean prompt to your clipboard — docmap never sends your text anywhere.</p>
+        <p class="where-line"><b>Where:</b> select text on the page to highlight or comment, or click <b>Ask AI</b> in the top bar.</p>
+      </div>
+      <img src="img/chrome-copy-ai.jpg" width="1280" height="800" alt="docmap in Chrome showing ready Copy for AI prompts and local review highlights" loading="lazy">
+    </li>
+
+    <li id="chrome-slides">
+      <div class="story-text">
+        <h2 class="day">1-click Slides mode</h2>
+        <p class="pain">“I want to present this Markdown doc on a call without making slides.”</p>
+        <p class="fix">Any doc separated by <code>---</code> lines turns into full-screen slides in one click. Move with <kbd>←</kbd> and <kbd>→</kbd>, press <kbd>Esc</kbd> to return to the page.</p>
+        <p class="where-line"><b>Where:</b> click <b>Slides</b> in the top bar.</p>
+      </div>
+      <img src="img/chrome-slides.jpg" width="1280" height="800" alt="A Markdown document presented in full-screen Slides mode inside Chrome with previous, next and exit controls" loading="lazy">
+    </li>
+
+    <li id="chrome-github" class="noimg">
+      <div class="story-text">
+        <h2 class="day">GitHub READMEs &amp; raw Markdown links</h2>
+        <p class="pain">“Long READMEs on GitHub are hard to navigate, and raw GitHub links are plain text.”</p>
+        <p class="fix">On <code>github.com</code>, docmap adds a collapsible outline sidebar beside any README or Markdown page (cleaning up automatically as you click around GitHub). On <code>raw.githubusercontent.com</code> and <code>gist.githubusercontent.com</code>, raw <code>.md</code> files open directly in the full docmap reader.</p>
+        <p class="where-line"><b>Where:</b> automatic on <code>github.com</code>, <code>raw.githubusercontent.com</code> and <code>gist.githubusercontent.com</code>.</p>
+      </div>
+    </li>
+
+    <li id="chrome-privacy" class="noimg">
+      <div class="story-text">
+        <h2 class="day">Zero permissions, zero tracking</h2>
+        <p class="pain">“What can this Chrome extension read or send?”</p>
+        <p class="fix">docmap requests <b>zero Chrome API permissions</b>, makes <b>zero network calls</b>, and collects <b>zero telemetry</b>. It renders Markdown with raw HTML disabled (<code>html: false</code>) so untrusted <code>.md</code> files cannot run scripts. Everything stays in your browser tab.</p>
+        <p class="where-line"><b>More:</b> <a href="settings.html#privacy">Privacy &amp; security details</a> · <a href="https://github.com/kish21/markdown-docmap/blob/main/SECURITY.md">SECURITY.md on GitHub</a>.</p>
+      </div>
+    </li>
+  </ol>
+
+  <p class="story-more">Want live code checks, Docs Inbox, Plans Dashboard and Doc Atlas too? <a href="index.html#start">Use docmap in VS Code</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    Updated November 2026 for docmap 3.3.2. Screenshots are from the real extensions in VS Code and Chrome. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+  </div>
+</footer>
+<script src="features.js"></script>
+<script src="search.js"></script>
+<script src="zoom.js"></script>
+</body>
+</html>

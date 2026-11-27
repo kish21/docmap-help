@@ -18,6 +18,7 @@
       <a href="finding.html">Find</a>
       <a href="writing.html">Write</a>
       <a href="agents.html">AI agents</a>
+      <a href="chrome.html">Chrome</a>
       <a href="settings.html">Settings</a>
     </nav>
   </div>
@@ -27,10 +28,11 @@
   <section class="hero">
     <div class="hero-text">
       <h1>Your project's docs, easy to read and safe to trust</h1>
-      <p class="intro">A free add-on for VS Code. It turns plans, specs and AI-written notes into clean pages, and shows you which ones are out of date.</p>
+      <p class="intro">Free for VS Code, Chrome, and your AI agents. It turns plans, specs and AI-written notes into clean pages, and shows you which ones are out of date.</p>
       <p class="cta">
-        <a class="btn" href="https://marketplace.visualstudio.com/items?itemName=kish21.markdown-as-web-page">Install free</a>
-        <a class="btn ghost" href="#start">Start in 3 steps</a>
+        <a class="btn" href="https://marketplace.visualstudio.com/items?itemName=kish21.markdown-as-web-page">Install for VS Code</a>
+        <a class="btn ghost" href="chrome.html">Use in Chrome</a>
+        <a class="btn ghost" href="agents.html#agent-tools">MCP for AI agents</a>
       </p>
       <ul class="pills">
         <li>Free</li><li>No account, no tracking</li><li>Works with the AI you already use</li>
@@ -99,18 +101,26 @@
   </ol>
   <p>Not sure which doc to read first? Try <a href="finding.html#where-to-start">Where Do I Start?</a> Want to see everything docmap can do? <a href="finding.html#what-can-docmap-do">What can docmap do?</a> lists every command in plain words.</p>
 
+  <h2 id="everywhere">Use docmap everywhere</h2>
+  <table class="words">
+    <tr><th>Where</th><th>What it does</th><th>How to start</th></tr>
+    <tr><td><b>VS Code</b></td><td>Same-tab preview, clickable outline, Clean view, 8 themes, Trust markers, Docs Inbox, Plans Dashboard, Doc Atlas, Compare, Slides, Export.</td><td><a href="#start">Install from Marketplace</a>, press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></td></tr>
+    <tr><td><b><a href="chrome.html">Chrome extension</a></b></td><td>Read local <code>.md</code> files, <code>raw.githubusercontent.com</code> and GitHub READMEs with Clean view, 8 themes, Slides, and local review → Copy for AI.</td><td><a href="chrome.html#chrome-setup">Allow access to file URLs</a> for local <code>.md</code></td></tr>
+    <tr><td><b><a href="agents.html#agent-tools">Standalone MCP server</a></b></td><td>6 read-only local tools (<code>plans</code>, <code>open_questions</code>, <code>decisions</code>, <code>search</code>, <code>outline</code>, <code>check_doc</code>) for Claude Desktop, Claude Code, Cursor &amp; Antigravity — no VS Code needed.</td><td><code>npx -y docmap-mcp /path/to/project</code></td></tr>
+    <tr><td><b><a href="agents.html#agent-skill">Agent Skill (SKILL.md)</a></b></td><td>Teaches your AI agent to inspect outlines, search docs and check plans/decisions before loading long files.</td><td><code>npx -y docmap-mcp --install-skill</code></td></tr>
+  </table>
+
   <h2 id="words">Words used on this site</h2>
   <table class="words">
     <tr><th>Word</th><th>What it means and where to find it</th></tr>
     <tr><td><b>Command Palette</b></td><td>A search box for every command. Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>), type part of a name shown in <span class="cmd">bold</span> on this site, and press <kbd>Enter</kbd>. docmap's commands start with “All-in-One Markdown Viewer:”.</td></tr>
-    <tr><td><b>Explorer</b></td><td>The file list on the left of VS Code. Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> if you can't see it.</td></tr>
-    <tr><td><b>docmap sidebar</b></td><td>The dedicated <b>docmap</b> icon in the left Activity Bar of VS Code. Holds <b>Quick Launch</b> (one-click buttons for Home, Plans Dashboard, Doc Atlas, Open Questions, Search All Docs, New Doc), <b>Docs Inbox</b>, and <b>Markdown Files</b>.</td></tr>
-    <tr><td><b>Docs Inbox</b></td><td>Inside the <b>docmap</b> Activity Bar sidebar, below Quick Launch. Groups docs by what changed, what is new, and what may be stale. <a href="finding.html#docs-inbox">More</a></td></tr>
-    <tr><td><b>Preview</b> (the page)</td><td>docmap's page that shows a doc neatly laid out, with a <b>Contents</b> list of its headings on the left and a top bar with <b>Look</b>, <b>Clean view</b>, <b>Plans</b>, <b>Atlas</b>, <b>Compare</b>, <b>🌐</b>, <b>?</b> and <b>⋯ More</b>.</td></tr>
+    <tr><td><b>docmap sidebar</b></td><td>docmap's own icon in the Activity Bar on the far left of VS Code. It holds <b>Quick Launch</b> (one-click Home, Plans Dashboard, Doc Atlas, Open Questions, Search All Docs, New Doc), <b>Docs Inbox</b>, and <b>Markdown Files</b>.</td></tr>
+    <tr><td><b>Docs Inbox</b></td><td>A section inside the <b>docmap sidebar</b> titled <b>DOCS INBOX</b>. It sorts every doc like an email inbox. <a href="finding.html#docs-inbox">More</a></td></tr>
+    <tr><td><b>Preview</b> (the page)</td><td>docmap's page that shows a doc neatly laid out, with a <b>Contents</b> list of its headings on the left and a top bar (<b>Look</b>, <b>Clean view</b>, <b>Plans</b>, <b>Atlas</b>, <b>Compare</b>, <b>🌐</b>, <b>?</b>, <b>⋯ More</b>).</td></tr>
     <tr><td><b>Status bar</b></td><td>The thin bar along the very bottom of the VS Code window.</td></tr>
-    <tr><td><b>⋯ More</b></td><td>Three dots. Click <b>⋯ More</b> at the top of the preview page for grouped actions (<b>This doc</b>, <b>Review &amp; AI</b>, <b>Export</b>, <b>Workspace views</b>), or <b>⋯</b> on the Docs Inbox title.</td></tr>
+    <tr><td><b>⋯ More</b></td><td>The menu at the top right of the preview page, grouped into <b>This doc</b>, <b>Review &amp; AI</b>, <b>Export</b>, and <b>Workspace views</b>.</td></tr>
     <tr><td><b>Settings</b></td><td>Press <kbd>Ctrl</kbd>+<kbd>,</kbd> (comma) and type <b>docmap</b>. <a href="settings.html#settings">All settings</a></td></tr>
-    <tr><td><b>AI agent</b></td><td>The AI chat you already use for coding, such as Claude Code, GitHub Copilot, Codex or Cursor. docmap has no AI of its own.</td></tr>
+    <tr><td><b>AI agent</b></td><td>The AI chat you already use for coding, such as Claude Code, GitHub Copilot, Codex, Cursor or Antigravity. docmap has no AI of its own.</td></tr>
     <tr><td><b>git</b>, <b>commit</b></td><td>git is the tool most projects use to keep every saved version of their files. A commit is one saved version. Features that compare versions need it; everything else works without.</td></tr>
   </table>
 
@@ -126,7 +136,6 @@
     <li><a href="reading.html#find-your-way"><span>Read</span>find my way around a long doc</a></li>
     <li><a href="reading.html#clean-view"><span>Read</span>read an AI-written plan comfortably</a></li>
     <li><a href="reading.html#in-browser"><span>Share</span>show a doc in my browser, or save it as PDF</a></li>
-    <li><a href="reading.html#chrome-extension"><span>Chrome</span>read local .md files and GitHub READMEs in Chrome</a></li>
     <li><a href="trust.html#trust-markers"><span>Trust</span>know which paragraphs are out of date</a></li>
     <li><a href="trust.html#compare"><span>Trust</span>see what changed in a doc</a></li>
     <li><a href="trust.html#design-check"><span>Trust</span>check the code still matches a design doc</a></li>
@@ -139,23 +148,25 @@
     <li><a href="agents.html#ask-agent"><span>AI</span>ask my AI agent about a doc</a></li>
     <li><a href="agents.html#build-from-doc"><span>AI</span>have my AI agent build what a doc describes</a></li>
     <li><a href="agents.html#agents-md"><span>AI</span>give every AI tool the same rules (AGENTS.md)</a></li>
-    <li><a href="agents.html#agent-tools"><span>AI</span>connect Claude, Codex or Cursor via standalone docmap-mcp</a></li>
+    <li><a href="agents.html#agent-tools"><span>AI</span>give Claude, Cursor or Antigravity 6 local doc tools (MCP)</a></li>
+    <li><a href="chrome.html#chrome-clean-view"><span>Chrome</span>read local .md files &amp; GitHub READMEs in Chrome</a></li>
   </ul>
 
   <h2>All sections</h2>
   <ul class="sections">
-    <li><h3><a href="reading.html">Reading your docs</a></h3><p>The page view, outline, clean view, themes, slides, browser and PDF.</p></li>
+    <li><h3><a href="reading.html">Reading your docs</a></h3><p>The page view, outline, clean view, 8 themes, slides, browser and PDF.</p></li>
     <li><h3><a href="trust.html">Trusting your docs</a></h3><p>Trust markers, does the code still match the design, docs to update after a change, compare versions, sign off, doc formats.</p></li>
-    <li><h3><a href="finding.html">Finding and tidying</a></h3><p>Docs Inbox, Where Do I Start?, Search All Docs, Doc Atlas, Plans Dashboard, open questions, my items.</p></li>
+    <li><h3><a href="finding.html">Finding and tidying</a></h3><p>Quick Launch sidebar, Docs Inbox, Where Do I Start?, Search All Docs, Doc Atlas, Plans Dashboard, open questions, my items.</p></li>
     <li><h3><a href="writing.html">Writing docs</a></h3><p>Writing keys, tables, contents, new docs from templates, restructuring.</p></li>
-    <li><h3><a href="agents.html">Working with AI agents</a></h3><p>Ready prompts, build from a doc, reviews, your own model, agent tools, AGENTS.md.</p></li>
+    <li><h3><a href="agents.html">Working with AI agents</a></h3><p>Ready prompts, build from a doc, reviews, your own model, standalone <code>docmap-mcp</code>, <code>SKILL.md</code>, AGENTS.md.</p></li>
+    <li><h3><a href="chrome.html">Chrome extension</a></h3><p>Read local <code>.md</code> files, raw GitHub files and GitHub READMEs in Chrome with Clean view, 8 themes, Slides and Copy for AI.</p></li>
     <li><h3><a href="settings.html">Settings, privacy and help</a></h3><p>Every setting, what stays on your computer, clearing saved data, and what to do if something breaks.</p></li>
   </ul>
 </main>
 
 <footer>
   <div class="wrap">
-    Updated November 2026 (docmap 3.3.0). Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites.
+    Updated November 2026 for docmap 3.3.2. Screenshots are from the real extensions in VS Code and Chrome. This site has no trackers and loads nothing from other websites.
   </div>
 </footer>
 <script src="features.js"></script>

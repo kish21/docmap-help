@@ -18,6 +18,7 @@
       <a href="finding.html">Find</a>
       <a href="writing.html">Write</a>
       <a href="agents.html" aria-current="page">AI agents</a>
+      <a href="chrome.html">Chrome</a>
       <a href="settings.html">Settings</a>
     </nav>
   </div>
@@ -42,7 +43,8 @@
     <li><a href="#agent-target">Where prompts go</a></li>
     <li><a href="#add-prompts">Prompts in your project</a></li>
     <li><a href="#my-model">Your own model</a></li>
-    <li><a href="#agent-tools">Agent tools</a></li>
+    <li><a href="#agent-tools">Agent tools (MCP)</a></li>
+    <li><a href="#agent-skill">Agent skill (SKILL.md)</a></li>
     <li><a href="#agents-md">AGENTS.md</a></li>
     <li><a href="#doc-map">Doc map</a></li>
   </ul>
@@ -130,12 +132,37 @@
 
     <li id="agent-tools">
       <div class="story-text">
-        <h2 class="day">Tools for your AI agents (standalone docmap-mcp &amp; SKILL.md)</h2>
-        <p class="pain">“My agent should check the plans before it writes code — even outside VS Code.”</p>
-        <p class="fix">Your agent can call four read-only local stdio MCP tools: <code>docmap_plans</code>, <code>docmap_open_questions</code>, <code>docmap_outline</code>, and <code>docmap_check_doc</code>. Also ships as the standalone <code>docmap-mcp</code> npm package (zero runtime dependencies, zero network, folder-confined) with a ready-to-use <code>SKILL.md</code> for Claude Desktop, Claude Code, Codex, Cursor and Antigravity.</p>
-        <p class="where-line"><b>Where:</b> <b>What Can docmap Do?</b> → <b>Set Up docmap Tools for My Agent…</b>, or run <code>npx -y docmap-mcp /path/to/project</code>.</p>
+        <h2 class="day">Tools for your AI agents (docmap-mcp)</h2>
+        <p class="pain">“My agent should check the plans, decisions and docs before it writes code — even outside VS Code.”</p>
+        <p class="fix">Give Claude Desktop, Claude Code, Cursor, Antigravity or Copilot <b>6 read-only local tools</b>: <code>docmap_plans</code>, <code>docmap_open_questions</code>, <code>docmap_decisions</code>, <code>docmap_search</code>, <code>docmap_outline</code>, and <code>docmap_check_doc</code>. Runs 100% locally with zero dependencies, zero network calls, and never reads <code>.env</code> secrets.</p>
+        <p class="where-line"><b>Standalone (no VS Code needed):</b> <code>npx -y docmap-mcp /path/to/your/project</code><br><b>In VS Code:</b> <b>What Can docmap Do?</b> → <b>Set Up docmap Tools for My Agent…</b></p>
+        <details><summary>Setup snippets (Claude Desktop, Claude Code, Cursor, Antigravity)</summary>
+          <p><b>Claude Code CLI:</b></p>
+          <pre><code>claude mcp add docmap -- npx -y docmap-mcp /absolute/path/to/your/project</code></pre>
+          <p><b>Claude Desktop / Cursor / Antigravity / <code>.mcp.json</code>:</b></p>
+          <pre><code>{
+  "mcpServers": {
+    "docmap": {
+      "command": "npx",
+      "args": ["-y", "docmap-mcp", "/absolute/path/to/your/project"]
+    }
+  }
+}</code></pre>
+          <p>Use <code>"${workspaceFolder}"</code> in Cursor's <code>.cursor/mcp.json</code>, or <code>"."</code> in a project's <code>.mcp.json</code>. Run <code>npx -y docmap-mcp --help</code> to see all flags.</p>
+        </details>
       </div>
       <img src="img/agent-tools.png" width="755" height="170" alt="A picker: Claude Code, Cursor, Windsurf and other agents, Just the command" loading="lazy">
+    </li>
+
+    <li id="agent-skill" class="noimg">
+      <div class="story-text">
+        <h2 class="day">Install the Agent Skill (SKILL.md)</h2>
+        <p class="pain">“My agent has the docmap tools, but it still dumps whole 1,000-line docs into context.”</p>
+        <p class="fix">Install docmap's ready-to-use <code>SKILL.md</code> in one command. It teaches your agent to inspect outlines, search across docs, and check plans, decisions and open questions before reading long files.</p>
+        <pre><code>npx -y docmap-mcp --install-skill          # writes .claude/skills/docmap/SKILL.md
+npx -y docmap-mcp --install-skill agents   # writes .agents/skills/docmap/SKILL.md</code></pre>
+        <p class="where-line"><b>Where:</b> run in your project folder (or run <code>npx -y docmap-mcp --print-skill</code> to inspect it first).</p>
+      </div>
     </li>
 
     <li id="agents-md">
@@ -164,7 +191,7 @@
 
 <footer>
   <div class="wrap">
-    Updated November 2026 (docmap 3.3.0). Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026 for docmap 3.3.2. Screenshots are from the real extensions in VS Code and Chrome. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>

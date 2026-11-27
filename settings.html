@@ -18,6 +18,7 @@
       <a href="finding.html">Find</a>
       <a href="writing.html">Write</a>
       <a href="agents.html">AI agents</a>
+      <a href="chrome.html">Chrome</a>
       <a href="settings.html" aria-current="page">Settings</a>
     </nav>
   </div>
@@ -58,8 +59,8 @@
             <tr><td><code>docmap.codeLens</code></td><td><a href="trust.html#mentioned-in-code">📄 Mentioned in N docs</a> in code files</td><td>on</td></tr>
             <tr><td><code>docmap.myNames</code></td><td>Your names and @handles for <a href="finding.html#my-items">My Items</a> and <a href="trust.html#sign-off">Sign off</a></td><td>empty (your git user name)</td></tr>
             <tr><th colspan="3">Reading look</th></tr>
-            <tr><td><code>docmap.theme</code></td><td>Reading theme: vscode, paper, github, github-dark, warm-dark, solarized-light, night, focus</td><td>vscode</td></tr>
-            <tr><td><code>docmap.fontScale</code></td><td>Text size on the page (1 = normal, 1.15 = larger)</td><td>1</td></tr>
+            <tr><td><code>docmap.theme</code></td><td>Reading theme: vscode, paper, github, github-dark, night, warm-dark, solarized-light, focus</td><td>vscode</td></tr>
+            <tr><td><code>docmap.fontScale</code></td><td>Text size on the page (0.9 to 1.3; 1 = normal)</td><td>1</td></tr>
             <tr><td><code>docmap.lineWidth</code></td><td>Line width: narrow, normal, wide, full</td><td>normal</td></tr>
             <tr><th colspan="3">Docs Inbox</th></tr>
             <tr><td><code>docmap.skipFolders</code></td><td>Extra folders to leave out of the Docs Inbox, search, the Plans Dashboard and trust marks</td><td>empty</td></tr>
@@ -76,6 +77,7 @@
             <tr><td><code>docmap.rememberPlace</code></td><td>Reopen a page at the section you were reading</td><td>on</td></tr>
             <tr><td><code>docmap.liveBrowser</code></td><td><a href="reading.html#in-browser">Open Preview in Browser</a> shows a live page (off: a saved copy)</td><td>on</td></tr>
             <tr><td><code>docmap.largeFileBytes</code></td><td>Files bigger than this ask before they open (1048576 = 1 MB)</td><td>1 MB</td></tr>
+            <tr><td><code>docmap.homeOnStart</code></td><td>Open <a href="finding.html#home">Home</a> automatically in projects with many docs</td><td>off</td></tr>
             <tr><td><code>docmap.staleDays</code></td><td>Docs Inbox: unchanged this many days = “Probably out of date” (0 = never)</td><td>90</td></tr>
             <tr><td><code>docmap.ai.model</code></td><td>Which model family answers (empty: a Copilot model, else any)</td><td>empty</td></tr>
           </table>
@@ -88,7 +90,7 @@
       <div class="story-text">
         <h2 class="day">Privacy</h2>
         <p class="pain">“These are private company docs. Where does my text go?”</p>
-        <p class="fix">Nowhere. No accounts, no tracking, no servers. What docmap remembers stays on your computer, and prompts are only copied for you to paste.</p>
+        <p class="fix">Nowhere. No accounts, no tracking, no servers. What docmap remembers stays on your computer, prompts are only copied for you to paste, and docmap never reads <code>.env</code> or <code>.env.*</code> secret files (only <code>.env.example</code> / <code>.env.sample</code> / <code>.env.template</code>).</p>
         <p class="where-line"><b>The one exception:</b> if you switch on <a href="agents.html#my-model">Answer with my own model</a>, your text goes to your own model, and only after you agree. Both AI settings are off until you turn them on.</p>
       </div>
       <img src="img/ai-settings.jpg" width="1055" height="429" alt="The AI settings: Agent Target set to clipboard, Answer With My Model off, Tools off" loading="lazy">
@@ -118,7 +120,7 @@
       <div class="story-text">
         <h2 class="day">Big files</h2>
         <p class="pain">“Will a huge file slow VS Code down?”</p>
-        <p class="fix">Files over 1 MB ask before they open as a page, so VS Code stays fast.</p>
+        <p class="fix">Files over 1 MB ask before they open as a page, and Mermaid diagrams render lazily as you scroll, so VS Code stays fast.</p>
         <p class="where-line"><b>Where:</b> automatic. The limit is the setting <b>Large File Bytes</b>.</p>
       </div>
       <img class="small" src="img/big-files.jpg" width="554" height="165" alt="'This file is very large. big-file.md is 5.9 MB. Rendering it may be slow.' with a Render anyway button" loading="lazy">
@@ -138,7 +140,7 @@
 
 <footer>
   <div class="wrap">
-    Updated November 2026 (docmap 3.3.0). Screenshots are from the real extension in VS Code. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
+    Updated November 2026 for docmap 3.3.2. Screenshots are from the real extensions in VS Code and Chrome. This site has no trackers and loads nothing from other websites. <a href="index.html">All features</a>
   </div>
 </footer>
 <script src="features.js"></script>
