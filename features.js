@@ -11,8 +11,8 @@ window.DOCMAP_SECTIONS = {
 };
 window.DOCMAP_FEATURES = [
   // Reading your docs
-  ["See the page instead of the code", "reading.html#show-preview", "Turn a Markdown file into a readable page in the same tab.", "show preview ctrl+alt+v same tab render view markdown"],
-  ["Go back to the text", "reading.html#show-preview", "Show Source switches the tab back to the Markdown text.", "show source edit raw ctrl+alt+v"],
+  ["See the page instead of the code", "reading.html#show-preview", "Markdown files open as a clean page by default; click ✎ Source or Ctrl+Alt+V anytime for raw text.", "show preview default editor openPreviewByDefault ctrl+alt+v same tab render view markdown"],
+  ["Go back to the text", "reading.html#show-preview", "✎ Source in the top bar (or Ctrl+Alt+V) switches the tab back to raw Markdown text.", "show source edit raw ctrl+alt+v"],
   ["Where this stands", "reading.html#where-this-stands", "A long doc opens with its parts, whether each is built, and their build records.", "status parts built timeline progress records phase milestone"],
   ["Long paragraphs, shorter", "reading.html#long-paragraphs", "Long paragraphs show two sentences, then more…", "more long paragraph wall of text fold"],
   ["Point at code to see it", "reading.html#code-preview", "Hover a code name or code link to see its lines.", "hover code preview peek lines function file"],
