@@ -95,7 +95,7 @@ window.DOCMAP_FEATURES = [
   ["Clear docmap's Saved Data…", "settings.html#clear-data", "Tick what docmap should forget: highlights, notes, reading places, copies.", "clear saved data forget remove highlights notes reset privacy"],
   ["Start here: install and words used", "index.html#start", "What docmap is, how to install it, and what Command Palette, docmap sidebar and Docs Inbox mean.", "install get started beginner new command palette sidebar explorer status bar glossary what is markdown"],
   ["Use docmap everywhere", "index.html#everywhere", "VS Code extension, Chrome extension, standalone docmap-mcp, and SKILL.md.", "everywhere chrome mcp skill vs code"],
-  ["Help inside VS Code", "settings.html#help", "Help (All Features) and the Get Started walkthrough.", "help get started walkthrough"],
+  ["Help inside VS Code", "settings.html#help", "Get Started walkthrough, What Can docmap Do?, and Help (All Features).", "help get started walkthrough what can docmap do"],
   ["Big files", "settings.html#big-files", "Files over 1 MB ask before they open.", "large file size slow"],
   ["Something not working?", "settings.html#trouble", "Reload Window, and where to report a problem.", "bug problem not working reload issue report"]
 ];
